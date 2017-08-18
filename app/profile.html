@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Профиль</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="stylesheet" href="css/main.min.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://use.fontawesome.com/042404e14f.js"></script>
+</head>
+<body>
+	<div class="main-container">
+    <div class="c-profile">
+      <div class="c-topnav">
+        <ul class="c-topnav__list">
+          <li class="c-topnav__item">
+            <a href="" class="c-topnav__link"><span>Каталог</span></a>
+          </li>
+          <li class="c-topnav__item">
+            <a href="" class="c-topnav__link"><span>Заявки</span></a>
+          </li>
+          <li class="c-topnav__item">
+            <a href="online_chat.html" class="c-topnav__link c-topnav__link--new"><span>Online-Чат</span></a>
+          </li>
+        </ul>
+        <div class="c-topnav__link">
+          <span>Иван <i class="fa fa-chevron-down fa-fw" aria-hidden="true"></i></span>
+          <div class="c-topnav__dropdown">
+            <a href="profile.html" class="c-topnav__link c-topnav__link--dropdown"><i class="fa fa-user fa-fw" aria-hidden="true"></i> Профиль</a>
+            <a href="profile_settings.html" class="c-topnav__link c-topnav__link--dropdown"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> Настройки</a>
+            <a href="#" class="c-topnav__link c-topnav__link--dropdown"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i> Выход из системы</a>
+          </div>
+        </div>
+      </div>
+      <div class="c-profile__inner">
+        <h1>Ваш профиль</h1>
+        <table cols="2" class="c-profile-table">
+          <tr class="c-profile-table__row">
+            <th colspan="2" class="c-profile-table__title">
+              <h2>Персональные данные:</h2>
+            </th>
+          </tr>
+          <tr class="c-profile-table__row">
+            <td class="c-profile-table__item">
+              Пользователь ID:
+              <span>100700354</span>
+            </td>
+            <td class="c-profile-table__item">
+              Контактный e-mail:
+              <span>ivanov90@gmail.com</span>
+              <input class="c-editor h-hidden" type="text" value="ivanov90@gmail.com" placeholder="ivanov@example.com"/>
+            </td>
+          </tr>
+          <tr class="c-profile-table__row">
+            <td class="c-profile-table__item">
+              ФИО:
+              <span>Иванов Иван Иванович</span>
+              <input class="c-editor h-hidden" type="text" value="Иванов Иван Иванович" placeholder="Иванов Иван Иванович"/>
+              <button class="c-ico-btn c-ico-btn--edit" title="Изменить ФИО"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+            </td>
+            <td class="c-profile-table__item">
+              Контактный телефон:
+              <span>+7 (999) 999-99-99</span>
+              <input class="c-editor h-hidden" type="text" value="+7 (999) 999-99-99" placeholder="+7 (999) 999-99-99"/>
+              <button class="c-ico-btn c-ico-btn--edit" title="Изменить телефон"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+            </td>
+          </tr>
+          <tr class="c-profile-table__row">
+            <th colspan="2" class="c-profile-table__title">
+              <h2>Организация:</h2>
+            </th>
+          </tr>
+          <tr class="c-profile-table__row">
+            <td class="c-profile-table__item">
+              Название:
+              <span>ООО «Название»</span>
+              <input class="c-editor h-hidden" type="text" value="ООО «Название»" placeholder="ООО «Название»"/>
+              <button class="c-ico-btn c-ico-btn--edit" title="Изменить название"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+            </td>
+            <td class="c-profile-table__item">
+              Web-сайт:
+              <span>www.nazvanie.ru</span>
+              <input class="c-editor h-hidden" type="text" value="www.nazvanie.ru" placeholder="www.nazvanie.ru"/>
+              <button class="c-ico-btn c-ico-btn--edit" title="Изменить Web-сайт"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+            </td>
+          </tr>
+          <tr class="c-profile-table__row">
+            <td class="c-profile-table__item">
+              Страна:
+              <span>Российская Федерация</span>
+              <input class="c-editor h-hidden" type="text" value="Российская Федерация" placeholder="Российская Федерация"/>
+              <button class="c-ico-btn c-ico-btn--edit" title="Изменить страну"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+            </td>
+            <td class="c-profile-table__item">
+              ИНН/КПП:
+              <span>7709773277</span>
+              <input class="c-editor h-hidden" type="text" value="7709773277" placeholder="7709773277"/> /
+              <span>770771001</span>
+              <input class="c-editor h-hidden" type="text" value="770771001" placeholder="770771001" />
+              <button class="c-ico-btn c-ico-btn--edit" title="Изменить данные"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+            </td>
+          </tr>
+          <tr class="c-profile-table__row">
+            <td class="c-profile-table__item" colspan="2">
+              Адрес юридический:
+              <span>142100, Московская область, город Подольск, ул. Б. Серпуховская, дом 43, офис 2</span>
+              <input class="c-editor h-hidden" type="text" value="142100, Московская область, город Подольск, ул. Б. Серпуховская, дом 43, офис 2" placeholder="Адрес юридический"/>
+              <button class="c-ico-btn c-ico-btn--edit" title="Изменить данные"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+            </td>
+          </tr>
+          <tr class="c-profile-table__row">
+            <td class="c-profile-table__item" colspan="2">
+              Адрес почтовый:
+              <span>142100, Московская область, город Подольск, ул. Б. Серпуховская, дом 43, офис 2</span>
+              <input class="c-editor h-hidden" type="text" value="142100, Московская область, город Подольск, ул. Б. Серпуховская, дом 43, офис 2" placeholder="Адрес почтовый"/>
+              <button class="c-ico-btn c-ico-btn--edit" title="Изменить данные"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+            </td>
+          </tr>
+          <tr class="c-profile-table__row">
+            <th colspan="2" class="c-profile-table__title">
+              <h2>Банковские реквизиты:</h2>
+            </th>
+          </tr>
+          <tr class="c-profile-table__row">
+            <td class="c-profile-table__item">
+              БИК:
+              <span>044525225</span>
+              <input class="c-editor h-hidden" type="text" value="044525225" placeholder="044525225"/>
+              <button class="c-ico-btn c-ico-btn--edit" title="Изменить данные"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+            </td>
+            <td class="c-profile-table__item">
+              Наименование банка:
+              <span>ПАО «Сбербанк России» г. Москва</span>
+              <input class="c-editor h-hidden" type="text" value="ПАО «Сбербанк России» г. Москва" placeholder="ПАО «Сбербанк России» г. Москва"/>
+              <button class="c-ico-btn c-ico-btn--edit" title="Изменить данные"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+            </td>
+          </tr>
+          <tr class="c-profile-table__row">
+            <td class="c-profile-table__item">
+              Расчётный счёт:
+              <span>40702810638050013199</span>
+              <input class="c-editor h-hidden" type="text" value="40702810638050013199" placeholder="40702810638050013199"/>
+              <button class="c-ico-btn c-ico-btn--edit" title="Изменить данные"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+            </td>
+            <td class="c-profile-table__item">
+              Корреспондентский счёт:
+              <span>30101810400000000225</span>
+              <input class="c-editor h-hidden" type="text" value="30101810400000000225" placeholder="30101810400000000225"/>
+              <button class="c-ico-btn c-ico-btn--edit" title="Изменить данные"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+            </td>
+          </tr>
+        </table>
+        <div class="c-profile__btn-wrapper">
+          <button class="c-btn">СОХРАНИТЬ</button>
+        </div>
+
+
+      </div>
+
+
+
+
+    </div>
+	</div>
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

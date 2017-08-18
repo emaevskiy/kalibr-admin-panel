@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Онлайн чат</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="stylesheet" href="css/main.min.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://use.fontawesome.com/042404e14f.js"></script>
+</head>
+<body>
+	<div class="main-container">
+    <div class="c-profile">
+      <div class="c-topnav">
+        <ul class="c-topnav__list">
+          <li class="c-topnav__item">
+            <a href="" class="c-topnav__link"><span>Каталог</span></a>
+          </li>
+          <li class="c-topnav__item">
+            <a href="" class="c-topnav__link"><span>Заявки</span></a>
+          </li>
+          <li class="c-topnav__item">
+            <a href="online_chat.html" class="c-topnav__link c-topnav__link--new"><span>Online-Чат</span></a>
+          </li>
+        </ul>
+        <div class="c-topnav__link">
+          <span>Иван <i class="fa fa-chevron-down fa-fw" aria-hidden="true"></i></span>
+          <div class="c-topnav__dropdown">
+            <a href="profile.html" class="c-topnav__link c-topnav__link--dropdown"><i class="fa fa-user fa-fw" aria-hidden="true"></i> Профиль</a>
+						<a href="profile_settings.html" class="c-topnav__link c-topnav__link--dropdown"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> Настройки</a>
+            <a href="#" class="c-topnav__link c-topnav__link--dropdown"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i> Выход из системы</a>
+          </div>
+        </div>
+      </div>
+      <div class="c-content c-content--chat">
+        <div class="l-chat">
+          <div class="c-chat c-chat--userside">
+            <div class="c-sidebar c-chat__sidebar">
+              <!-- <div class="l-search">
+                <label class="c-search">
+                  <input class="c-search__inner" type="search" placeholder="Поиск...">
+                </label>
+              </div> -->
+              <div class="c-sidebar__userlist-wrapper">
+                <ul class="c-sidebar__list">
+                  <li class="c-sidebar__item c-sidebar__item--category">
+                    <i class="fa fa-question fa-fw" aria-hidden="true"></i> Тех. поддержка
+                  </li>
+                  <li class="c-sidebar__item c-sidebar__item--new">
+                    <div class="c-chat__user">
+                      <img class="c-chat__img" src="img/user.jpg" alt="userphoto">
+                      <span class="c-chat__info c-chat__info--username">John Doe</span>
+                      <span class="c-chat__info c-chat__info--position">Администратор</span>
+                      <div class="c-chat__user-status c-chat__user-status--online"><span>online</span></div>
+                    </div>
+                  </li>
+                  <li class="c-sidebar__item c-sidebar__item--category">
+                    <i class="fa fa-user fa-fw" aria-hidden="true"></i> Менеджеры
+                  </li>
+                  <li class="c-sidebar__item c-sidebar__item--is-active">
+                    <div class="c-chat__user">
+                      <img class="c-chat__img" src="img/cartman.jpg" alt="userphoto">
+                      <span class="c-chat__info c-chat__info--username">Картман</span>
+                      <span class="c-chat__info c-chat__info--position">Персональный менеджер</span>
+                      <div class="c-chat__user-status c-chat__user-status--online"><span>online</span></div>
+                    </div>
+                  </li>
+                  <li class="c-sidebar__item">
+                    <div class="c-chat__user">
+                      <img class="c-chat__img" src="img/kenny.jpg" alt="userphoto">
+                      <span class="c-chat__info c-chat__info--username">Кенни</span>
+                      <span class="c-chat__info c-chat__info--position">Замещающий менеджер</span>
+                      <div class="c-chat__user-status c-chat__user-status--online"><span>online</span></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="c-chat__userbar">
+              <a href="users.html" class="c-chat__user c-chat__user--link">
+                <img class="c-chat__img" src="img/cartman.jpg" alt="userphoto">
+                <span class="c-chat__info c-chat__info--username">Картман</span>
+                <span class="c-chat__info c-chat__info--position">Личный менеджер</span>
+                <div class="c-chat__tooltip-wrapper">
+                  <div class="c-chat__tooltip">
+                    <span>Старший менеджер</span>
+                    <span>info1cartman@kalibr.com</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <ul class="c-dialog__list c-dialog__list">
+              <li class="c-dialog__date">
+                29.07.2017
+              </li>
+              <li class="c-dialog__item">
+                <div class="c-dialog__message c-dialog__message--inc">
+                  <div class="c-dialog__message-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum error, odit doloremque dicta, dolore ipsum eligendi eius. Rerum ipsa corporis hic maiores quis minima voluptatum, amet autem voluptate earum aperiam doloribus beatae esse nostrum vero eum quasi? Aspernatur, pariatur, rerum!
+                  </div>
+                  <div class="c-dialog__message-time">
+                    15:22
+                  </div>
+                </div>
+              </li>
+              <li class="c-dialog__item">
+                <div class="c-dialog__message c-dialog__message--out">
+                  <div class="c-dialog__message-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, deserunt.
+                  </div>
+                  <div class="c-dialog__message-time">
+                    15:22
+                  </div>
+                </div>
+              </li>
+              <li class="c-dialog__item">
+                <div class="c-dialog__message c-dialog__message--out">
+                  <div class="c-dialog__message-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorum at, odit amet dicta quidem iste omnis harum laborum! Doloribus impedit obcaecati perspiciatis facilis ad illo ratione excepturi quam! Nesciunt nobis laboriosam illum necessitatibus ab. Repudiandae quod sint qui incidunt inventore aut, cumque neque reprehenderit. Quas illum, tempore molestias fugit!
+                  </div>
+                  <div class="c-dialog__message-time">
+                    15:22
+                  </div>
+                </div>
+              </li>
+              <li class="c-dialog__item">
+                <div class="c-dialog__message c-dialog__message--inc">
+                  <div class="c-dialog__message-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, deserunt.
+                  </div>
+                  <div class="c-dialog__message-time">
+                    15:22
+                  </div>
+                </div>
+              </li>
+              <li class="c-dialog__item">
+                <div class="c-dialog__message c-dialog__message--out">
+                  <div class="c-dialog__message-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis error explicabo excepturi nostrum, repellendus non, delectus incidunt accusantium ipsam expedita voluptates assumenda voluptate, tempora iure ab quod veritatis natus, soluta!
+                  </div>
+                  <div class="c-dialog__message-time">
+                    15:22
+                  </div>
+                </div>
+              </li>
+              <li class="c-dialog__item">
+                <div class="c-dialog__message c-dialog__message--out">
+                  <div class="c-dialog__message-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quo atque ipsam quos fuga maiores! Explicabo quo perferendis molestiae velit.
+                  </div>
+                  <div class="c-dialog__message-time">
+                    15:22
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="l-chat__new-message">
+              <input class="c-chat__new-message" type="text" name="message" placeholder="Написать сообщение...">
+              <button class="c-chat__send-btn"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	</div>
+	<script src="js/scripts.min.js"></script>
+
+  <script>
+    let dialog = $(".c-dialog__list");
+    dialog.scrollTop(dialog.prop('scrollHeight'));
+  </script>
+
+
+</body>
+</html>

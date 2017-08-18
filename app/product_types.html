@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Виды товаров</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://use.fontawesome.com/042404e14f.js"></script>
+</head>
+<body>
+	<div class="main-container">
+    <div class="c-header">
+      <div class="c-logo">
+      </div>
+      <div class="c-header__wrapper">
+        <div class="c-header__time">
+        </div>
+        <div class="c-header__date">
+        </div>
+      </div>
+    </div>
+    <div class="c-main">
+      <div class="c-navbar">
+        <input id="c-menu-ctrl" type="checkbox" checked/>
+        <label for="c-menu-ctrl" class="c-menu-ctrl"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></label>
+        <h4 class="c-navbar__title">Admin Panel ver. 1.0</h4>
+        <div class="c-userbar">
+          <div class="c-userbar__img"></div>
+          <div class="c-userbar__username">John Doe</div>
+          <div class="c-userbar__email">john.doe@example.com</div>
+          <div class="c-userbar__wrapper">
+            <a href="#" class="c-userbar__link c-link"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> Настройки</a>
+            <a href="#" class="c-userbar__link c-link"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i> Выход</a>
+          </div>
+        </div>
+        <ul class="c-navbar__list">
+          <li class="c-navbar__item">
+            <a href="index.html" class="c-navbar__navlink c-navlink"><span>Каталог</span><i class="fa fa-book fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="brends.html" class="c-navbar__navlink c-navlink"><span>Производители</span><i class="fa fa-building fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="classification.html" class="c-navbar__navlink c-navlink"><span>Классификация</span><i class="fa fa-th fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="product_types.html" class="c-navbar__navlink c-navlink c-navlink--is-active"><span>Вид товара</span><i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="news.html" class="c-navbar__navlink c-navlink"><span>Новости</span><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="hot_news.html" class="c-navbar__navlink c-navlink"><span>Горячие новости</span><i class="fa fa-fire fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="clients.html" class="c-navbar__navlink c-navlink"><span>Наши клиенты</span><i class="fa fa-male fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="users.html" class="c-navbar__navlink c-navlink"><span>Пользователи</span><i class="fa fa-users fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="applications.html" class="c-navbar__navlink c-navlink c-navlink--new"><span>Список заявок</span><i class="fa fa-list fa-fw" aria-hidden="true"><span class="c-navbar__new"></span></i></a>
+          </li>
+					<li class="c-navbar__item">
+            <a href="chat.html" class="c-navbar__navlink c-navlink c-navlink--new"><span>Чат</span><i class="fa fa-comment fa-fw" aria-hidden="true"><span class="c-navbar__new"></span></i></a>
+          </li>
+        </ul>
+        <div class="c-settings">
+          <!-- c-settings--is-active -->
+          <a href="#" class="c-settings__close-btn c-ico-btn c-ico-btn--close" title="Закрыть"><i class="fa fa-close fa-fw" aria-hidden="true"></i></a>
+          <ul class="c-settings__list">
+            <li class="c-settings__item">
+              <label class="c-settings__label">
+                <input class="c-settings__radio" type="radio" name="unit" />
+                <div class="c-settings__userbar">
+                  <div class="c-user-status c-user-status--offline c-settings__user-status"></div>
+                  <div class="c-settings__img-wrapper">
+                    <img src="img/dima.jpg" alt="user_photo" class="c-settings__img">
+                  </div>
+                  <div class="c-settings__wrapper">
+                    <div class="c-settings__username">
+                      Дмитрий Медведев
+                    </div>
+                    <div class="c-settings__position">
+                      Премьер министр РФ
+                    </div>
+                    <div class="c-settings__email">
+                      dima.mozhet@example.com
+                    </div>
+                  </div>
+                  <div class="c-settings__status">
+                    <div class="c-settings__title">
+                      Статус:
+                    </div>
+                    <textarea class="c-styleguide__textarea c-settings__status__inner" rows="3" placeholder="Статус">Добрый день! Я являюсь премьер министром РФ. Вы можете направить мне предложения по изменению системы образования в стране или ваши пожелания по работе Роскомнадзора.
+                    </textarea>
+                    <button class="c-btn c-btn--small c-settings__btn">СМЕНИТЬ ПОЛЬЗОВАТЕЛЯ</button>
+                    <button class="c-btn c-btn--small c-settings__btn">ОБНОВИТЬ СТАТУС</button>
+                  </div>
+                </div>
+              </label>
+            </li>
+            <li class="c-settings__item">
+              <label class="c-settings__label">
+                <input class="c-settings__radio" type="radio" name="unit" />
+                <div class="c-settings__userbar">
+                  <div class="c-user-status c-user-status--online c-settings__user-status"></div>
+                  <div class="c-settings__img-wrapper">
+                    <img src="img/gena.jpg" alt="user_photo" class="c-settings__img">
+                  </div>
+                  <div class="c-settings__wrapper">
+                    <div class="c-settings__username">
+                      Геннадий Букин
+                    </div>
+                    <div class="c-settings__position">
+                      Продавец обуви
+                    </div>
+                    <div class="c-settings__email">
+                      gena.bukin@example.com
+                    </div>
+                  </div>
+                  <div class="c-settings__status">
+                    <div class="c-settings__title">
+                      Статус:
+                    </div>
+                    <textarea class="c-styleguide__textarea c-settings__status__inner" rows="3" placeholder="Статус">Добрый день! Я помогу Вам подобрать обувь, которая бы подчеркивала Ваш стиль и стала отличным дополнением к другой обуви в вашем шкафу.
+                    </textarea>
+                    <button class="c-btn c-btn--small c-settings__btn">СМЕНИТЬ ПОЛЬЗОВАТЕЛЯ</button>
+                    <button class="c-btn c-btn--small c-settings__btn">ОБНОВИТЬ СТАТУС</button>
+                  </div>
+                </div>
+              </label>
+            </li>
+            <li class="c-settings__item">
+              <label class="c-settings__label">
+                <input class="c-settings__radio" type="radio" name="unit" />
+                <div class="c-settings__userbar">
+                  <div class="c-user-status c-user-status--offline c-settings__user-status"></div>
+                  <div class="c-settings__img-wrapper">
+                    <img src="img/user.jpg" alt="user_photo" class="c-settings__img">
+                  </div>
+                  <div class="c-settings__wrapper">
+                    <div class="c-settings__username">
+                      Иван Иванов
+                    </div>
+                    <div class="c-settings__position">
+                      Консультант
+                    </div>
+                    <div class="c-settings__email">
+                      ivan.ivanov@example.com
+                    </div>
+                  </div>
+                  <div class="c-settings__status">
+                    <div class="c-settings__title">
+                      Статус:
+                    </div>
+                    <textarea class="c-styleguide__textarea c-settings__status__inner" rows="3" placeholder="Статус">Добрый день! Я являюсь экспертом компании "Калибр". Я могу проконсультировать Вас по нашему ассортименту.
+                    </textarea>
+                    <button class="c-btn c-btn--small c-settings__btn">СМЕНИТЬ ПОЛЬЗОВАТЕЛЯ</button>
+                    <button class="c-btn c-btn--small c-settings__btn">ОБНОВИТЬ СТАТУС</button>
+                  </div>
+                </div>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="c-content">
+
+        <div class="l-datatable">
+       		<div class="c-datatable">
+       				<label class="c-datatable__label">
+       					Показывать
+       					<select class="c-datatable__select">
+       						<option value="1">10</option>
+       						<option value="2" selected>50</option>
+       						<option value="3">100</option>
+       						<option value="4">200</option>
+       					</select>
+       					позиций
+       				</label>
+              <div class="l-add-item">
+                <div class="c-add-item">
+                  <a href="#" class="c-add-item__link"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <div class="l-search">
+                <select class="c-datatable__select">
+                  <option value="1">Наименование вида товара</option>
+                  <option value="2">Производитель</option>
+                  <option value="3">Классификация</option>
+                </select>
+                <label class="c-search">
+                  <input class="c-search__inner" type="search" placeholder="Поиск...">
+              </label>
+              </div>
+       			<div class="c-datatable__wrapper">
+       			<table class="c-datatable__main">
+       				<thead class="c-datatable__header">
+       					<tr class="c-datatable__row">
+       						<th class="c-datatable__item c-datatable__item--header">
+       							ID
+       						</th>
+       						<th class="c-datatable__item c-datatable__item--header">
+       							Наименование вида товара
+       						</th>
+                  <th class="c-datatable__item c-datatable__item--header">
+       							Производитель
+       						</th>
+                  <th class="c-datatable__item c-datatable__item--header">
+       							Классификация
+       						</th>
+       					</tr>
+       				</thead>
+       				<tbody class="c-datatable__body">
+       					<tr class="c-datatable__row">
+       						<td class="c-datatable__item c-datatable__item--center">
+       							1
+       						</td>
+                  <td class="c-datatable__item">
+       							Кабель в бухтах
+       						</td>
+                  <td class="c-datatable__item">
+       							Turck
+       						</td>
+       						<td class="c-datatable__item">
+       							Соединители
+       						</td>
+       					</tr>
+                <tr class="c-datatable__row">
+       						<td class="c-datatable__item c-datatable__item--center">
+       							2
+       						</td>
+                  <td class="c-datatable__item">
+       							Индуктивные
+       						</td>
+                  <td class="c-datatable__item">
+       							Turck
+       						</td>
+       						<td class="c-datatable__item">
+       							Датчики
+       						</td>
+       					</tr>
+                <tr class="c-datatable__row">
+       						<td class="c-datatable__item c-datatable__item--center">
+       							3
+       						</td>
+                  <td class="c-datatable__item">
+       							Концевые фрезы
+       						</td>
+                  <td class="c-datatable__item">
+       							Mitsubishi
+       						</td>
+       						<td class="c-datatable__item">
+       							Вращающийся инструмент
+       						</td>
+       					</tr>
+       				</tbody>
+       			</table>
+       		</div>
+       				<div class="c-datatable__info">
+       					Показано с 1 по 3 из 3 позиций
+       				</div>
+       				<div class="c-datatable__paginate">
+       					<a href="#" class="paginate-button paginate-button--first paginate-button--disabled"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+       					<a href="#" class="paginate-button paginate-button--previous paginate-button--disabled"><i class="fa fa-angle-left" aria-hidden="true"></i> Предыдущая</a>
+       					<span>
+       						<a href="#" class="paginate-button paginate-button--current">1</a>
+       						<a href="#" class="paginate-button">2</a>
+       						<a href="#" class="paginate-button">3</a>
+       						<a href="#" class="paginate-button">...</a>
+       						<a href="#" class="paginate-button">10</a>
+       					</span>
+       					<a href="#" class="paginate-button paginate-button--next">Следующая <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+       					<a href="#" class="paginate-button paginate-button--last"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+       				</div>
+       		</div>
+       	</div>
+
+				<div class="c-ctrl-panel">
+            <a href="#" class="c-ico-btn c-ico-btn--close" title="Закрыть"><i class="fa fa-close fa-fw" aria-hidden="true"></i></a>
+            <h1 class="c-ctrl-panel__title">
+              ID 1
+            </h1>
+            <label class="c-ctrl-panel__label" for="name">Наименование вида товара*</label>
+            <input class="c-input" id="name" type="text" placeholder="Наименование">
+            <label class="c-ctrl-panel__label" for="brend">Производитель*</label>
+            <select class="c-styleguide__select" id="brend">
+              <option value="1">Mitsubishi</option>
+              <option value="2">Turck</option>
+              <option value="3">Knipex</option>
+              <option value="4">SECO</option>
+            </select>
+            <label class="c-ctrl-panel__label" for="class">Классификация*</label>
+            <select class="c-styleguide__select" id="class">
+              <option value="1">Класс_1</option>
+              <option value="2">Класс_2</option>
+              <option value="3">Класс_3</option>
+              <option value="4">Класс_4</option>
+              <option value="5">Класс_5</option>
+            </select>
+            <div class="l-btn-bar">
+              <button class="c-btn c-btn--block">СОХРАНИТЬ</button>
+              <button class="c-btn c-btn--block">ОТМЕНА</button>
+            </div>
+            <div class="c-ctrl-panel__wrapper">
+              <a href="#" class="c-ico-btn c-ico-btn--trash" title="Удалить вид товара"><i class="fa fa-trash fa-fw" aria-hidden="true"></i></a>
+            </div>
+	      </div>
+      </div>
+    </div>
+    <div class="c-footer">
+
+    </div>
+	</div>
+	<script src="js/scripts.min.js"></script>
+
+
+</body>
+</html>

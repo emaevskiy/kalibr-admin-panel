@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Пользователи</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="stylesheet" href="css/main.min.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://use.fontawesome.com/042404e14f.js"></script>
+</head>
+<body>
+	<div class="main-container">
+    <div class="c-header">
+      <div class="c-logo">
+      </div>
+      <div class="c-header__wrapper">
+        <div class="c-header__time">
+        </div>
+        <div class="c-header__date">
+        </div>
+      </div>
+    </div>
+    <div class="c-main">
+      <div class="c-navbar">
+        <input id="c-menu-ctrl" type="checkbox" checked/>
+        <label for="c-menu-ctrl" class="c-menu-ctrl"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></label>
+        <h4 class="c-navbar__title">Admin Panel ver. 1.0</h4>
+        <div class="c-userbar">
+          <div class="c-userbar__img"></div>
+          <div class="c-userbar__username">John Doe</div>
+          <div class="c-userbar__email">john.doe@example.com</div>
+          <div class="c-userbar__wrapper">
+            <a href="#" class="c-userbar__link c-link"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> Настройки</a>
+            <a href="#" class="c-userbar__link c-link"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i> Выход</a>
+          </div>
+        </div>
+        <ul class="c-navbar__list">
+          <li class="c-navbar__item">
+            <a href="index.html" class="c-navbar__navlink c-navlink"><span>Каталог</span><i class="fa fa-book fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="brends.html" class="c-navbar__navlink c-navlink"><span>Производители</span><i class="fa fa-building fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="classification.html" class="c-navbar__navlink c-navlink"><span>Классификация</span><i class="fa fa-th fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="product_types.html" class="c-navbar__navlink c-navlink"><span>Вид товара</span><i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="news.html" class="c-navbar__navlink c-navlink"><span>Новости</span><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="hot_news.html" class="c-navbar__navlink c-navlink"><span>Горячие новости</span><i class="fa fa-fire fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="clients.html" class="c-navbar__navlink c-navlink"><span>Наши клиенты</span><i class="fa fa-male fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="users.html" class="c-navbar__navlink c-navlink c-navlink--is-active"><span>Пользователи</span><i class="fa fa-users fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="applications.html" class="c-navbar__navlink c-navlink c-navlink--new"><span>Список заявок</span><i class="fa fa-list fa-fw" aria-hidden="true"><span class="c-navbar__new"></span></i></a>
+          </li>
+					<li class="c-navbar__item">
+            <a href="chat.html" class="c-navbar__navlink c-navlink c-navlink--new"><span>Чат</span><i class="fa fa-comment fa-fw" aria-hidden="true"><span class="c-navbar__new"></span></i></a>
+          </li>
+        </ul>
+        <div class="c-settings">
+          <!-- c-settings--is-active -->
+          <a href="#" class="c-settings__close-btn c-ico-btn c-ico-btn--close" title="Закрыть"><i class="fa fa-close fa-fw" aria-hidden="true"></i></a>
+          <ul class="c-settings__list">
+            <li class="c-settings__item">
+              <label class="c-settings__label">
+                <input class="c-settings__radio" type="radio" name="unit" />
+                <div class="c-settings__userbar">
+                  <div class="c-user-status c-user-status--offline c-settings__user-status"></div>
+                  <div class="c-settings__img-wrapper">
+                    <img src="img/dima.jpg" alt="user_photo" class="c-settings__img">
+                  </div>
+                  <div class="c-settings__wrapper">
+                    <div class="c-settings__username">
+                      Дмитрий Медведев
+                    </div>
+                    <div class="c-settings__position">
+                      Премьер министр РФ
+                    </div>
+                    <div class="c-settings__email">
+                      dima.mozhet@example.com
+                    </div>
+                  </div>
+                  <div class="c-settings__status">
+                    <div class="c-settings__title">
+                      Статус:
+                    </div>
+                    <textarea class="c-styleguide__textarea c-settings__status__inner" rows="3" placeholder="Статус">Добрый день! Я являюсь премьер министром РФ. Вы можете направить мне предложения по изменению системы образования в стране или ваши пожелания по работе Роскомнадзора.
+                    </textarea>
+                    <button class="c-btn c-btn--small c-settings__btn">СМЕНИТЬ ПОЛЬЗОВАТЕЛЯ</button>
+                    <button class="c-btn c-btn--small c-settings__btn">ОБНОВИТЬ СТАТУС</button>
+                  </div>
+                </div>
+              </label>
+            </li>
+            <li class="c-settings__item">
+              <label class="c-settings__label">
+                <input class="c-settings__radio" type="radio" name="unit" />
+                <div class="c-settings__userbar">
+                  <div class="c-user-status c-user-status--online c-settings__user-status"></div>
+                  <div class="c-settings__img-wrapper">
+                    <img src="img/gena.jpg" alt="user_photo" class="c-settings__img">
+                  </div>
+                  <div class="c-settings__wrapper">
+                    <div class="c-settings__username">
+                      Геннадий Букин
+                    </div>
+                    <div class="c-settings__position">
+                      Продавец обуви
+                    </div>
+                    <div class="c-settings__email">
+                      gena.bukin@example.com
+                    </div>
+                  </div>
+                  <div class="c-settings__status">
+                    <div class="c-settings__title">
+                      Статус:
+                    </div>
+                    <textarea class="c-styleguide__textarea c-settings__status__inner" rows="3" placeholder="Статус">Добрый день! Я помогу Вам подобрать обувь, которая бы подчеркивала Ваш стиль и стала отличным дополнением к другой обуви в вашем шкафу.
+                    </textarea>
+                    <button class="c-btn c-btn--small c-settings__btn">СМЕНИТЬ ПОЛЬЗОВАТЕЛЯ</button>
+                    <button class="c-btn c-btn--small c-settings__btn">ОБНОВИТЬ СТАТУС</button>
+                  </div>
+                </div>
+              </label>
+            </li>
+            <li class="c-settings__item">
+              <label class="c-settings__label">
+                <input class="c-settings__radio" type="radio" name="unit" />
+                <div class="c-settings__userbar">
+                  <div class="c-user-status c-user-status--offline c-settings__user-status"></div>
+                  <div class="c-settings__img-wrapper">
+                    <img src="img/user.jpg" alt="user_photo" class="c-settings__img">
+                  </div>
+                  <div class="c-settings__wrapper">
+                    <div class="c-settings__username">
+                      Иван Иванов
+                    </div>
+                    <div class="c-settings__position">
+                      Консультант
+                    </div>
+                    <div class="c-settings__email">
+                      ivan.ivanov@example.com
+                    </div>
+                  </div>
+                  <div class="c-settings__status">
+                    <div class="c-settings__title">
+                      Статус:
+                    </div>
+                    <textarea class="c-styleguide__textarea c-settings__status__inner" rows="3" placeholder="Статус">Добрый день! Я являюсь экспертом компании "Калибр". Я могу проконсультировать Вас по нашему ассортименту.
+                    </textarea>
+                    <button class="c-btn c-btn--small c-settings__btn">СМЕНИТЬ ПОЛЬЗОВАТЕЛЯ</button>
+                    <button class="c-btn c-btn--small c-settings__btn">ОБНОВИТЬ СТАТУС</button>
+                  </div>
+                </div>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="c-content">
+
+        <div class="l-datatable">
+       		<div class="c-datatable">
+       				<label class="c-datatable__label">
+       					Показывать
+       					<select class="c-datatable__select">
+       						<option value="1">10</option>
+       						<option value="2" selected>50</option>
+       						<option value="3">100</option>
+       						<option value="4">200</option>
+       					</select>
+       					пользователей
+       				</label>
+              <div class="l-add-item h-hidden" hidden>
+                <div class="c-add-item">
+                  <a href="#" class="c-add-item__link"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <div class="l-search">
+                <select class="c-datatable__select" value="1">
+                  <option value="1">Название организации</option>
+                  <option value="2">Контактное лицо</option>
+                  <option value="3">Телефон</option>
+                  <option value="4">Электронная почта</option>
+                  <option value="5">ИНН</option>
+                  <option value="6">КПП</option>
+                  <option value="7">Юр. адрес</option>
+                  <option value="8">Факт. адрес</option>
+                  <option value="9">Р/с</option>
+                  <option value="10">Менеджер</option>
+                </select>
+                <label class="c-search">
+                  <input class="c-search__inner" type="search" placeholder="Поиск...">
+              </label>
+              </div>
+       			<div class="c-datatable__wrapper">
+       			<table class="c-datatable__main">
+       				<thead class="c-datatable__header">
+       					<tr class="c-datatable__row">
+       						<th class="c-datatable__item c-datatable__item--header">
+       							ID
+       						</th>
+       						<th class="c-datatable__item c-datatable__item--header">
+       							Название организации
+       						</th>
+       						<th class="c-datatable__item c-datatable__item--header">
+       							Контактное лицо
+       						</th>
+                  <th class="c-datatable__item c-datatable__item--header">
+       							Телефон
+       						</th>
+                  <th class="c-datatable__item c-datatable__item--header">
+       							Электронная почта
+       						</th>
+                  <th class="c-datatable__item c-datatable__item--header">
+       							Реквизиты организации
+       						</th>
+                  <th class="c-datatable__item c-datatable__item--header">
+       							Персональный менеджер
+       						</th>
+       					</tr>
+       				</thead>
+       				<tbody class="c-datatable__body">
+       					<tr class="c-datatable__row">
+       						<td class="c-datatable__item c-datatable__item--center">
+       							1
+       						</td>
+       						<td class="c-datatable__item c-datatable__item--users">
+       							ООО "Компания"
+       						</td>
+       						<td class="c-datatable__item c-datatable__item--users">
+       							Иванов Иван Иванович
+       						</td>
+       						<td class="c-datatable__item c-datatable__item--users">
+       							+7 (999) 999-99-99
+       						</td>
+                  <td class="c-datatable__item c-datatable__item--users">
+       							i.ivanov@company.org
+       						</td>
+                  <td class="c-datatable__item c-datatable__item--users c-datatable__item--full">
+       							Есть
+       						</td>
+                  <td class="c-datatable__item c-datatable__item--users">
+       							И.Петров
+       						</td>
+       					</tr>
+                <tr class="c-datatable__row">
+       						<td class="c-datatable__item c-datatable__item--center">
+       							2
+       						</td>
+       						<td class="c-datatable__item c-datatable__item--users">
+       							ПАО "Газпром"
+       						</td>
+       						<td class="c-datatable__item c-datatable__item--users">
+       							Абрамович Роман Аркадьевич
+       						</td>
+       						<td class="c-datatable__item c-datatable__item--users">
+       							+7 (999) 999-99-99
+       						</td>
+                  <td class="c-datatable__item c-datatable__item--users">
+       							romka777@gazprom.ru
+       						</td>
+                  <td class="c-datatable__item c-datatable__item--users c-datatable__item--partially">
+       							Частично
+       						</td>
+                  <td class="c-datatable__item c-datatable__item--users">
+       							И.Петров
+       						</td>
+       					</tr>
+                <tr class="c-datatable__row">
+       						<td class="c-datatable__item c-datatable__item--center">
+       							3
+       						</td>
+       						<td class="c-datatable__item c-datatable__item--users">
+       							ИП Жопа
+       						</td>
+       						<td class="c-datatable__item c-datatable__item--users">
+       							Попович Алексей Леонтьевич
+       						</td>
+       						<td class="c-datatable__item c-datatable__item--users">
+       							+7 (999) 999-99-99
+       						</td>
+                  <td class="c-datatable__item c-datatable__item--users">
+       							aleshka.company@mail.ru
+       						</td>
+                  <td class="c-datatable__item c-datatable__item--users c-datatable__item--empty">
+       							Отсутствуют
+       						</td>
+                  <td class="c-datatable__item c-datatable__item--users">
+       							И.Петров
+       						</td>
+       					</tr>
+
+       				</tbody>
+       			</table>
+       		</div>
+       				<div class="c-datatable__info">
+       					Показано с 1 по 3 из 3 пользователей
+       				</div>
+       				<div class="c-datatable__paginate">
+       					<a href="#" class="paginate-button paginate-button--first paginate-button--disabled"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+       					<a href="#" class="paginate-button paginate-button--previous paginate-button--disabled"><i class="fa fa-angle-left" aria-hidden="true"></i> Предыдущая</a>
+       					<span>
+       						<a href="#" class="paginate-button paginate-button--current">1</a>
+       						<a href="#" class="paginate-button">2</a>
+       						<a href="#" class="paginate-button">3</a>
+       						<a href="#" class="paginate-button">...</a>
+       						<a href="#" class="paginate-button">10</a>
+       					</span>
+       					<a href="#" class="paginate-button paginate-button--next">Следующая <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+       					<a href="#" class="paginate-button paginate-button--last"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+       				</div>
+       		</div>
+       	</div>
+        <div class="l-popup-panel">
+          <!-- l-popup-panel--is-active -->
+          <div class="c-popup-panel">
+            <a href="#" class="c-ico-btn c-ico-btn--close" title="Закрыть"><i class="fa fa-close fa-fw" aria-hidden="true"></i></a>
+            <h1 class="c-popup-panel__title">
+              Карточка клиента
+            </h1>
+            <h3 class="c-popup-panel__title">
+              Персональная информация
+            </h3>
+            <div class="c-popup-panel__info-comb">
+              <div class="c-popup-panel__item">
+                ID: <span>1</span>
+              </div>
+              <div class="c-popup-panel__item">
+                ФИО: <span>Иванов Иван Иванович</span>
+                <input class="c-editor h-hidden" type="text" name="username" value="Иванов Иван Иванович" placeholder="Иванов Иван Иванович"/>
+                <button class="c-ico-btn c-ico-btn--edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+              </div>
+              <div class="c-popup-panel__item">
+                Электронная почта: <span>i.ivanov@company.org</span>
+                <input class="c-editor h-hidden" type="text" name="email" value="i.ivanov@company.org" placeholder="example@example.com"/>
+                <button class="c-ico-btn c-ico-btn--edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+              </div>
+              <div class="c-popup-panel__item">
+                Телефон: <span>+7 (999) 999-99-99</span>
+                <input class="c-editor h-hidden" type="phone" name="phone" value="+7 (999) 999-99-99" placeholder="+7 (___) ___-__-__"/>
+                <button class="c-ico-btn c-ico-btn--edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <h3 class="c-popup-panel__title">
+              Информация об организации
+            </h3>
+            <div class="c-popup-panel__info-comb">
+              <div class="c-popup-panel__item">
+                Название: <span>ООО "Компания"</span>
+                <input class="c-editor h-hidden" type="text" name="organization" value="ООО Компания" placeholder="ООО Компания"/>
+                <button class="c-ico-btn c-ico-btn--edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+              </div>
+              <div class="c-popup-panel__item">
+                Страна: <span>Российская Федерация</span>
+                <input class="c-editor h-hidden" type="text" name="country" value="Российская Федерация" placeholder="Российская Федерация"/>
+                <button class="c-ico-btn c-ico-btn--edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+              </div>
+              <div class="c-popup-panel__item">
+                ИНН: <span>7709773277</span>
+                <input class="c-editor h-hidden" type="text" name="inn" value="7709773277" placeholder="7709773277"/>
+                <button class="c-ico-btn c-ico-btn--edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+              </div>
+              <div class="c-popup-panel__item">
+                КПП: <span>770771001</span>
+                <input class="c-editor h-hidden" type="text" name="kpp" value="770771001" placeholder="770771001"/>
+                <button class="c-ico-btn c-ico-btn--edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+              </div>
+              <div class="c-popup-panel__item">
+                Адрес юридический: <span>142100, Московская область, город Подольск, ул. Б. Серпуховская, дом 43, офис 2</span>
+                <input class="c-editor h-hidden" type="text" name="adress" value="142100, Московская область, город Подольск, ул. Б. Серпуховская, дом 43, офис 2" placeholder="142100, Московская область, город Подольск, ул. Б. Серпуховская, дом 43, офис 2"/>
+                <button class="c-ico-btn c-ico-btn--edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+              </div>
+              <div class="c-popup-panel__item">
+                Адрес фактический: <span> 142100, Московская область, город Подольск, ул. Б. Серпуховская, дом 43, офис 2</span>
+                <input class="c-editor h-hidden" type="text" name="real-adress" value="142100, Московская область, город Подольск, ул. Б. Серпуховская, дом 43, офис 2" placeholder="142100, Московская область, город Подольск, ул. Б. Серпуховская, дом 43, офис 2"/>
+                <button class="c-ico-btn c-ico-btn--edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+              </div>
+              <div class="c-popup-panel__item">
+                Веб-сайт: <span>www.company.org</span>
+                <input class="c-editor h-hidden" type="text" name="web-site" value="www.company.org" placeholder="www.company.org"/>
+                <button class="c-ico-btn c-ico-btn--edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <h3 class="c-popup-panel__title">
+              Банковские реквизиты
+            </h3>
+            <div class="c-popup-panel__info-comb">
+              <div class="c-popup-panel__item">
+                БИК: <span>044525225</span>
+                <input class="c-editor h-hidden" type="text" name="bik" value="044525225" placeholder="044525225"/>
+                <button class="c-ico-btn c-ico-btn--edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+              </div>
+              <div class="c-popup-panel__item">
+                Банк: <span>ПАО «Сбербанк России» г. Москва</span>
+                <input class="c-editor h-hidden" type="text" name="bank" value="ПАО «Сбербанк России» г. Москва" placeholder="ПАО «Сбербанк России» г. Москва"/>
+                <button class="c-ico-btn c-ico-btn--edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+              </div>
+              <div class="c-popup-panel__item">
+                Расчетный cчет: <span>40702810638050013199</span>
+                <input class="c-editor h-hidden" type="text" name="check-account" value="40702810638050013199" placeholder="40702810638050013199"/>
+                <button class="c-ico-btn c-ico-btn--edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+              </div>
+              <div class="c-popup-panel__item">
+                Корреспондентский cчет: <span>30101810400000000225</span>
+                <input class="c-editor h-hidden" type="text" name="corr-account" value="30101810400000000225" placeholder="30101810400000000225"/>
+                <button class="c-ico-btn c-ico-btn--edit"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <h3 class="c-popup-panel__title">
+              Персональный менеджер
+            </h3>
+            <select class="c-styleguide__select">
+              <option value="1">И.Петров</option>
+              <option value="2">О.Сорокина</option>
+              <option value="3">В.Волков</option>
+              <option value="4">О.Шматко</option>
+            </select>
+            <div class="c-popup-panel__btn-wrapper">
+              <button class="c-btn">СОХРАНИТЬ</button>
+              <button class="c-btn">ОТМЕНА</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="c-footer">
+
+    </div>
+	</div>
+	<script src="js/scripts.min.js"></script>
+
+
+</body>
+</html>
