@@ -43,52 +43,911 @@
           </div>
         </div>
       </div>
-      <div class="c-profile__inner">
-        <h1>Настройки</h1>
-        <table cols="2" class="c-profile-table">
-          <tr class="c-profile-table__row">
-            <th colspan="2" class="c-profile-table__title">
-              <h2>Изменить пароль:</h2>
-            </th>
-          </tr>
-          <tr class="c-profile-table__row">
-            <td class="c-profile-table__item">
-              Старый пароль:
-            </td>
-            <td class="c-profile-table__item">
-              <input class="c-input" type="text" value="" placeholder="old password"/>
-            </td>
-          </tr>
-          <tr class="c-profile-table__row">
-            <td class="c-profile-table__item">
-              Новый пароль:
-            </td>
-            <td class="c-profile-table__item">
-              <input class="c-input" type="text" value="" placeholder="new password"/>
-            </td>
-          </tr>
-          <tr class="c-profile-table__row">
-            <td class="c-profile-table__item">
-              Повторите пароль:
-            </td>
-            <td class="c-profile-table__item">
-              <input class="c-input" type="text" value="" placeholder="new password"/>
-            </td>
-          </tr>
-        </table>
-        <div class="c-profile__btn-wrapper">
-          <button class="c-btn">СОХРАНИТЬ</button>
+
+      <div class="c-profile__inner c-profile__inner--catalog">
+        <div class="c-catalog-sidebar">
+          <h4 class="c-catalog-sidebar__title">Группа товаров:</h4>
+          <ul class="c-catalog-sidebar__list">
+            <li class="c-catalog-sidebar__item">
+              <label class="c-catalog-sidebar__wrap">
+                <input type="radio" name="favorite-radio" class="c-catalog-sidebar__radio" checked/>
+                <div class="c-catalog-sidebar__item-inner"><i class="fa fa-list fa-fw" aria-hidden="true"></i> Все</div>
+              </label>
+            </li>
+            <li class="c-catalog-sidebar__item">
+              <label class="c-catalog-sidebar__wrap">
+                <input type="radio" name="favorite-radio" class="c-catalog-sidebar__radio"/>
+                <div class="c-catalog-sidebar__item-inner"><i class="fa fa-star fa-fw" aria-hidden="true"></i> Избранное</div>
+              </label>
+            </li>
+          </ul>
+          <h4 class="c-catalog-sidebar__title">Производитель:</h4>
+          <div class="c-catalog-sidebar__brend-name">Mitsubishi materials</div>
+          <div class="l-btn-bar">
+            <button class="c-btn c-btn--block">Выбрать производителя...</button>
+          </div>
+
+          <!-- <h4 class="c-catalog-sidebar__title">Производители:</h4>
+          <ul class="c-catalog-sidebar__list">
+            <li class="c-catalog-sidebar__item">
+              <label class="c-catalog-sidebar__wrap">
+                <input type="radio" name="brend-radio" class="c-catalog-sidebar__radio" checked/>
+                <div class="c-catalog-sidebar__item-inner c-catalog-sidebar__item-inner--brends">
+                  По умолчанию
+                 </div>
+              </label>
+            </li>
+            <li class="c-catalog-sidebar__item">
+              <label class="c-catalog-sidebar__wrap">
+                <input type="radio" name="brend-radio" class="c-catalog-sidebar__radio"/>
+                <div class="c-catalog-sidebar__item-inner c-catalog-sidebar__item-inner--brends">
+                  Mitsubishi materials
+                  <div class="l-brend-logo l-brend-logo--mini">
+                    <img src="img/brends/mitsubishi.svg" class="c-brend-logo c-brend-logo--mini" />
+                  </div>
+                 </div>
+              </label>
+            </li>
+            <li class="c-catalog-sidebar__item">
+              <label class="c-catalog-sidebar__wrap">
+                <input type="radio" name="brend-radio" class="c-catalog-sidebar__radio"/>
+                <div class="c-catalog-sidebar__item-inner c-catalog-sidebar__item-inner--brends">
+                  Turck
+                  <div class="l-brend-logo l-brend-logo--mini">
+                    <img src="img/brends/turck.svg" class="c-brend-logo c-brend-logo--mini" />
+                  </div>
+                 </div>
+              </label>
+            </li>
+            <li class="c-catalog-sidebar__item">
+              <label class="c-catalog-sidebar__wrap">
+                <input type="radio" name="brend-radio" class="c-catalog-sidebar__radio"/>
+                <div class="c-catalog-sidebar__item-inner c-catalog-sidebar__item-inner--brends">
+                  Knipex
+                  <div class="l-brend-logo l-brend-logo--mini">
+                    <img src="img/brends/knipex.svg" class="c-brend-logo c-brend-logo--mini" />
+                  </div>
+                 </div>
+              </label>
+            </li>
+            <li class="c-catalog-sidebar__item">
+              <label class="c-catalog-sidebar__wrap">
+                <input type="radio" name="brend-radio" class="c-catalog-sidebar__radio"/>
+                <div class="c-catalog-sidebar__item-inner c-catalog-sidebar__item-inner--brends">
+                  SECO
+                  <div class="l-brend-logo l-brend-logo--mini">
+                    <img src="img/brends/seco.svg" class="c-brend-logo c-brend-logo--mini" />
+                  </div>
+                 </div>
+              </label>
+            </li>
+            <li class="c-catalog-sidebar__item">
+              <label class="c-catalog-sidebar__wrap">
+                <input type="radio" name="brend-radio" class="c-catalog-sidebar__radio"/>
+                <div class="c-catalog-sidebar__item-inner c-catalog-sidebar__item-inner--brends">
+                  Hammelmann
+                  <div class="l-brend-logo l-brend-logo--mini">
+                    <img src="img/brends/hammelmann.jpg" class="c-brend-logo c-brend-logo--mini" />
+                  </div>
+                 </div>
+              </label>
+            </li>
+            <li class="c-catalog-sidebar__item">
+              <label class="c-catalog-sidebar__wrap">
+                <input type="radio" name="brend-radio" class="c-catalog-sidebar__radio"/>
+                <div class="c-catalog-sidebar__item-inner c-catalog-sidebar__item-inner--brends">
+                  Korloy
+                  <div class="l-brend-logo l-brend-logo--mini">
+                    <img src="img/brends/korloy-inc.png" class="c-brend-logo c-brend-logo--mini" />
+                  </div>
+                 </div>
+              </label>
+            </li>
+            <li class="c-catalog-sidebar__item">
+              <label class="c-catalog-sidebar__wrap">
+                <input type="radio" name="brend-radio" class="c-catalog-sidebar__radio"/>
+                <div class="c-catalog-sidebar__item-inner c-catalog-sidebar__item-inner--brends">
+                  Kemmler
+                  <div class="l-brend-logo l-brend-logo--mini">
+                    <img src="img/brends/kemmler.png" class="c-brend-logo c-brend-logo--mini" />
+                  </div>
+                 </div>
+              </label>
+            </li>
+            <li class="c-catalog-sidebar__item">
+              <label class="c-catalog-sidebar__wrap">
+                <input type="radio" name="brend-radio" class="c-catalog-sidebar__radio"/>
+                <div class="c-catalog-sidebar__item-inner c-catalog-sidebar__item-inner--brends">
+                  Nitto
+                  <div class="l-brend-logo l-brend-logo--mini">
+                    <img src="img/brends/nitto.png" class="c-brend-logo c-brend-logo--mini" />
+                  </div>
+                 </div>
+              </label>
+            </li>
+          </ul> -->
+          <div class="c-catalog-sidebar__filter">
+            <label>
+              <h4 class="c-catalog-sidebar__title">Классификация:</h4>
+              <select class="c-styleguide__select" name="prod_classification">
+                <option value="1">Все</option>
+                <option value="2">Значение 1</option>
+                <option value="3">Значение 2</option>
+              </select>
+            </label>
+          </div>
+          <div class="c-catalog-sidebar__filter">
+            <label>
+              <h4 class="c-catalog-sidebar__title">Тип товара:</h4>
+              <select class="c-styleguide__select" name="prod_type">
+                <option value="1">Все</option>
+                <option value="2">Значение 1</option>
+                <option value="3">Значение 2</option>
+              </select>
+            </label>
+          </div>
+          <div class="l-btn-bar">
+            <button class="c-btn c-btn--block">ПРИМЕНИТЬ ФИЛЬТРЫ</button>
+            <button class="c-btn c-btn--block">ПО УМОЛЧАНИЮ</button>
+          </div>
         </div>
+        <div class="c-catalog-main">
+          <div class="c-panel c-catalog-filter">
+            <!-- <div class="c-catalog-filter__wrap">
+              <label>
+                Классификация:
+                <select class="c-datatable__select c-datatable__select--catalog" name="prod_classification">
+                  <option value="1">Все</option>
+                  <option value="2">Значение 1</option>
+                  <option value="3">Значение 2</option>
+                </select>
+              </label>
+            </div>
+            <div class="c-catalog-filter__wrap">
+              <label>
+                Тип товара:
+                <select class="c-datatable__select c-datatable__select--catalog" name="prod_type">
+                  <option value="1">Все</option>
+                  <option value="2">Значение 1</option>
+                  <option value="3">Значение 2</option>
+                </select>
+              </label>
+            </div> -->
+            <div class="c-catalog-filter__wrap">
+              <label>
+                На странице:
+                <select class="c-datatable__select" name="prod_type">
+                  <option value="1">10</option>
+                  <option value="2">25</option>
+                  <option value="3">50</option>
+                  <option value="4">100</option>
+                </select>
+              </label>
+            </div>
+            <div class="l-search">
+              <select class="c-datatable__select">
+                <option value="1" selected>Артикул</option>
+                <option value="2">Наименование</option>
+              </select>
+              <label class="c-search">
+                <input class="c-search__inner" type="search" placeholder="Поиск по каталогу...">
+            </label>
+            </div>
+          </div>
+          <div class="c-breadcrumbs">
+            <a href="profile_catalog.html" class="c-breadcrumbs__item c-link">Каталог</a>
+            <i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i>
+            <a href="#" class="c-breadcrumbs__item c-link">Все</a>
+            <i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i>
+            <a href="#" class="c-breadcrumbs__item c-link">Mitsubishi materials</a>
+          </div>
+          <div class="c-panel c-catalog-header">
+            <div class="c-catalog-col c-catalog-col--art">
+              <strong>Артикул</strong>
+            </div>
+            <div class="c-catalog-col c-catalog-col--name">
+              <strong>Наименование</strong>
+            </div>
+            <div class="c-catalog-col c-catalog-col--cost">
+              <strong>Цена, шт</strong>
+            </div>
+            <div class="c-catalog-col c-catalog-col--count">
+              <strong>Количество, шт</strong>
+            </div>
+            <div class="c-catalog-col c-catalog-col--favorite">
+              <strong>Избранное</strong>
+            </div>
+          </div>
+          <ul class="c-catalog-main__list">
+            <li class="c-catalog-main__item">
+              <div class="c-catalog-col c-catalog-col--art">
+                <a href="#" class="c-link h-margin-0">QCMT 050204 - CM NC 3220</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--name">
+                <a href="#" class="c-link h-margin-0">Полное наименование единицы товара</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--cost">
+                  <div>
+                    49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                  </div>
+              </div>
+              <div class="c-catalog-col c-catalog-col--count">
+                <input class="c-catalog-main__input-count" type="text" name="count" value="1" min="1" max="9999">
+                <div class="l-btn-mini">
+                  <button class="c-btn-mini" type="button" name="increase">+</button>
+                  <button class="c-btn-mini" type="button" name="reduce">-</button>
+                </div>
+                <button class="c-btn c-btn--inline" type="button" name="move-to-cart">В корзину</button>
+              </div>
+              <div class="c-catalog-col c-catalog-col--favorite">
+                <label class="c-favorite" title="Добавить / удалить из избранного">
+                  <input class="c-favorite__inner" type="checkbox">
+                  <div class="c-favorite__tick"></div>
+                </label>
+              </div>
+            </li>
+            <li class="c-catalog-main__item">
+              <div class="c-catalog-col c-catalog-col--art">
+                <a href="#" class="c-link h-margin-0">QCMT 050204 - CM NC 3220</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--name">
+                <a href="#" class="c-link h-margin-0">Полное наименование единицы товара</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--cost">
+                <a href="#" class="c-link h-margin-0">Уточнить стоимость</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--count">
+                <input class="c-catalog-main__input-count" type="text" name="count" value="1" min="1" max="9999">
+                <div class="l-btn-mini">
+                  <button class="c-btn-mini" type="button" name="increase">+</button>
+                  <button class="c-btn-mini" type="button" name="reduce">-</button>
+                </div>
+                <button class="c-btn c-btn--inline" type="button" name="move-to-cart">В корзину</button>
+              </div>
+              <div class="c-catalog-col c-catalog-col--favorite">
+                <label class="c-favorite" title="Добавить / удалить из избранного">
+                  <input class="c-favorite__inner" type="checkbox">
+                  <div class="c-favorite__tick"></div>
+                </label>
+              </div>
+            </li>
 
 
+            <li class="c-catalog-main__item">
+              <div class="c-catalog-col c-catalog-col--art">
+                <a href="#" class="c-link h-margin-0">QCMT 050204 - CM NC 3220</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--name">
+                <a href="#" class="c-link h-margin-0">Полное наименование единицы товара</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--cost">
+                  <div>
+                    49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                  </div>
+              </div>
+              <div class="c-catalog-col c-catalog-col--count">
+                <input class="c-catalog-main__input-count" type="text" name="count" value="1" min="1" max="9999">
+                <div class="l-btn-mini">
+                  <button class="c-btn-mini" type="button" name="increase">+</button>
+                  <button class="c-btn-mini" type="button" name="reduce">-</button>
+                </div>
+                <button class="c-btn c-btn--inline" type="button" name="move-to-cart">В корзину</button>
+              </div>
+              <div class="c-catalog-col c-catalog-col--favorite">
+                <label class="c-favorite" title="Добавить / удалить из избранного">
+                  <input class="c-favorite__inner" type="checkbox">
+                  <div class="c-favorite__tick"></div>
+                </label>
+              </div>
+            </li>
+            <li class="c-catalog-main__item">
+              <div class="c-catalog-col c-catalog-col--art">
+                <a href="#" class="c-link h-margin-0">QCMT 050204 - CM NC 3220</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--name">
+                <a href="#" class="c-link h-margin-0">Полное наименование единицы товара</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--cost">
+                <a href="#" class="c-link h-margin-0">Уточнить стоимость</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--count">
+                <input class="c-catalog-main__input-count" type="text" name="count" value="1" min="1" max="9999">
+                <div class="l-btn-mini">
+                  <button class="c-btn-mini" type="button" name="increase">+</button>
+                  <button class="c-btn-mini" type="button" name="reduce">-</button>
+                </div>
+                <button class="c-btn c-btn--inline" type="button" name="move-to-cart">В корзину</button>
+              </div>
+              <div class="c-catalog-col c-catalog-col--favorite">
+                <label class="c-favorite" title="Добавить / удалить из избранного">
+                  <input class="c-favorite__inner" type="checkbox">
+                  <div class="c-favorite__tick"></div>
+                </label>
+              </div>
+            </li>
+            <li class="c-catalog-main__item">
+              <div class="c-catalog-col c-catalog-col--art">
+                <a href="#" class="c-link h-margin-0">QCMT 050204 - CM NC 3220</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--name">
+                <a href="#" class="c-link h-margin-0">Полное наименование единицы товара</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--cost">
+                  <div>
+                    49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                  </div>
+              </div>
+              <div class="c-catalog-col c-catalog-col--count">
+                <input class="c-catalog-main__input-count" type="text" name="count" value="1" min="1" max="9999">
+                <div class="l-btn-mini">
+                  <button class="c-btn-mini" type="button" name="increase">+</button>
+                  <button class="c-btn-mini" type="button" name="reduce">-</button>
+                </div>
+                <button class="c-btn c-btn--inline" type="button" name="move-to-cart">В корзину</button>
+              </div>
+              <div class="c-catalog-col c-catalog-col--favorite">
+                <label class="c-favorite" title="Добавить / удалить из избранного">
+                  <input class="c-favorite__inner" type="checkbox">
+                  <div class="c-favorite__tick"></div>
+                </label>
+              </div>
+            </li>
+            <li class="c-catalog-main__item">
+              <div class="c-catalog-col c-catalog-col--art">
+                <a href="#" class="c-link h-margin-0">QCMT 050204 - CM NC 3220</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--name">
+                <a href="#" class="c-link h-margin-0">Полное наименование единицы товара</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--cost">
+                <a href="#" class="c-link h-margin-0">Уточнить стоимость</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--count">
+                <input class="c-catalog-main__input-count" type="text" name="count" value="1" min="1" max="9999">
+                <div class="l-btn-mini">
+                  <button class="c-btn-mini" type="button" name="increase">+</button>
+                  <button class="c-btn-mini" type="button" name="reduce">-</button>
+                </div>
+                <button class="c-btn c-btn--inline" type="button" name="move-to-cart">В корзину</button>
+              </div>
+              <div class="c-catalog-col c-catalog-col--favorite">
+                <label class="c-favorite" title="Добавить / удалить из избранного">
+                  <input class="c-favorite__inner" type="checkbox">
+                  <div class="c-favorite__tick"></div>
+                </label>
+              </div>
+            </li>
+            <li class="c-catalog-main__item">
+              <div class="c-catalog-col c-catalog-col--art">
+                <a href="#" class="c-link h-margin-0">QCMT 050204 - CM NC 3220</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--name">
+                <a href="#" class="c-link h-margin-0">Полное наименование единицы товара</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--cost">
+                  <div>
+                    49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                  </div>
+              </div>
+              <div class="c-catalog-col c-catalog-col--count">
+                <input class="c-catalog-main__input-count" type="text" name="count" value="1" min="1" max="9999">
+                <div class="l-btn-mini">
+                  <button class="c-btn-mini" type="button" name="increase">+</button>
+                  <button class="c-btn-mini" type="button" name="reduce">-</button>
+                </div>
+                <button class="c-btn c-btn--inline" type="button" name="move-to-cart">В корзину</button>
+              </div>
+              <div class="c-catalog-col c-catalog-col--favorite">
+                <label class="c-favorite" title="Добавить / удалить из избранного">
+                  <input class="c-favorite__inner" type="checkbox">
+                  <div class="c-favorite__tick"></div>
+                </label>
+              </div>
+            </li>
+            <li class="c-catalog-main__item">
+              <div class="c-catalog-col c-catalog-col--art">
+                <a href="#" class="c-link h-margin-0">QCMT 050204 - CM NC 3220</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--name">
+                <a href="#" class="c-link h-margin-0">Полное наименование единицы товара</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--cost">
+                <a href="#" class="c-link h-margin-0">Уточнить стоимость</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--count">
+                <input class="c-catalog-main__input-count" type="text" name="count" value="1" min="1" max="9999">
+                <div class="l-btn-mini">
+                  <button class="c-btn-mini" type="button" name="increase">+</button>
+                  <button class="c-btn-mini" type="button" name="reduce">-</button>
+                </div>
+                <button class="c-btn c-btn--inline" type="button" name="move-to-cart">В корзину</button>
+              </div>
+              <div class="c-catalog-col c-catalog-col--favorite">
+                <label class="c-favorite" title="Добавить / удалить из избранного">
+                  <input class="c-favorite__inner" type="checkbox">
+                  <div class="c-favorite__tick"></div>
+                </label>
+              </div>
+            </li>
+            <li class="c-catalog-main__item">
+              <div class="c-catalog-col c-catalog-col--art">
+                <a href="#" class="c-link h-margin-0">QCMT 050204 - CM NC 3220</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--name">
+                <a href="#" class="c-link h-margin-0">Полное наименование единицы товара</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--cost">
+                  <div>
+                    49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                  </div>
+              </div>
+              <div class="c-catalog-col c-catalog-col--count">
+                <input class="c-catalog-main__input-count" type="text" name="count" value="1" min="1" max="9999">
+                <div class="l-btn-mini">
+                  <button class="c-btn-mini" type="button" name="increase">+</button>
+                  <button class="c-btn-mini" type="button" name="reduce">-</button>
+                </div>
+                <button class="c-btn c-btn--inline" type="button" name="move-to-cart">В корзину</button>
+              </div>
+              <div class="c-catalog-col c-catalog-col--favorite">
+                <label class="c-favorite" title="Добавить / удалить из избранного">
+                  <input class="c-favorite__inner" type="checkbox">
+                  <div class="c-favorite__tick"></div>
+                </label>
+              </div>
+            </li>
+            <li class="c-catalog-main__item">
+              <div class="c-catalog-col c-catalog-col--art">
+                <a href="#" class="c-link h-margin-0">QCMT 050204 - CM NC 3220</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--name">
+                <a href="#" class="c-link h-margin-0">Полное наименование единицы товара</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--cost">
+                <a href="#" class="c-link h-margin-0">Уточнить стоимость</a>
+              </div>
+              <div class="c-catalog-col c-catalog-col--count">
+                <input class="c-catalog-main__input-count" type="text" name="count" value="1" min="1" max="9999">
+                <div class="l-btn-mini">
+                  <button class="c-btn-mini" type="button" name="increase">+</button>
+                  <button class="c-btn-mini" type="button" name="reduce">-</button>
+                </div>
+                <button class="c-btn c-btn--inline" type="button" name="move-to-cart">В корзину</button>
+              </div>
+              <div class="c-catalog-col c-catalog-col--favorite">
+                <label class="c-favorite" title="Добавить / удалить из избранного">
+                  <input class="c-favorite__inner" type="checkbox">
+                  <div class="c-favorite__tick"></div>
+                </label>
+              </div>
+            </li>
+          </ul>
+          <div class="c-datatable__paginate">
+            <a href="#" class="paginate-button paginate-button--first paginate-button--disabled"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+            <a href="#" class="paginate-button paginate-button--previous paginate-button--disabled"><i class="fa fa-angle-left" aria-hidden="true"></i> Предыдущая</a>
+            <span>
+              <a href="#" class="paginate-button paginate-button--current">1</a>
+              <a href="#" class="paginate-button">2</a>
+              <a href="#" class="paginate-button">3</a>
+              <a href="#" class="paginate-button">...</a>
+              <a href="#" class="paginate-button">10</a>
+            </span>
+            <a href="#" class="paginate-button paginate-button--next">Следующая <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a href="#" class="paginate-button paginate-button--last"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
       </div>
 
 
-
-
     </div>
+    <div class="l-profile-popup">
+      <div class="c-profile-popup">
+        <a href="#" class="c-ico-btn c-ico-btn--close" title="Закрыть"><i class="fa fa-close fa-fw" aria-hidden="true"></i></a>
+        <div class="c-alph-filter">
+          <label>
+            <input class="c-alph-filter__radio" type="radio" name="lang">
+            <div>ВСЕ</div>
+          </label>
+          <label>
+            <input class="c-alph-filter__radio" type="radio" name="lang"  checked>
+            <div>ENG</div>
+          </label>
+          <label>
+            <input class="c-alph-filter__radio" type="radio" name="lang">
+            <div>RUS</div>
+          </label>
+          <ul class="c-alph-filter__list">
+            <li class="c-alph-filter__item">
+              A
+            </li>
+            <li class="c-alph-filter__item">
+              B
+            </li>
+            <li class="c-alph-filter__item">
+              C
+            </li>
+            <li class="c-alph-filter__item c-alph-filter__item--is-active">
+              D
+            </li>
+            <li class="c-alph-filter__item">
+              E
+            </li>
+            <li class="c-alph-filter__item">
+              F
+            </li>
+            <li class="c-alph-filter__item">
+              G
+            </li>
+            <li class="c-alph-filter__item">
+              H
+            </li>
+            <li class="c-alph-filter__item">
+              I
+            </li>
+            <li class="c-alph-filter__item">
+              J
+            </li>
+            <li class="c-alph-filter__item">
+              K
+            </li>
+            <li class="c-alph-filter__item">
+              L
+            </li>
+            <li class="c-alph-filter__item">
+              M
+            </li>
+            <li class="c-alph-filter__item">
+              N
+            </li>
+            <li class="c-alph-filter__item">
+              O
+            </li>
+            <li class="c-alph-filter__item">
+              P
+            </li>
+            <li class="c-alph-filter__item">
+              Q
+            </li>
+            <li class="c-alph-filter__item">
+              R
+            </li>
+            <li class="c-alph-filter__item">
+              S
+            </li>
+            <li class="c-alph-filter__item">
+              T
+            </li>
+            <li class="c-alph-filter__item">
+              U
+            </li>
+            <li class="c-alph-filter__item">
+              V
+            </li>
+            <li class="c-alph-filter__item">
+              W
+            </li>
+            <li class="c-alph-filter__item">
+              X
+            </li>
+            <li class="c-alph-filter__item">
+              Y
+            </li>
+            <li class="c-alph-filter__item">
+              Z
+            </li>
+          </ul>
+        </div>
+        <ul class="c-profile-popup__list">
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/absolent.jpeg" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Absolent
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/balluff.jpg" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              BALLUFF
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/baumer.jpg" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Baumer
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/d'andrea.png" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              D'andrea
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/donaldson.png" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Donaldson
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/eroglu.png" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Eroglu
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/guhring.png" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Guhring
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/haimer.png" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Haimer
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/hammelmann.jpg" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Hammelmann
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/kamasch.jpg" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Kamasch
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/kemmler.jpg" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Kemmler
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/kennametal.png" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Kennametal
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/knipex.png" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Knipex
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/korloy.jpg" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Korloy
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/kyocera.jpg" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Kyocera
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/mitsubishi.png" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Mitsubishi materials
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/nitto.png" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Nitto
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/osawa.jpg" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Osawa
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/polar_handtools.jpg" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              Polar Handtools
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/seco.svg" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              SECO
+            </div>
+          </li>
+          <li class="c-profile-popup__item">
+            <div class="l-brend-logo l-brend-logo--big">
+              <img src="img/brends/turck.jpg" class="c-brend-logo" />
+            </div>
+            <div class="c-profile-popup__item-name">
+              TURCK
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="l-cart">
+      <div class="c-cart">
+        <a href="#" class="c-ico-btn c-ico-btn--close h-hidden" title="Закрыть"><i class="fa fa-close fa-fw" aria-hidden="true"></i></a>
+        <h4 class="c-cart__title"><i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i> Корзина: 3 товара</h4>
+        <div class="c-cart__panel">
+          <div class="c-cart__info">
+            Всего на сумму :
+            <span>110068.40<i class="fa fa-rub fa-fw" aria-hidden="true"></i></span>
+          </div>
+          <button class="c-btn" type="button" name="button">Оформить заказ</button>
+        </div>
+        <ul class="c-cart__list">
+          <li class="c-cart__item">
+            <div class="c-catalog-col c-catalog-col--cart-art">
+              <a href="#" class="c-link h-margin-0">QCMT 050204 - CM NC 3220</a>
+            </div>
+            <div class="c-catalog-col c-catalog-col--cart-name">
+              <a href="#" class="c-link h-margin-0">Полное наименование единицы товара</a>
+            </div>
+            <div class="c-catalog-col c-catalog-col--cart-cost">
+                <div>
+                  49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                </div>
+                <div>
+                  706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="c-catalog-col c-catalog-col--cart-count">
+              <input class="c-catalog-main__input-count" type="text" name="count" value="1" min="1" max="9999">
+              <div class="l-btn-mini">
+                <button class="c-btn-mini" type="button" name="increase">+</button>
+                <button class="c-btn-mini" type="button" name="reduce">-</button>
+              </div>
+            </div>
+            <div class="c-catalog-col c-catalog-col--cart-remove">
+              <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+            </div>
+          </li>
+          <li class="c-cart__item">
+            <div class="c-catalog-col c-catalog-col--cart-art">
+              <a href="#" class="c-link h-margin-0">QCMT 050204 - CM NC 3220</a>
+            </div>
+            <div class="c-catalog-col c-catalog-col--cart-name">
+              <a href="#" class="c-link h-margin-0">Полное наименование единицы товара</a>
+            </div>
+            <div class="c-catalog-col c-catalog-col--cart-cost">
+                <div>
+                  49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                </div>
+                <div>
+                  706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="c-catalog-col c-catalog-col--cart-count">
+              <input class="c-catalog-main__input-count" type="text" name="count" value="1" min="1" max="9999">
+              <div class="l-btn-mini">
+                <button class="c-btn-mini" type="button" name="increase">+</button>
+                <button class="c-btn-mini" type="button" name="reduce">-</button>
+              </div>
+            </div>
+            <div class="c-catalog-col c-catalog-col--cart-remove">
+              <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+            </div>
+          </li>
+          <li class="c-cart__item">
+            <div class="c-catalog-col c-catalog-col--cart-art">
+              <a href="#" class="c-link h-margin-0">QCMT 050204 - CM NC 3220</a>
+            </div>
+            <div class="c-catalog-col c-catalog-col--cart-name">
+              <a href="#" class="c-link h-margin-0">Полное наименование единицы товара</a>
+            </div>
+            <div class="c-catalog-col c-catalog-col--cart-cost">
+                <div>
+                  49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                </div>
+                <div>
+                  706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="c-catalog-col c-catalog-col--cart-count">
+              <input class="c-catalog-main__input-count" type="text" name="count" value="1" min="1" max="9999">
+              <div class="l-btn-mini">
+                <button class="c-btn-mini" type="button" name="increase">+</button>
+                <button class="c-btn-mini" type="button" name="reduce">-</button>
+              </div>
+            </div>
+            <div class="c-catalog-col c-catalog-col--cart-remove">
+              <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+            </div>
+          </li>
+        </ul>
+        <div class="c-cart__panel">
+          <div class="c-cart__info">
+            Всего на сумму :
+            <span>1586<i class="fa fa-eur fa-fw" aria-hidden="true"></i></span>
+          </div>
+          <button class="c-btn c-btn--transparent" type="button" name="button">Очистить корзину</button>
+        </div>
+      </div>
+    </div>
+
 	</div>
 	<script src="js/scripts.min.js"></script>
+
+  <script>
+    $(".c-btn:eq(0)").on("click", function() {
+      $(".l-profile-popup").addClass("l-profile-popup--is-active");
+    });
+
+    $(".c-ico-btn--close:eq(0)").on("click", function() {
+      $(".l-profile-popup").removeClass("l-profile-popup--is-active");
+    });
+
+    $(".c-cart__title:eq(0)").on("click", function() {
+      $(".l-cart").addClass("l-cart--is-active");
+      $(".c-ico-btn--close:eq(1)").removeClass("h-hidden");
+    });
+
+    $(".c-ico-btn--close:eq(1)").on("click", function() {
+      $(".l-cart").removeClass("l-cart--is-active");
+      $(".c-ico-btn--close:eq(1)").addClass("h-hidden");
+    });
+  </script>
 
 </body>
 </html>

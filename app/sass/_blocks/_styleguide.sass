@@ -120,16 +120,19 @@ p
   color: $color-1
   cursor: pointer
   font-size: 100%
-  opacity: .8
+  opacity: 1
   outline: none
   text-transform: uppercase
   box-shadow: 1px 1px 8px 2px transparentize($grey-darken, .7)
   white-space: nowrap
+  transition: all .3s
   &:hover
-    background-color: lighten($third-color, 15%)
+    background-color: rgba($color-3, .8)
+    transition: all 0s
   &:active
-    background-color: darken($third-color, 15%)
+    background-color: darken($color-3, 20%)
     box-shadow: 0 0 3px 1px transparentize($grey-darken, .3)
+    transition: all 0s
   &--small
     min-width: auto
     padding: .2em .3em
@@ -177,8 +180,20 @@ p
   &:disabled
     opacity: .3
     background-color: $grey-dark
-    &:hover, &:active
+    &:hover, &:active, &:focus
       background-color: $grey-dark
+      text-decoration: none
+      color: $color-1
+  &--inline
+    display: inline-block
+    margin: 0
+  &--transparent
+    background-color: $secondary-color
+    color: $color-1
+    &:hover
+      background-color: lighten($secondary-color, 10%)
+    &:active
+      background-color: darken($secondary-color, 5%)
 
 .c-link
   margin: 0 5px
@@ -230,6 +245,8 @@ p
   padding: 5px 5px
   &:disabled
     opacity: .3
+  &--inline
+    display: inline-block
 
 .c-styleguide__textarea
   padding: 10px 10px
@@ -252,6 +269,24 @@ p
   border-radius: .1em
   background: $secondary-color
 
+.c-favorite
+  color: $color-1
+  cursor: pointer
+  position: relative
+  display: inline-flex
+  font-size: 120%
+  width: 20px
+  height: 20px
+  justify-content: center
+  align-items: center
+  opacity: .7
+  transition: opacity .3s
+  &:hover
+    opacity: 1
+    transition: opacity .3s
+
+
+
 
 .c-checkbox__inner
   display: none
@@ -273,6 +308,26 @@ p
       border-right: 2px solid $main-color
       transform: rotate(45deg)
 
+
+.c-favorite__tick
+  position: relative
+  height: 100%
+  width: 100%
+  background: url('../img/favorite.png') center no-repeat
+  background-size: 18px 18px
+  top: 0
+  left: 0
+
+.c-favorite__inner
+  display: none
+  visibility: hidden
+  &:checked + .c-favorite__tick
+    position: absolute
+    height: 100%
+    width: 100%
+    background: url('../img/unfavorite.png') center no-repeat
+    background-size: 18px 18px
+
 .c-editor
   margin: 0 0 0 5px
   background: $secondary-color
@@ -289,8 +344,18 @@ p
 .h-margin-0
   margin: 0
 
+.h-padding-0
+  padding: 0
 
 .h-hidden
   display: none
   visibility: hidden
   position: absolute
+
+.h-invisible
+  visibility: hidden
+  opacity: 0
+  user-select: none
+
+.h-animate-no
+  transition: all 0s !important

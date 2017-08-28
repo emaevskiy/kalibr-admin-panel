@@ -45,7 +45,7 @@
       </div>
       <div class="c-content c-content--chat">
 
-        <div class="l-datatable">
+        <div class="l-datatable l-datatable--profile">
        		<div class="c-datatable">
        				<label class="c-datatable__label">
        					Показывать
@@ -65,28 +65,20 @@
               <div class="l-search">
                 <select class="c-datatable__select">
                   <option value="1" selected>Все заявки</option>
-                  <option value="2">Только мои</option>
-                  <option value="3">Только новые</option>
+                  <option value="2">Новые</option>
+                  <option value="3">Текущие</option>
+                  <option value="4">Завершенные</option>
+                  <option value="5">Отмененные</option>
                 </select>
-                <select class="c-datatable__select">
-                  <option value="1" selected>ID заявки</option>
-                  <option value="2">ID пользователя</option>
-                  <option value="3">Дата заявки</option>
-                  <option value="4">Статус заявки</option>
-                  <option value="5">Менеджер</option>
-                </select>
-                <label class="c-search">
-                  <input class="c-search__inner" type="search" placeholder="Поиск...">
-              </label>
               </div>
        			<div class="c-datatable__wrapper">
               <div class="c-datatable__application c-application">
                 <label class="c-application__label">
                   <input class="c-application__check" type="radio" name="app_item"/>
                   <div class="c-application__main">
-                    <div class="c-application__info c-application__info--manager"><span>1</span>
+                    <div class="c-application__info c-application__info--manager"><span>#4</span>
                     </div>
-                    <div class="c-application__info c-application__info--manager">№ заявки:<span>12342</span>
+                    <div class="c-application__info c-application__info--number">№ заявки:<span>12342</span>
                     </div>
                     <div class="c-application__info c-application__info--date">
                       Дата заявки: <span>17.07.2017</span>
@@ -114,10 +106,10 @@
                             <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
                             <div class="c-application__wrapper">
                               <div>
-                                49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                                цена уточняется
                               </div>
                               <div>
-                                706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                                цена уточняется
                               </div>
                             </div>
                             <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
@@ -130,10 +122,10 @@
                             <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
                             <div class="c-application__wrapper">
                               <div>
-                                49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                                цена уточняется
                               </div>
                               <div>
-                                706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                                цена уточняется
                               </div>
                             </div>
                             <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
@@ -146,10 +138,10 @@
                             <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
                             <div class="c-application__wrapper">
                               <div>
-                                49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                                цена уточняется
                               </div>
                               <div>
-                                706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                                цена уточняется
                               </div>
                             </div>
                             <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
@@ -161,10 +153,10 @@
                         <div class="c-application__ctrl-bar">
                           <div class="c-application__total"><h3>Итого к оплате:</h3>
                             <div class="c-application__total-info">
-                              В рублях: <span>245229.10</span><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              В рублях: <span>цена уточняется</span>
                             </div>
                             <div class="c-application__total-info">
-                              В евро: <span>3530.00</span><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              В евро: <span>цена уточняется</span>
                             </div>
                           </div>
                           <div class="c-application__total"><h3>Курсы валют (17.07.2017):</h3>
@@ -221,6 +213,459 @@
                             <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
                           </li>
                           <li class="c-application__item c-application__item--new">
+                            <label class="c-application__label">
+                            <input class="c-application__addfile h-hidden" type="file" />
+                            <div class="c-application__add-item c-application__add-docs"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </label>
+                  </div>
+                </label>
+              </div>
+
+              <div class="c-datatable__application c-application">
+                <label class="c-application__label">
+                  <input class="c-application__check" type="radio" name="app_item"/>
+                  <div class="c-application__main">
+                    <div class="c-application__info c-application__info--manager"><span>#3</span>
+                    </div>
+                    <div class="c-application__info c-application__info--number">№ заявки:<span>12342</span>
+                    </div>
+                    <div class="c-application__info c-application__info--date">
+                      Дата заявки: <span>17.07.2017</span>
+                    </div>
+                    <div class="c-application__info c-application__info--date">
+                      Время заявки: <span>16:35</span>
+                    </div>
+                    <div class="c-application__status c-application__status--processing">
+                      Статус заявки: <span>В работе</span>
+                    </div>
+                  </div>
+                  <div class="c-application__full-info">
+                    <label class="c-application__switcher-wrapper">
+                      <input type="radio" class="c-application__tabs-switcher" name="tabs_switch"/>
+                      <div class="c-application__tabs-button">
+                        Список товаров
+                      </div>
+                      <div class="c-application__tabs">
+                        <ul class="c-application__list">
+                          <li class="c-application__item">
+                            <span class="c-application__id">1</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count c-application__count--disabled"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999" disabled/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__id">2</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count c-application__count--disabled"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999" disabled/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__id">3</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count c-application__count--disabled"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999" disabled/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="c-application__item c-application__item--new h-hidden">
+                            <label class="c-application__label">
+                            <input class="c-application__addfile h-hidden" type="file" />
+                            <div class="c-application__add-item c-application__add-docs"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></div>
+                            </label>
+                          </li>
+                        </ul>
+                        <div class="c-application__ctrl-bar">
+                          <div class="c-application__total"><h3>Итого к оплате:</h3>
+                            <div class="c-application__total-info">
+                              В рублях: <span>245229.10</span><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                            </div>
+                            <div class="c-application__total-info">
+                              В евро: <span>3530.00</span><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="c-application__total"><h3>Курсы валют (17.07.2017):</h3>
+                            <div class="c-application__total-info">
+                              Евро: <span>69,4700</span><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                            </div>
+                            <div class="c-application__total-info">
+                              Доллар США: <span>59,6500</span><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="c-application__total">
+                            <div>
+                              <h3>Персональный менеджер:</h3>
+                              <div class="c-application__total-info">
+                                Иван Попов
+                              </div>
+                              <a class="c-link h-margin-0" href="online_chat.html">Написать менеджеру</a>
+                            </div>
+                          </div>
+                          <div class="c-application__total">
+                            <div class="l-btn-bar">
+                              <button class="c-btn c-btn--block h-invisible">СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
+                              <button class="c-btn c-btn--block">ОТМЕНИТЬ ЗАЯВКУ</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                    <label class="c-application__switcher-wrapper">
+                      <input type="radio" class="c-application__tabs-switcher" name="tabs_switch" />
+                      <div class="c-application__tabs-button c-application__tabs-button--2">
+                        Документы
+                      </div>
+                      <div class="c-application__tabs">
+                        <ul class="c-application__list">
+                          <li class="c-application__item">
+                            <span class="c-application__art">1</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Карточка предприятия.pdf</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove h-invisible" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">2</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Счет на оплату.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove h-invisible" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">3</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Договор поставки.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove h-invisible" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">3</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Договор на оказание услуг.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove h-invisible" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item c-application__item--new">
+                            <label class="c-application__label">
+                            <input class="c-application__addfile h-hidden" type="file" />
+                            <div class="c-application__add-item c-application__add-docs"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </label>
+                  </div>
+                </label>
+              </div>
+
+              <div class="c-datatable__application c-application">
+                <label class="c-application__label">
+                  <input class="c-application__check" type="radio" name="app_item"/>
+                  <div class="c-application__main c-application__main--canceled">
+                    <div class="c-application__info c-application__info--manager"><span>#2</span>
+                    </div>
+                    <div class="c-application__info c-application__info--number">№ заявки:<span>12342</span>
+                    </div>
+                    <div class="c-application__info c-application__info--date">
+                      Дата заявки: <span>17.07.2017</span>
+                    </div>
+                    <div class="c-application__info c-application__info--date">
+                      Время заявки: <span>16:35</span>
+                    </div>
+                    <div class="c-application__status c-application__status--completed">
+                      Статус заявки: <span>Завершена</span>
+                    </div>
+                  </div>
+                  <div class="c-application__full-info">
+                    <label class="c-application__switcher-wrapper">
+                      <input type="radio" class="c-application__tabs-switcher" name="tabs_switch"/>
+                      <div class="c-application__tabs-button">
+                        Список товаров
+                      </div>
+                      <div class="c-application__tabs">
+                        <ul class="c-application__list">
+                          <li class="c-application__item">
+                            <span class="c-application__id">1</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count c-application__count--disabled"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999" disabled/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__id">2</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count c-application__count--disabled"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999" disabled/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__id">3</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count c-application__count--disabled"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999" disabled/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="c-application__item c-application__item--new h-hidden">
+                            <a href="#" class="c-application__add-item"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                        </ul>
+                        <div class="c-application__ctrl-bar">
+                          <div class="c-application__total"><h3>Итого к оплате:</h3>
+                            <div class="c-application__total-info">
+                              В рублях: <span>245229.10</span><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                            </div>
+                            <div class="c-application__total-info">
+                              В евро: <span>3530.00</span><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="c-application__total"><h3>Курсы валют (17.07.2017):</h3>
+                            <div class="c-application__total-info">
+                              Евро: <span>69,4700</span><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                            </div>
+                            <div class="c-application__total-info">
+                              Доллар США: <span>59,6500</span><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="c-application__total">
+                            <div>
+                              <h3>Персональный менеджер:</h3>
+                              <div class="c-application__total-info">
+                                Иван Попов
+                              </div>
+                              <a class="c-link h-margin-0" href="online_chat.html">Написать менеджеру</a>
+                            </div>
+                          </div>
+                          <div class="c-application__total">
+                            <div class="l-btn-bar">
+                              <button class="c-btn c-btn--block">ПОВТОРИТЬ ЗАЯВКУ</button>
+                              <button class="c-btn c-btn--block h-invisible">ОТМЕНИТЬ ЗАЯВКУ</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                    <label class="c-application__switcher-wrapper">
+                      <input type="radio" class="c-application__tabs-switcher" name="tabs_switch" />
+                      <div class="c-application__tabs-button c-application__tabs-button--2">
+                        Документы
+                      </div>
+                      <div class="c-application__tabs">
+                        <ul class="c-application__list">
+                          <li class="c-application__item">
+                            <span class="c-application__art">1</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Карточка предприятия.pdf</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove h-invisible" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">2</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Счет на оплату.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove h-invisible" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">3</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Договор поставки.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove h-invisible" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">3</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Договор на оказание услуг.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove h-invisible" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item c-application__item--new h-hidden">
+                            <label class="c-application__label">
+                            <input class="c-application__addfile h-hidden" type="file" />
+                            <div class="c-application__add-item c-application__add-docs"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </label>
+                  </div>
+                </label>
+              </div>
+
+              <div class="c-datatable__application c-application">
+                <label class="c-application__label">
+                  <input class="c-application__check" type="radio" name="app_item"/>
+                  <div class="c-application__main c-application__main--canceled">
+                    <div class="c-application__info c-application__info--manager"><span>#1</span>
+                    </div>
+                    <div class="c-application__info c-application__info--number">№ заявки:<span>12342</span>
+                    </div>
+                    <div class="c-application__info c-application__info--date">
+                      Дата заявки: <span>17.07.2017</span>
+                    </div>
+                    <div class="c-application__info c-application__info--date">
+                      Время заявки: <span>16:35</span>
+                    </div>
+                    <div class="c-application__status c-application__status--canceled">
+                      Статус заявки: <span>Отменена</span>
+                    </div>
+                  </div>
+                  <div class="c-application__full-info">
+                    <label class="c-application__switcher-wrapper">
+                      <input type="radio" class="c-application__tabs-switcher" name="tabs_switch"/>
+                      <div class="c-application__tabs-button">
+                        Список товаров
+                      </div>
+                      <div class="c-application__tabs">
+                        <ul class="c-application__list">
+                          <li class="c-application__item">
+                            <span class="c-application__id">1</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count c-application__count--disabled"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999" disabled/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__id">2</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count c-application__count--disabled"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999" disabled/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__id">3</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count c-application__count--disabled"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999" disabled/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                49045.82<i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                706.00<i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="c-application__item c-application__item--new h-hidden">
+                            <a href="#" class="c-application__add-item"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                        </ul>
+                        <div class="c-application__ctrl-bar">
+                          <div class="c-application__total"><h3>Итого к оплате:</h3>
+                            <div class="c-application__total-info">
+                              В рублях: <span>245229.10</span><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                            </div>
+                            <div class="c-application__total-info">
+                              В евро: <span>3530.00</span><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="c-application__total"><h3>Курсы валют (17.07.2017):</h3>
+                            <div class="c-application__total-info">
+                              Евро: <span>69,4700</span><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                            </div>
+                            <div class="c-application__total-info">
+                              Доллар США: <span>59,6500</span><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="c-application__total">
+                            <div>
+                              <h3>Персональный менеджер:</h3>
+                              <div class="c-application__total-info">
+                                Иван Попов
+                              </div>
+                              <a class="c-link h-margin-0" href="online_chat.html">Написать менеджеру</a>
+                            </div>
+                          </div>
+                          <div class="c-application__total">
+                            <div class="l-btn-bar">
+                              <button class="c-btn c-btn--block">ПОВТОРИТЬ ЗАЯВКУ</button>
+                              <button class="c-btn c-btn--block h-invisible">ОТМЕНИТЬ ЗАЯВКУ</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                    <label class="c-application__switcher-wrapper">
+                      <input type="radio" class="c-application__tabs-switcher" name="tabs_switch" />
+                      <div class="c-application__tabs-button c-application__tabs-button--2">
+                        Документы
+                      </div>
+                      <div class="c-application__tabs">
+                        <ul class="c-application__list">
+                          <li class="c-application__item">
+                            <span class="c-application__art">1</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Карточка предприятия.pdf</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove h-invisible" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">2</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Счет на оплату.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove h-invisible" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">3</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Договор поставки.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove h-invisible" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">3</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Договор на оказание услуг.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove h-invisible" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item c-application__item--new h-hidden">
                             <label class="c-application__label">
                             <input class="c-application__addfile h-hidden" type="file" />
                             <div class="c-application__add-item c-application__add-docs"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></div>

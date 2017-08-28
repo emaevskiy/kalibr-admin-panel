@@ -46,7 +46,7 @@ body
   display: flex
   flex-direction: column
   min-height: 100vh
-  min-width: 900px
+  min-width: 1024px
 
 .c-header
 	display: flex
@@ -114,16 +114,19 @@ body
 	z-index: 51
 	font-size: 130%
 	background-color: $main-color
-	box-shadow: 0 0 2px 5px $secondary-color
+	box-shadow: 0 0 0px 5px $secondary-color
 	color: $color-1
 	transition: .1s ease-in-out
 	&>.fa
 		margin: auto
+		opacity: .7
 	&:hover>.fa
-		transform: scale3d(1.15, 1.15, 1)
+		// transform: scale3d(1.1, 1.1, 1)
+		opacity: 1
 		transition: .1s ease-in-out
 	&:focus>.fa
-		transform: scale3d(1.15, 1.15, 1)
+		// transform: scale3d(1.1, 1.1, 1)
+		opacity: 1
 
 
 
@@ -421,8 +424,10 @@ body
 
 
 .l-datatable
-  padding: 0px
-  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+	padding: 0px
+	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+	&--profile
+		box-shadow: none
 
 .c-datatable__caption
 	width: 100%
@@ -432,16 +437,17 @@ body
 	color: lighten($font-color, 10%)
 
 .c-datatable
-  position: relative
-  width: 100%
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-between
-  align-items: center
-  background-color: $main-color
-  padding: 10px 15px
-  border-bottom: solid 1px #212121
-  font-size: 100%
+	position: relative
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: center
+	background-color: $main-color
+	padding: 10px 15px
+	border-bottom: solid 1px #212121
+	font-size: 100%
+	min-width: 900px
 
 .c-datatable__label
   padding: 5px 0
@@ -499,6 +505,9 @@ body
 	color: $color-1
 	border: 1px solid $grey-dark
 	margin: 0 5px
+	&--catalog
+		height: auto
+		border: none
 
 .c-datatable__select>option
   background-color: $secondary-color
@@ -599,6 +608,14 @@ body
 .l-brend-logo
 	width: 64px
 	height: 64px
+	&--mini
+		width: 20px
+		height: 20px
+	&--big
+		width: 100%
+		height: 100%
+		max-width: 128px
+		max-height: 128px
 
 .c-brend-logo
 	width: 100%
@@ -613,7 +630,7 @@ body
 	width: 100%
 	object-fit: contain
 	&--hot
-		min-height: 200px
+		height: 200px
 		object-fit: cover
 
 .c-datatable__info
@@ -630,18 +647,20 @@ body
 	text-decoration: none
 	color: $color-1
 	background-color: $third-color
-	&:hover, &--current
+	&:hover, &:focus, &--current
 		color: $color-1
 		background-color: $third-color
-		border-color: $third-color
+		border-color: rgba($color-3, .8)
 		text-decoration: none
 	&--disabled
-    color: transparentize($color-1, .7)
-    cursor: default
-    &:hover
-      background: $third-color
-      color: transparentize($color-1, .7)
-      border-color: $color-2
+		color: transparentize($color-1, .7)
+		cursor: default
+		user-select: none
+		&:hover, &:focus
+			background: $third-color
+			color: transparentize($color-1, .7)
+			border-color: $color-2
+			text-decoration: none
 
 .c-datatable__wrapper::-webkit-scrollbar
   width: 5px
@@ -738,10 +757,13 @@ body
 	justify-content: center
 	align-items: flex-start
 	height: 7rem
-	background-color: darken($main-color, 5%)
+	background-color: rgba($color-3, .4)
 	cursor: pointer
 	&:hover
-		background-color: rgba($third-color, 0.125)
+		background-color: rgba($color-3, .8)
+	&--canceled
+		opacity: .5
+		background-color: darken($third-color, 30%)
 
 .c-application__info
 	display: flex
@@ -771,6 +793,12 @@ body
 		opacity: .4
 		width: 10%
 		text-transform: uppercase
+		padding: 0 5px
+		height: 100%
+	&--number
+		font-size: 140%
+		opacity: 1
+		width: 10%
 		padding: 0 5px
 		height: 100%
 
@@ -836,17 +864,19 @@ body
 	justify-content: center
 	align-items: center
 	cursor: pointer
+	transition: all .3s
 	&:hover
 		text-decoration: none
 		color: $color-1
-		background: $third-color
+		background: rgba($color-3, .8)
+		transition: all 0s
 	&:focus
 		text-decoration: none
 		color: $color-1
 	&:active
 		text-decoration: none
 		color: $color-1
-		background: darken($third-color, 15%)
+		background: darken($color-3, 20%)
 	&>.fa
 		right: 7px
 		position: relative
@@ -863,6 +893,34 @@ body
 	border-top: none
 	top: -1px
 
+.c-application__id
+	min-width: 75px
+	margin-right: 5px
+	width: 5%
+
+.c-application__art
+	min-width: 100px
+	width: 15%
+	margin: 0 5px
+
+.c-application__prod
+	min-width: 80px
+	width: 15%
+	margin: 0 5px
+
+.c-application__brend
+	min-width: 80px
+	width: 15%
+	margin: 0 5px
+
+.c-application__count
+	min-width: 125px
+	margin: 0 5px
+
+.c-application__wrapper
+	margin: 0 5px
+	min-width: 130px
+
 .c-application__count
 	position: relative
 	display: block
@@ -878,6 +936,18 @@ body
 		visibility: visible
 	&:hover .c-application__count-inner
 		background: rgba($color-3, 0.39)
+
+.c-application__count--disabled
+	&:hover .arrows-box
+		opacity: 0
+		visibility: hidden
+	&:hover .c-application__count-inner
+		background: none
+		border: none
+
+.c-application__count--disabled
+	&>.c-application__count-inner:hover
+		border: 1px solid rgba(10, 10, 10, 0)
 
 .c-application__link
 	color: $color-1
@@ -919,14 +989,17 @@ body
 
 
 .c-application__total
-	height: 100%
-	display: flex
-	flex-direction: column
-	justify-content: space-between
-	padding: 0 15px
-	//min-width: 20%
-	&>.l-btn-bar
-		margin-bottom: 0
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 0 15px
+  position: relative
+  //min-width: 20%
+  &>.l-btn-bar
+    margin-bottom: 0
+  &>h3
+    position: relative
 
 .arrows-box
 	position: absolute
@@ -943,14 +1016,14 @@ body
 	align-items: center
 	line-height: 5px
 	cursor: pointer
-	background: $third-color
+	background: rgba($color-3, .4)
 	color: $color-1
 	height: 50%
 	border: 1px solid $main-color
 	font-size: 130%
 	&:hover
-		background: $color-1
-		color: $color-2
+		background: rgba($color-3, .8)
+		color: $color-1
 
 .c-application__wrapper
   display: flex
@@ -964,7 +1037,7 @@ body
 
 .c-application__check
 	&:checked ~ .c-application__main
-		background-color: rgba($third-color, 0.3)
+		background-color: rgba($third-color, .9)
 	&:checked ~ .c-application__full-info
 		display: block
 		position: relative
@@ -998,9 +1071,11 @@ body
 	background: none
 	border: 1px solid rgba($main-color, 0)
 	outline: none
-	&:hover, &:focus
+	&:hover
 		background: $third-color
 		border: 1px solid $color-2
+	&:focus
+		background: rgba($color-3, .8)
 
 .c-application__tabs-button
 	position: absolute
@@ -1158,48 +1233,57 @@ body
 		right: 15px
 		color: $color-1
 		font-size: 200%
+		opacity: .7
 		&:hover, &:focus
 			color: $color-1
-			transform: scale3d(1.1, 1.1, 1)
+			opacity: 1
 	&--trash
 		position: relative
 		font-size: 240%
 		color: $color-1
+		opacity: .7
 		&:disabled
-			opacity: .7
-			&:hover, &:focus
-				transform: scale3d(1, 1, 1)
-		&:hover, &:focus
+			opacity: .3
+		&:not([disabled]):hover, &:not([disabled]):focus
 			color: $color-1
-			transform: scale3d(1.1, 1.1, 1)
+			opacity: 1
 	&--edit
 		position: relative
 		font-size: 1.2em
 		color: $color-1
 		margin-left: 0px
 		//top: calc(50% - 1em)
+		opacity: .7
 		&:hover, &:focus
 			color: $color-1
 			transform: scale3d(1.1, 1.1, 1)
 			outline: none
+			opacity: 1
 	&--remove
 		position: relative
 		font-size: 1.7em
 		color: lighten($danger, 10%)
 		margin-left: 0px
 		//top: calc(50% - 1em)
+		opacity: .7
 		&:hover, &:focus
-      color: lighten($danger, 20%)
-      transform: scale3d(1.2, 1.2, 2)
+			color: lighten($danger, 10%)
+			opacity: 1
 	&--refresh
 		position: absolute
 		top: 10px
 		right: 15px
 		color: $color-1
 		font-size: 150%
+		opacity: .7
 		&:hover, &:focus
 			color: $color-1
-			transform: scale3d(1.1, 1.1, 1)
+			opacity: 1
+	&--currentcy
+		position: absolute
+		top: calc(50% - 11px)
+		right: -25px
+		font-size: 15px
 
 .c-settings__close-btn
   top: -2px
@@ -1270,7 +1354,7 @@ body
 	min-height: 100vh
 	padding: 25px 40px
 	background-image: linear-gradient(109deg, #29323c, #424f5c 83%, #485563)
-	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+	//box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
 
 .c-profile__inner
 	height: 100%
@@ -1279,7 +1363,16 @@ body
 	border: 1px solid $color-2
 	padding: 20px
 	color: $color-1
-	&>table tr td
+	//box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+	&--catalog
+		display: flex
+		align-items: stretch
+		padding: 0
+		border: none
+		background: none
+		box-shadow: none
+		position: relative
+		justify-content: space-between
 
 .c-profile__btn-wrapper
   margin: 40px 35px 20px 35px
@@ -1306,9 +1399,9 @@ body
 	border: 1px solid $color-2
 	border-left: none
 	border-right: none
-	z-index: 99
+	z-index: 97
 	position: relative
-	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+	//box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
 
 .c-topnav__list
   display: flex
@@ -1373,7 +1466,7 @@ body
 	display: flex
 	justify-content: center
 	&--profile
-		box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+		//box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
 
 .c-chat
 	display: flex
@@ -1388,6 +1481,7 @@ body
 	padding-left: 250px
 	&--userside
 		height: calc(100vh - 120px)
+
 
 .c-chat__sidebar
 	background: $main-color
@@ -1537,6 +1631,32 @@ body
 	&:not(.c-sidebar__item--category):hover, &--is-active
 		background: rgba($color-3, .2)
 
+.c-sidebar__ctrl-wrapper
+  width: 100%
+
+.c-sidebar__ctrl
+	width: 50%
+	float: left
+	text-align: center
+	font-size: 120%
+	color: $color-1
+	display: block
+	height: 30px
+	line-height: 27px
+	margin-top: 10px
+	cursor: pointer
+	transition: all .3s
+	background: none
+	border: none
+	&:not([disabled]):hover
+		color: $color-1
+		text-decoration: none
+		background: rgba($color-3, .8)
+		transition: all .0s
+	&:disabled
+		opacity: .3
+
+
 .c-sidebar
 	position: absolute
 	height: 100%
@@ -1672,6 +1792,433 @@ body
   &:active
   	background-color: $info
 
+.c-catalog-sidebar
+	margin-right: 10px
+	background: $main-color
+	padding: 0 15px 10px 15px
+	border: 1px solid $color-2
+	margin-bottom: 30px
+	width: 230px
+
+.c-catalog-sidebar__title
+	margin: 20px 0 10px 0
+	font-weight: bold
+
+.c-catalog-sidebar__list
+	overflow-y: auto
+	max-height: 200px
+	//border: 1px solid $color-2
+	//background: lighten($main-color, 0%)
+
+.c-catalog-sidebar__item
+	//border-bottom: 1px solid $color-2
+
+.c-catalog-sidebar__item-inner
+	width: 100%
+	height: 100%
+	display: flex
+	align-items: center
+	padding-left: 0px
+	padding: 5px 5px
+	cursor: pointer
+	font-size: 120%
+	position: relative
+	&>.fa
+		margin-right: 5px
+		font-size: 130%
+	&--brends
+		justify-content: space-between
+		padding-left: 26px
+		&::before
+			display: block
+			position: absolute
+			content: ''
+			width: 16px
+			height: 16px
+			top: calc(50% - 8px)
+			left: 5px
+			border-radius: 50%
+			border: 1px solid $color-2
+			background: $grey-light
+		&::after
+			display: block
+			position: absolute
+			content: ''
+			width: 8px
+			height: 8px
+			top: calc(50% - 4px)
+			left: 9px
+			border-radius: 50%
+			background: $color-2
+			visibility: hidden
+			opacity: 0
+
+.c-catalog-sidebar__filter
+  //padding-top: 20px
+
+.c-catalog-sidebar__brend-name
+  font-size: 120%
+
+.c-catalog-main
+	width: calc(100% - 235px)
+	display: flex
+	flex-direction: column
+	align-items: center
+	margin-bottom: 30px
+
+.c-panel
+	width: 100%
+	margin-bottom: 10px
+	background: $main-color
+	border: 1px solid $color-2
+	//box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+
+.c-catalog-filter
+	display: flex
+	justify-content: space-between
+	padding: 10px 15px
+
+.c-breadcrumbs
+	width: 100%
+	font-size: 120%
+	margin: 10px 0 20px 0
+
+.c-catalog-header
+	display: flex
+	justify-content: space-between
+	padding: 10px 0
+
+.c-catalog-main__list
+	border: 1px solid $color-2
+	border-bottom: none
+	margin-bottom: 10px
+	width: 100%
+
+
+
+.c-catalog-main__item
+	display: flex
+	justify-content: space-between
+	padding: 5px 0
+	font-size: 110%
+	background: $main-color
+	border-bottom: 1px solid $color-2
+	&:nth-of-type(2n+2)
+		background: lighten($main-color, 5%)
+
+.c-catalog-col
+	display: flex
+	align-items: center
+	position: relative
+	padding: 0 15px
+	&:not(:last-of-type)::after
+		content: ''
+		display: block
+		position: absolute
+		background-color: $color-2
+		right: 0
+		top: 0
+		width: 1px
+		height: 100%
+	&>strong
+		font-size: 120%
+		font-weight: bold
+		text-align: center
+	&--art
+		width: 25%
+	&--name
+		width: 26%
+	&--cost
+	  width: 20%
+	  min-width: 140px
+	  max-width: 180px
+	  justify-content: center
+	  flex-direction: column
+	  align-items: center
+	&--count
+		min-width: 187px
+		width: 187px
+		justify-content: center
+		flex-wrap: wrap
+	&--favorite
+		width: 10%
+		min-width: 80px
+		justify-content: center
+	&-cart--art
+		width: 32%
+	&--cart-name
+		width: 35%
+	&--cart-cost
+	  width: 20%
+	  min-width: 120px
+	  max-width: 180px
+	  justify-content: center
+	  flex-direction: column
+	  align-items: flex-end
+	&--cart-count
+		min-width: 80px
+		width: 80px
+		display: flex
+	&--cart-remove
+		width: 10%
+		min-width: 40px
+		justify-content: center
+
+.c-catalog-main__input-count
+	width: 36px
+	height: 29px
+	border: 1px solid $color-2
+	background: rgba($color-3, .4)
+	padding: 0 3px
+	text-align: center
+	transition: all .3s
+	&:focus
+		background: rgba($color-3, .8)
+		outline: none
+
+
+.l-btn-mini
+	margin-right: 5px
+
+.c-btn-mini
+	width: 14.5px
+	height: 14.5px
+	line-height: 9px
+	border: 1px solid $color-2
+	background: rgba($color-3, .4)
+	padding: 0
+	margin: 0
+	display: block
+	transition: all .3s
+	font-size: 10px
+	&:hover
+		background-color: rgba($color-3, .8)
+		transition: all 0s
+	&:active
+		background-color: darken($color-3, 20%)
+		box-shadow: 0 0 3px 1px transparentize($grey-darken, .3)
+		transition: all 0s
+
+.c-catalog-sidebar__radio
+	display: none
+	visibility: hidden
+	display: none
+	&:checked + .c-catalog-sidebar__item-inner
+		background: rgba($color-3, .4)
+		&::after
+			opacity: 1
+			visibility: visible
+
+.l-cart
+	position: fixed
+	bottom: 0
+	width: 100%
+	height: 40px
+	background: $color-2
+	z-index: 98
+	display: flex
+	justify-content: center
+	align-items: center
+	&--is-active
+		position: absolute
+		width: 100%
+		height: 100%
+		background: rgba(0, 0, 0, .6)
+		&>.c-cart
+			max-width: 700px
+			width: 90%
+			min-width: 420px
+			min-height: 200px
+			height: auto
+			max-height: 90%
+			border-radius: 15px
+			box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+			&>.c-cart__title
+				cursor: default
+				font-weight: bold
+				&:hover
+					background: $color-2
+
+
+
+.c-cart
+	width: 100%
+	height: 40px
+	background: $color-2
+	overflow: hidden
+	border: 1px solid $color-2
+	position: relative
+	font-size: 110%
+
+.c-cart__title
+	height: 40px
+	line-height: 40px
+	color: $color-1
+	width: 100%
+	text-align: center
+	cursor: pointer
+	&:hover
+		background: lighten($color-2, 5%)
+
+.c-cart__panel
+	height: 50px
+	background: $color-2
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 10px 10px 10px 10px
+
+.c-cart__info
+	color: $color-1
+	font-size: 120%
+	font-weight: bold
+	&>span
+		font-weight: normal
+
+
+
+.c-cart__list
+	padding: 20px 0
+	max-height: 600px
+	background: $main-color
+	overflow-y: auto
+
+.c-cart__item
+	display: flex
+	justify-content: space-between
+	padding: 10px 0
+	border-bottom: 1px solid $color-2
+	color: $color-1
+
+
+
+
+
+
+
+
+
+
+
+.l-profile-popup
+	position: absolute
+	width: 100%
+	height: 100vh
+	background: rgba(0, 0, 0, .6)
+	z-index: 99
+	display: flex
+	justify-content: center
+	align-items: center
+	display: none
+	visibility: hidden
+	&--is-active
+	  display: flex
+	  visibility: visible
+
+
+.c-profile-popup
+	width: 91%
+	height: 90%
+	background: #29323c
+	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+	border: 1px solid $color-2
+	border-radius: 15px
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	align-items: center
+	overflow-y: auto
+	padding: 10px 0
+	position: relative
+
+
+.c-alph-filter
+	width: 100%
+	display: flex
+	// align-items: center
+	padding: 15px 15px
+	&>label>div
+		padding: 5px
+		font-size: 120%
+		color: $color-1
+		border: 1px solid $color-2
+		width: 35px
+		padding: 3px 0
+		height: 26px
+		text-align: center
+		margin-right: 2px
+		cursor: pointer
+		background: rgba($color-3, .3)
+		transition: all .3s
+		&:hover
+			background-color: rgba($color-3, .8)
+			transition: all .0s
+
+.c-alph-filter__radio
+  display: none
+  visibility: hidden
+  position: absolute
+  &:checked + div
+    background: rgba($color-3, .8)
+
+
+.c-alph-filter__list
+	display: flex
+	flex-wrap: wrap
+	margin: 0 30px 0 50px
+
+.c-alph-filter__item
+	width: 26px
+	height: 26px
+	padding: 3px 0
+	text-align: center
+	border: 1px solid $color-2
+	background-color: rgba($color-3, .3)
+	color: $color-1
+	font-size: 120%
+	margin: 0 2px 2px 0
+	cursor: pointer
+	transition: all .3s
+	&--is-active, &:hover
+		background-color: rgba($color-3, .8)
+		transition: all .0s
+
+
+
+
+.c-profile-popup__list
+	display: flex
+	flex-wrap: wrap
+	width: auto
+	margin-top: 20px
+	overflow-y: auto
+	height: 100%
+	padding: 0 10px
+
+.c-profile-popup__item
+	position: relative
+	width: 150px
+	height: 150px
+	border: 4px solid $color-2
+	margin: 10px 10px 40px 10px
+	padding: 7px
+	background: white
+	cursor: pointer
+	border-radius: 10%
+	&:hover, &--is-active
+		border: 4px solid rgba($color-3, .5)
+
+.c-profile-popup__item-name
+	position: absolute
+	width: 100%
+	color: $color-1
+	text-align: center
+	font-size: 120%
+	bottom: -25px
+	font-weight: bold
+	text-transform: uppercase
+	left: 0
+
 .c-footer
 	width: 100%
 	height: 20px
@@ -1709,6 +2256,92 @@ body
 	margin-bottom: 15px
 	background: $secondary-color
 
+.l-modal-window
+	position: absolute
+	width: 100%
+	height: 100%
+	min-height: 100vh
+	z-index: 999
+	display: flex
+	justify-content: center
+	align-items: center
+	background: rgba(0, 0, 0, .6)
+	top: 0
+	left: 0
+	opacity: 0
+	transition: opacity .3s ease-in-out
+	transform: scale3d(0, 0, 0)
+	&--is-active
+		opacity: 1
+		transition: opacity .3s ease-in-out
+		transform: scale3d(1, 1, 1)
+
+.c-modal-window
+  min-width: 350px
+  //height: 210px
+  background: $color-2
+  border: 1px solid $color-2
+  border-radius: 15px
+  box-shadow: 0 0 10px 3px rgba(0,0,0, .5)
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  padding-bottom: 20px
+  opacity: 0
+  transition: opacity .3s ease-in-out
+  transform: scale3d(0, 0, 0)
+  position: absolute
+  &--is-active
+    position: relative
+    opacity: 1
+    transition: all .3s ease-in-out
+    transform: scale3d(1, 1, 1)
+
+.c-modal-window__title
+	width: 100%
+	padding: 5px 15px
+	font-size: 140%
+	color: rgba(255, 255, 255, .5)
+	font-weight: bold
+	text-align: center
+	border-bottom: 1px solid rgba($secondary-color, .5)
+	margin: 0
+
+.c-modal-window__ico
+  width: 64px
+  height: 64px
+  margin-top: 20px
+  &--success
+  	background: url("../img/ok-256.png") center no-repeat
+  	background-size: 64px 64px
+  &--warning
+  	background: url("../img/warning-256.png") center no-repeat
+  	background-size: 64px 64px
+  &--danger
+  	background: url("../img/danger-256.png") center no-repeat
+  	background-size: 64px 64px
+  &--info
+  	background: url("../img/info-256.png") center no-repeat
+  	background-size: 64px 64px
+
+
+.c-modal-window__text
+	font-size: 180%
+	color: rgba(255, 255, 255, .5)
+	font-weight: bold
+	margin: 20px 0 0 0
+	text-align: center
+	padding: 0 15px
+	&--info
+		font-size: 130%
+		margin: 20px 0 10px 0
+		font-weight: normal
+
+.c-modal-window__btn-wrapper
+	display: flex
+	width: 100%
+	justify-content: center
 
 ::-webkit-scrollbar
   width: 5px
