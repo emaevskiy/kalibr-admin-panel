@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Чат</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div class="main-container">
+    <div class="c-header">
+      <div class="c-logo">
+      </div>
+      <div class="c-header__wrapper">
+        <div class="c-header__time">
+        </div>
+        <div class="c-header__date">
+        </div>
+      </div>
+    </div>
+    <div class="c-main">
+      <div class="c-navbar">
+        <input id="c-menu-ctrl" type="checkbox" checked/>
+        <label for="c-menu-ctrl" class="c-menu-ctrl"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></label>
+        <h4 class="c-navbar__title">Admin Panel ver. 1.0</h4>
+        <div class="c-userbar">
+          <div class="c-userbar__img"></div>
+          <div class="c-userbar__username">John Doe</div>
+          <div class="c-userbar__email">john.doe@example.com</div>
+          <div class="c-userbar__wrapper">
+            <a href="#" class="c-userbar__link c-link"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> Настройки</a>
+            <a href="#" class="c-userbar__link c-link"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i> Выход</a>
+          </div>
+        </div>
+        <ul class="c-navbar__list">
+          <li class="c-navbar__item">
+            <a href="index.html" class="c-navbar__navlink c-navlink"><span>Каталог</span><i class="fa fa-book fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="brends.html" class="c-navbar__navlink c-navlink"><span>Производители</span><i class="fa fa-building fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="classification.html" class="c-navbar__navlink c-navlink"><span>Классификация</span><i class="fa fa-th fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="product_types.html" class="c-navbar__navlink c-navlink"><span>Вид товара</span><i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="news.html" class="c-navbar__navlink c-navlink"><span>Новости</span><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="hot_news.html" class="c-navbar__navlink c-navlink"><span>Горячие новости</span><i class="fa fa-fire fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="clients.html" class="c-navbar__navlink c-navlink"><span>Наши клиенты</span><i class="fa fa-male fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="users.html" class="c-navbar__navlink c-navlink"><span>Пользователи</span><i class="fa fa-users fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="applications.html" class="c-navbar__navlink c-navlink c-navlink--new"><span>Список заявок</span><i class="fa fa-list fa-fw" aria-hidden="true"><span class="c-navbar__new"></span></i></a>
+          </li>
+					<li class="c-navbar__item">
+            <a href="chat.html" class="c-navbar__navlink c-navlink c-navlink--is-active"><span>Чат</span><i class="fa fa-comment fa-fw" aria-hidden="true"><span class="c-navbar__new"></span></i></a>
+          </li>
+        </ul>
+        <div class="c-settings">
+          <!-- c-settings--is-active -->
+          <a href="#" class="c-settings__close-btn c-ico-btn c-ico-btn--close" title="Закрыть"><i class="fa fa-close fa-fw" aria-hidden="true"></i></a>
+          <ul class="c-settings__list">
+            <li class="c-settings__item">
+              <label class="c-settings__label">
+                <input class="c-settings__radio" type="radio" name="unit" />
+                <div class="c-settings__userbar">
+                  <div class="c-user-status c-user-status--offline c-settings__user-status"></div>
+                  <div class="c-settings__img-wrapper">
+                    <img src="img/dima.jpg" alt="user_photo" class="c-settings__img">
+                  </div>
+                  <div class="c-settings__wrapper">
+                    <div class="c-settings__username">
+                      Дмитрий Медведев
+                    </div>
+                    <div class="c-settings__position">
+                      Премьер министр РФ
+                    </div>
+                    <div class="c-settings__email">
+                      dima.mozhet@example.com
+                    </div>
+                  </div>
+                  <div class="c-settings__status">
+                    <div class="c-settings__title">
+                      Статус:
+                    </div>
+                    <textarea class="c-styleguide__textarea c-settings__status__inner" rows="3" placeholder="Статус">Добрый день! Я являюсь премьер министром РФ. Вы можете направить мне предложения по изменению системы образования в стране или ваши пожелания по работе Роскомнадзора.
+                    </textarea>
+                    <button class="c-btn c-btn--small c-settings__btn">СМЕНИТЬ ПОЛЬЗОВАТЕЛЯ</button>
+                    <button class="c-btn c-btn--small c-settings__btn">ОБНОВИТЬ СТАТУС</button>
+                  </div>
+                </div>
+              </label>
+            </li>
+            <li class="c-settings__item">
+              <label class="c-settings__label">
+                <input class="c-settings__radio" type="radio" name="unit" />
+                <div class="c-settings__userbar">
+                  <div class="c-user-status c-user-status--online c-settings__user-status"></div>
+                  <div class="c-settings__img-wrapper">
+                    <img src="img/gena.jpg" alt="user_photo" class="c-settings__img">
+                  </div>
+                  <div class="c-settings__wrapper">
+                    <div class="c-settings__username">
+                      Геннадий Букин
+                    </div>
+                    <div class="c-settings__position">
+                      Продавец обуви
+                    </div>
+                    <div class="c-settings__email">
+                      gena.bukin@example.com
+                    </div>
+                  </div>
+                  <div class="c-settings__status">
+                    <div class="c-settings__title">
+                      Статус:
+                    </div>
+                    <textarea class="c-styleguide__textarea c-settings__status__inner" rows="3" placeholder="Статус">Добрый день! Я помогу Вам подобрать обувь, которая бы подчеркивала Ваш стиль и стала отличным дополнением к другой обуви в вашем шкафу.
+                    </textarea>
+                    <button class="c-btn c-btn--small c-settings__btn">СМЕНИТЬ ПОЛЬЗОВАТЕЛЯ</button>
+                    <button class="c-btn c-btn--small c-settings__btn">ОБНОВИТЬ СТАТУС</button>
+                  </div>
+                </div>
+              </label>
+            </li>
+            <li class="c-settings__item">
+              <label class="c-settings__label">
+                <input class="c-settings__radio" type="radio" name="unit" />
+                <div class="c-settings__userbar">
+                  <div class="c-user-status c-user-status--offline c-settings__user-status"></div>
+                  <div class="c-settings__img-wrapper">
+                    <img src="img/user.jpg" alt="user_photo" class="c-settings__img">
+                  </div>
+                  <div class="c-settings__wrapper">
+                    <div class="c-settings__username">
+                      Иван Иванов
+                    </div>
+                    <div class="c-settings__position">
+                      Консультант
+                    </div>
+                    <div class="c-settings__email">
+                      ivan.ivanov@example.com
+                    </div>
+                  </div>
+                  <div class="c-settings__status">
+                    <div class="c-settings__title">
+                      Статус:
+                    </div>
+                    <textarea class="c-styleguide__textarea c-settings__status__inner" rows="3" placeholder="Статус">Добрый день! Я являюсь экспертом компании "Калибр". Я могу проконсультировать Вас по нашему ассортименту.
+                    </textarea>
+                    <button class="c-btn c-btn--small c-settings__btn">СМЕНИТЬ ПОЛЬЗОВАТЕЛЯ</button>
+                    <button class="c-btn c-btn--small c-settings__btn">ОБНОВИТЬ СТАТУС</button>
+                  </div>
+                </div>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="c-content c-content--chat">
+        <div class="l-chat">
+          <div class="c-chat">
+            <div class="c-sidebar c-chat__sidebar">
+              <div class="l-search">
+                <label class="c-search">
+                  <input class="c-search__inner" type="search" placeholder="Поиск...">
+                </label>
+              </div>
+              <div class="c-sidebar__userlist-wrapper">
+                <ul class="c-sidebar__list">
+                  <li class="c-sidebar__item c-sidebar__item--category">
+                    <div>
+                      <i class="fa fa-question fa-fw" aria-hidden="true"></i> Тех. поддержка
+                    </div>
+                  </li>
+                  <li class="c-sidebar__item c-sidebar__item--is-active">
+                    <div class="c-chat__user">
+                      <img class="c-chat__img" src="img/user.jpg" alt="userphoto">
+                      <span class="c-chat__info c-chat__info--username">John Doe</span>
+                      <span class="c-chat__info c-chat__info--position">Администратор</span>
+                      <div class="c-chat__user-status c-chat__user-status--online"><span>online</span></div>
+                    </div>
+                  </li>
+                  <li class="c-sidebar__item">
+                    <div class="c-chat__user">
+                      <img class="c-chat__img" src="img/dima.jpg" alt="userphoto">
+                      <span class="c-chat__info c-chat__info--username">Дмитрий Медведев</span>
+                      <span class="c-chat__info c-chat__info--position">Администратор</span>
+                      <div class="c-chat__user-status c-chat__user-status--online"><span>online</span></div>
+                    </div>
+                  </li>
+                  <li class="c-sidebar__item">
+                    <div class="c-chat__user">
+                      <img class="c-chat__img" src="img/gena.jpg" alt="userphoto">
+                      <span class="c-chat__info c-chat__info--username">Гена Букин</span>
+                      <span class="c-chat__info c-chat__info--position">Модератор</span>
+                      <div class="c-chat__user-status"><span>Был в сети 6ч назад</span></div>
+                    </div>
+                  </li>
+                  <li class="c-sidebar__item c-sidebar__item--category">
+                    <div>
+                      <i class="fa fa-users fa-fw" aria-hidden="true"></i> Клиенты
+                    </div>
+                    <div>
+                      <label class="c-checkbox" title="Показать только персональных">
+                        <input class="c-checkbox__inner" type="checkbox">
+                        <div class="c-checkbox__tick"></div>
+                      </label>
+                      Персональные
+                    </div>
+
+                  </li>
+                  <li class="c-sidebar__item">
+                    <div class="c-chat__user">
+                      <img class="c-chat__img" src="img/avatar.jpg" alt="userphoto">
+                      <span class="c-chat__info c-chat__info--username">Вася Пупкин</span>
+                      <span class="c-chat__info c-chat__info--position">Ололош</span>
+                      <div class="c-chat__user-status c-chat__user-status--online"><span>online</span></div>
+                    </div>
+                  </li>
+                  <li class="c-sidebar__item c-sidebar__item--new">
+                    <div class="c-chat__user">
+                      <img class="c-chat__img" src="img/cartman.jpg" alt="userphoto">
+                      <span class="c-chat__info c-chat__info--username">Картман</span>
+                      <span class="c-chat__info c-chat__info--position">Картман</span>
+                      <div class="c-chat__user-status c-chat__user-status--online"><span>online</span></div>
+                    </div>
+                  </li>
+                  <li class="c-sidebar__item">
+                    <div class="c-chat__user">
+                      <img class="c-chat__img" src="img/batters.jpg" alt="userphoto">
+                      <span class="c-chat__info c-chat__info--username">Баттерс</span>
+                      <span class="c-chat__info c-chat__info--position">Профессор Хаос</span>
+                      <div class="c-chat__user-status"><span>Был в сети 6ч назад</span></div>
+                    </div>
+                  </li>
+                  <li class="c-sidebar__item">
+                    <div class="c-chat__user">
+                      <img class="c-chat__img" src="img/kenny.jpg" alt="userphoto">
+                      <span class="c-chat__info c-chat__info--username">Кенни</span>
+                      <span class="c-chat__info c-chat__info--position">Kenny Never Die</span>
+                      <div class="c-chat__user-status"><span>Был в сети 6ч назад</span></div>
+                    </div>
+                  </li>
+                  <li class="c-sidebar__item c-sidebar__item--new">
+                    <div class="c-chat__user">
+                      <img class="c-chat__img" src="img/avatar.jpg" alt="userphoto">
+                      <span class="c-chat__info c-chat__info--username">Прокопенко</span>
+                      <span class="c-chat__info c-chat__info--position">"Омский Газ-Мяс"</span>
+                      <div class="c-chat__user-status c-chat__user-status--online"><span>online</span></div>
+                    </div>
+                  </li>
+									<li class="c-sidebar__ctrl-wrapper">
+										<button class="c-sidebar__ctrl" disabled>
+											<i class="fa fa-angle-left" aria-hidden="true"></i> Предыдущие
+										</button>
+										<button class="c-sidebar__ctrl">
+											Следующие <i class="fa fa-angle-right" aria-hidden="true"></i>
+										</button>
+									</li>
+                </ul>
+              </div>
+            </div>
+            <div class="c-chat__userbar">
+              <a href="users.html" class="c-chat__user c-chat__user--link">
+                <img class="c-chat__img" src="img/user.jpg" alt="userphoto">
+                <span class="c-chat__info c-chat__info--username">John Doe</span>
+                <span class="c-chat__info c-chat__info--position">Администратор</span>
+                <div class="c-chat__tooltip-wrapper">
+                  <div class="c-chat__tooltip">
+                    <span>Организация: ООО "Калибр"</span>
+                    <span>Город: Омск</span>
+                  </div>
+                  <div class="c-chat__tooltip">
+                    <span>Эл. почта: john.doe@example.com</span>
+                    <span>Телефон: +7 (999) 999-99-99</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <ul class="c-dialog__list c-dialog__list">
+              <li class="c-dialog__date">
+                29.07.2017
+              </li>
+              <li class="c-dialog__item">
+                <div class="c-dialog__message c-dialog__message--inc">
+                  <div class="c-dialog__message-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum error, odit doloremque dicta, dolore ipsum eligendi eius. Rerum ipsa corporis hic maiores quis minima voluptatum, amet autem voluptate earum aperiam doloribus beatae esse nostrum vero eum quasi? Aspernatur, pariatur, rerum!
+                  </div>
+                  <div class="c-dialog__message-time">
+                    15:22
+                  </div>
+                </div>
+              </li>
+              <li class="c-dialog__item">
+                <div class="c-dialog__message c-dialog__message--out">
+                  <div class="c-dialog__message-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, deserunt.
+                  </div>
+                  <div class="c-dialog__message-time">
+                    15:22
+                  </div>
+                </div>
+              </li>
+              <li class="c-dialog__item">
+                <div class="c-dialog__message c-dialog__message--out">
+                  <div class="c-dialog__message-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorum at, odit amet dicta quidem iste omnis harum laborum! Doloribus impedit obcaecati perspiciatis facilis ad illo ratione excepturi quam! Nesciunt nobis laboriosam illum necessitatibus ab. Repudiandae quod sint qui incidunt inventore aut, cumque neque reprehenderit. Quas illum, tempore molestias fugit!
+                  </div>
+                  <div class="c-dialog__message-time">
+                    15:22
+                  </div>
+                </div>
+              </li>
+              <li class="c-dialog__item">
+                <div class="c-dialog__message c-dialog__message--inc">
+                  <div class="c-dialog__message-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, deserunt.
+                  </div>
+                  <div class="c-dialog__message-time">
+                    15:22
+                  </div>
+                </div>
+              </li>
+              <li class="c-dialog__item">
+                <div class="c-dialog__message c-dialog__message--out">
+                  <div class="c-dialog__message-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis error explicabo excepturi nostrum, repellendus non, delectus incidunt accusantium ipsam expedita voluptates assumenda voluptate, tempora iure ab quod veritatis natus, soluta!
+                  </div>
+                  <div class="c-dialog__message-time">
+                    15:22
+                  </div>
+                </div>
+              </li>
+              <li class="c-dialog__item">
+                <div class="c-dialog__message c-dialog__message--out">
+                  <div class="c-dialog__message-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quo atque ipsam quos fuga maiores! Explicabo quo perferendis molestiae velit.
+                  </div>
+                  <div class="c-dialog__message-time">
+                    15:22
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="l-chat__new-message">
+              <input class="c-chat__new-message" type="text" name="message" placeholder="Написать сообщение...">
+              <button class="c-chat__send-btn"></button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+    <div class="c-footer">
+
+    </div>
+	</div>
+	<script src="js/scripts.min.js"></script>
+
+  <script>
+    let dialog = $(".c-dialog__list");
+    dialog.scrollTop(dialog.prop('scrollHeight'));
+  </script>
+
+
+</body>
+</html>

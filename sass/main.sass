@@ -1,0 +1,2410 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "_blocks/styleguide"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+.clearfix::after,
+.clearfix::before
+    content: ""
+    display: table
+    clear: both
+
+html
+	font-size: 10px
+
+body
+	position: relative
+	line-height: 1.5
+	font-family: $default-font
+	overflow-x: hidden
+	font-size: 100%
+
+.main-container
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  min-width: 1024px
+
+.c-header
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+	height: 60px
+	background-color: darken($main-color, 5%)
+	border-bottom: 1px solid $color-2
+	box-shadow: 1px 0px 6px 3px rgba(0, 0, 0, .5)
+	z-index: 50
+
+.c-logo
+	width: 160px
+	height: 100%
+	background: url('../img/logo.png') 50% no-repeat
+	background-size: contain
+	margin: 0 10px
+	&--login
+		width: 100%
+		height: 60px
+		margin: 0
+
+.c-header__wrapper
+	margin: 0 15px
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.c-header__time
+	color: $color-1
+	font-size: 200%
+
+.c-header__date
+	color: $color-1
+	font-size: 100%
+
+.c-main
+  display: flex
+  width: 100%
+  min-height: calc(100vh - 80px)
+  align-items: stretch
+  background-color: $secondary-color
+
+.c-navbar
+	position: relative
+	background-color: $main-color
+	border-right: 1px solid $color-2
+	box-shadow: 0px 1px 6px 3px rgba(0, 0, 0, .5)
+
+#c-menu-ctrl
+	display: none
+	visibility: hidden
+
+.c-menu-ctrl
+	position: absolute
+	right: -18px
+	top: -1px
+	display: flex
+	width: 30px
+	height: 30px
+	border: 2px solid $color-2
+	border-radius: 50%
+	cursor: pointer
+	z-index: 51
+	font-size: 130%
+	background-color: $main-color
+	box-shadow: 0 0 0px 5px $secondary-color
+	color: $color-1
+	transition: .1s ease-in-out
+	&>.fa
+		margin: auto
+		opacity: .7
+	&:hover>.fa
+		// transform: scale3d(1.1, 1.1, 1)
+		opacity: 1
+		transition: .1s ease-in-out
+	&:focus>.fa
+		// transform: scale3d(1.1, 1.1, 1)
+		opacity: 1
+
+
+
+.c-navbar__title
+	margin-top: 5px
+	margin-bottom: 0
+	text-align: center
+	width: 60px
+	overflow: hidden
+	white-space: nowrap
+	opacity: 0
+	transition: .3s ease-in-out
+
+.c-userbar
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	align-items: center
+	padding: 15px
+	width: 60px
+	white-space: nowrap
+	overflow: hidden
+	transition: .3s ease-in-out
+
+.c-userbar__img
+	width: 6rem
+	height: 6rem
+	border-radius: 5rem
+	background: url('../img/user.jpg') 50% no-repeat
+	background-size: cover
+	border: 1px solid $color-2
+
+.c-userbar__username
+	color: $color-1
+	font-size: 140%
+	margin: 5px 0 0 0
+	opacity: 0
+	transition: .1s ease-in-out
+
+.c-userbar__email
+	color: $color-1
+	font-size: 110%
+	opacity: 0
+	transition: .1s ease-in-out
+
+.c-userbar__wrapper
+	display: flex
+	justify-content: space-around
+	width: 100%
+	margin: 5px 0
+	opacity: 0
+	transition: .1s ease-in-out
+
+.c-navbar__list
+	width: 60px
+	transition: .3s ease-in-out
+
+.c-navbar__navlink
+	width: 100%
+	overflow: hidden
+	padding-right: 40px
+	white-space: nowrap
+	&>span
+		opacity: 0
+		transition: .1s ease-in-out
+
+
+.c-navlink
+	position: relative
+	display: block
+	padding: .5em 10px .5em 15px
+	font-size: 130%
+	text-decoration: none
+	color: transparentize($color-1, .4)
+	border-bottom: 1px solid transparentize($color-1, .8)
+	&:hover
+		background-color: transparentize($color-3, .9)
+		color: $color-1
+		text-decoration: none
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			top: 0
+			height: 100%
+			width: 4px
+			background-color: $color-3
+	&:focus
+		background-color: transparentize($color-3, .9)
+		color: $color-1
+		text-decoration: none
+	&--is-active
+		background-color: transparentize($color-3, .71)
+		color: $color-1
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			top: 0
+			height: 100%
+			width: 4px
+			background-color: $color-3
+		&:hover
+			background-color: transparentize($color-3, .71)
+
+.c-navlink>.fa
+	position: absolute
+	right: 22px
+	top: calc(50% - .5em)
+	transition: right .2s ease-in-out
+
+#c-menu-ctrl
+	&:checked ~ .c-userbar
+		width: 180px
+		background-color: darken($main-color, 5%)
+		transition: .4s ease-in-out
+	&:checked ~ .c-navbar__title
+		width: 180px
+		background-color: darken($main-color, 5%)
+		opacity: 1
+		transition: .4s ease-in-out
+	&:checked ~ .c-userbar>.c-userbar__username
+		opacity: 1
+		transition: .3s ease-in-out .2s
+	&:checked ~ .c-userbar>.c-userbar__email
+		opacity: 1
+		transition: .3s ease-in-out .2s
+	&:checked ~ .c-userbar>.c-userbar__wrapper
+		opacity: 1
+		transition: .3s ease-in-out .2s
+	&:checked ~ .c-navbar__list
+		width: 180px
+		transition: .4s ease-in-out
+	&:checked ~ .c-navbar__list>.c-navbar__item>.c-navbar__navlink>span
+		opacity: 1
+		transition: opacity .3s ease-in-out .2s
+	&:checked ~ .c-navbar__list>.c-navbar__item>.c-navbar__navlink>.fa
+		right: 10px
+		transition: right .4s ease-in-out
+
+.c-settings
+	position: absolute
+	width: 280px
+	height: 100%
+	top: 0
+	left: calc(100% + 4px)
+	background: $main-color
+	z-index: 49
+	border-right: 1px solid $color-2
+	border-left: 1px solid transparentize($secondary-color, .5)
+	box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, .5)
+	overflow-y: auto
+	overflow-x: hidden
+	padding: 30px 0
+	display: none
+	visibility: hidden
+	&--is-active
+		display: block
+		visibility: visible
+
+
+
+
+.c-settings__list
+  border-top: 1px solid transparentize($secondary-color, .5)
+
+.c-settings__item
+	border-bottom: 1px solid transparentize($secondary-color, .5)
+
+.c-settings__label
+	display: block
+	width: 100%
+	background: $main-color
+	cursor: pointer
+
+.c-settings__radio
+	display: none
+	visibility: hidden
+	position: absolute
+	&:checked + .c-settings__userbar
+		background: $third-color
+		transition: .2s ease-out
+	&:checked + .c-settings__userbar>.c-settings__status
+		opacity: 1
+		transition: .2s ease-out
+		position: relative
+		padding: 10px 0 0 0
+		height: 14.2rem
+
+
+.c-settings__userbar
+	position: relative
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	padding: 10px 15px
+	overflow: hidden
+	transition: .2s ease-out
+
+.c-user-status
+	position: relative
+	width: 8px
+	height: 8px
+	border-radius: 5px
+	&--online
+		background: linear-gradient(to top, #32CD32, #98FB98)
+		&::before
+			content: 'online'
+			display: block
+			top: -3px
+			color: $color-1
+			font-size: 90%
+			position: absolute
+			right: calc(100% + 5px)
+			opacity: .5
+	&--offline
+		background: linear-gradient(to top, #696969, #DCDCDC)
+		&::before
+			content: 'offline'
+			display: block
+			top: -3px
+			color: $color-1
+			font-size: 90%
+			position: absolute
+			right: calc(100% + 5px)
+			opacity: .5
+
+.c-settings__user-status
+  position: absolute
+  right: 5px
+  top: 5px
+
+.c-settings__img-wrapper
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	border: 1px solid $color-2
+	overflow: hidden
+
+.c-settings__img
+	width: 100%
+	height: 100%
+	object-fit: cover
+
+.c-settings__wrapper
+  width: calc(100% - 65px)
+
+
+.c-settings__username
+	color: $color-1
+	font-size: 130%
+
+.c-settings__position
+	color: $color-1
+	font-size: 110%
+
+.c-settings__email
+	color: $color-1
+	font-size: 100%
+
+.c-settings__status
+	width: 100%
+	padding: 0px 0
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: space-between
+	opacity: 0
+	position: absolute
+	overflow: hidden
+	height: 0
+
+
+.c-settings__title
+	font-size: 110%
+	color: $color-1
+	margin-bottom: 5px
+
+.c-settings__status__inner
+	font-size: 110%
+	background-color: $color-2
+
+.c-settings__btn
+	align-self: flex-end
+	margin: 15px 0 0 0
+
+.c-content
+	position: relative
+	width: 100%
+	padding: 30px 30px
+	&--chat
+		padding: 0
+
+
+.l-datatable
+	padding: 0px
+	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+	&--profile
+		box-shadow: none
+
+.c-datatable__caption
+	width: 100%
+	padding: 15px 20px
+	background-color: rgba(255,255,255,.1)
+	font-weight: bold
+	color: lighten($font-color, 10%)
+
+.c-datatable
+	position: relative
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: center
+	background-color: $main-color
+	padding: 10px 15px
+	border-bottom: solid 1px #212121
+	font-size: 100%
+	min-width: 900px
+
+.c-datatable__label
+  padding: 5px 0
+  color: $color-1
+
+.l-add-item
+  position: relative
+
+.c-add-item
+	position: absolute
+	width: 70px
+	height: 70px
+	border: 10px solid $secondary-color
+	background-color: $main-color
+	border-radius: 50%
+	top: -80px
+	z-index: 51
+
+.c-add-item__link
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 50px
+	height: 50px
+	border: 2px solid $color-2
+	border-radius: 50%
+	z-index: 51
+	font-size: 200%
+	color: $color-1
+	outline: none
+	background-color: lighten($main-color, 5%)
+	transition: .2s ease-in-out
+	&:hover
+		text-decoration: none
+		color: darken($color-3, 10%)
+		background-color: darken($third-color, 20%)
+		border: 2px solid darken($color-3, 10%)
+		transition: .2s ease-in-out
+	&:focus
+		text-decoration: none
+		color: darken($color-3, 10%)
+		background-color: darken($third-color, 20%)
+		border: 2px solid darken($color-3, 10%)
+	&:active
+		color: darken($color-3, 20%)
+		background-color: darken($third-color, 40%)
+		border: 2px solid darken($color-3, 20%)
+	&>.fa
+		margin: auto
+
+.c-datatable__select
+	background: none
+	height: 30px
+	color: $color-1
+	border: 1px solid $grey-dark
+	margin: 0 5px
+	&--catalog
+		height: auto
+		border: none
+
+.c-datatable__select>option
+  background-color: $secondary-color
+  color: $color-1
+
+.c-datatable__wrapper
+  width: 100%
+  max-height: calc(100vh - 260px)
+  min-height: 83px
+  overflow: auto
+  margin: 10px 0
+
+.c-datatable__main
+	width: 100%
+	min-width: 100%
+
+.c-datatable__header
+	font-weight: bold
+	color: $color-1
+
+.c-datatable__body .c-datatable__row:nth-of-type(2n + 1)
+  background-color: rgba(255,255,255,.04)
+
+.c-datatable__row--is-active
+	background-color: rgba($third-color, 0.25) !important
+
+.c-datatable__body .c-datatable__row
+  &:hover
+    background-color: rgba($third-color, 0.1)
+
+.c-datatable__item
+  border: 1px solid $grey-dark
+  padding: 10px 10px
+  line-height: 20px
+  color: $color-1
+  font-size: 120%
+  cursor: pointer
+  vertical-align: middle
+  &--header
+    cursor: default
+  &--center
+    text-align: center
+    text-align: -webkit-center
+  &--full
+    color: lighten($success, 15%)
+  &--partially
+    color: lighten($warrning, 20%)
+  &--empty
+    color: lighten($danger, 15%)
+
+.c-datatable__item--catalog
+	text-transform: capitalize
+	&:nth-of-type(1)
+		max-width: 50px
+	&:nth-of-type(3)
+		min-width: 120px
+		text-transform: uppercase
+	&:nth-of-type(8)
+		min-width: 120px
+		text-align: right
+	&:nth-of-type(9)
+		min-width: 160px
+		max-width: 300px
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+
+.c-datatable__item--brends
+	text-align: center
+  text-transform: uppercase
+	&:nth-of-type(4)
+		min-width: 120px
+		text-align: justify
+	&:nth-of-type(6)
+		min-width: 100px
+    text-transform: uppercase
+
+.c-datatable__item--news
+	&:nth-of-type(4)
+		min-width: 150px
+		text-align: center
+	&:nth-of-type(5)
+		text-align: justify
+	&:nth-of-type(6)
+		text-align: center
+	&:nth-of-type(7)
+		text-align: center
+
+.c-datatable__item--users
+	text-align: center
+	&:nth-of-type(2)
+		text-align: left
+	&:nth-of-type(3)
+		text-align: left
+	&:nth-of-type(4)
+		min-width: 10.5em
+
+.l-brend-logo
+	width: 64px
+	height: 64px
+	&--mini
+		width: 20px
+		height: 20px
+	&--big
+		width: 100%
+		height: 100%
+		max-width: 128px
+		max-height: 128px
+
+.c-brend-logo
+	width: 100%
+	height: 100%
+	object-fit: contain
+
+.l-news-img
+	width: 128px
+	max-height: 128px
+
+.c-news-img
+	width: 100%
+	object-fit: contain
+	&--hot
+		height: 200px
+		object-fit: cover
+
+.c-datatable__info
+  padding: 10px 0
+  color: $color-1
+
+.paginate-button
+	display: inline-block
+	float: left
+	margin-right: 2px
+	padding: .8em 1em
+	cursor: pointer
+	border: 1px solid $color-2
+	text-decoration: none
+	color: $color-1
+	background-color: $third-color
+	&:hover, &:focus, &--current
+		color: $color-1
+		background-color: $third-color
+		border-color: rgba($color-3, .8)
+		text-decoration: none
+	&--disabled
+		color: transparentize($color-1, .7)
+		cursor: default
+		user-select: none
+		&:hover, &:focus
+			background: $third-color
+			color: transparentize($color-1, .7)
+			border-color: $color-2
+			text-decoration: none
+
+.c-datatable__wrapper::-webkit-scrollbar
+  width: 5px
+  height: 8px
+
+.c-datatable__wrapper::-webkit-scrollbar-track
+  border-radius: 4px
+
+.c-datatable__wrapper::-webkit-scrollbar-thumb
+  border-radius: 4px
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5)
+  background-color: rgba(255,255,255,.3)
+
+.c-card-stack
+	width: 100%
+	height: calc(100vh - 80px)
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	overflow-y: auto
+	justify-content: center
+	padding: 10px
+
+.c-card--4
+	width: calc(25% - 30px)
+	min-width: 300px
+	min-height: 320px
+	//height: calc(50% - 30px)
+	background-color: $main-color
+	margin: 15px
+	position: relative
+	box-shadow: 0 0 4px 3px rgba(0,0,0,0.5)
+
+.c-col-2
+  width: 50%
+  padding: 0 15px
+  height: 100%
+  &--fl
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+
+.c-hot-news
+	padding: 30px 30px 15px 30px
+	display: flex
+	height: 100%
+	flex-direction: column
+	&--empty
+		justify-content: center
+		align-items: center
+		height: 605px
+		padding: 0
+		background: $secondary-color
+
+.c-hot-news__input
+	width: 100%
+	height: 40px
+	background: lighten($main-color, 10%)
+	border: 1px solid $color-2
+	margin: 10px 0
+	padding: 0 15px
+	color: $color-1
+
+.c-card__btn
+	width: 100%
+	height: 100%
+	color: $color-1
+	background: rgba($color-1,.2)
+	border: none
+	font-size: 1100%
+	border: 1px solid rgba($color-1,.8)
+	opacity: .2
+	transition: .4s ease-in
+	&:hover
+		opacity: .8
+		transition: .2s ease-out
+
+
+.c-application
+	width: 100%
+	color: $color-1
+	margin-bottom: 10px
+
+.c-application__label
+	display: block
+	width: 100%
+	height: 100%
+
+.c-application__main
+	padding: 10px 15px 10px 10px
+	display: flex
+	flex-direction: column
+	flex-wrap: wrap
+	justify-content: center
+	align-items: flex-start
+	height: 7rem
+	background-color: rgba($color-3, .4)
+	cursor: pointer
+	&:hover
+		background-color: rgba($color-3, .8)
+	&--canceled
+		opacity: .5
+		background-color: darken($third-color, 30%)
+
+.c-application__info
+	display: flex
+	align-items: center
+	padding: 0 5px
+	white-space: nowrap
+	&>span
+		margin-left: 5px
+	&--id, &--user-id
+		height: 50%
+		font-size: 130%
+		width: 20%
+		font-size: 130%
+	&--username, &--phone, &--email
+		font-size: 120%
+		height: calc(100% / 3)
+		width: 20%
+		min-width: 200px
+	&--time, &--date
+		font-size: 130%
+		height: 50%
+		align-self: flex-end
+		width: 20%
+		padding: 0 5px
+	&--manager
+		font-size: 140%
+		opacity: .4
+		width: 10%
+		text-transform: uppercase
+		padding: 0 5px
+		height: 100%
+	&--number
+		font-size: 140%
+		opacity: 1
+		width: 10%
+		padding: 0 5px
+		height: 100%
+
+.c-application__status
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: flex-end
+	font-size: 130%
+	align-self: flex-end
+	height: 100%
+	width: 10%
+	white-space: nowrap
+	min-width: 120px
+	&--completed>span
+		margin-left: 5px
+		color: lighten($success, 20%)
+	&--new>span
+		margin-left: 5px
+		color: lighten($danger, 10%)
+	&--processing>span
+		margin-left: 5px
+		color: lighten($warrning, 20%)
+	&--canceled>span
+		margin-left: 5px
+		color: lighten($grey, 10%)
+
+.c-application__check
+  display: none
+  visibility: hidden
+  position: absolute
+
+.c-application__list
+	display: block
+	padding: 10px 15px
+	list-style: decimal
+	font-size: 120%
+	background-color: lighten($main-color, 1%)
+	border: 1px solid $grey-dark
+	//border-bottom: none
+
+.c-application__item
+	border-bottom: 1px solid $grey-dark
+	padding: 5px 10px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&--new
+		height: 50px
+		cursor: pointer
+		background: $color-2
+		border: 1px solid $color-2
+		padding: 0
+	&:nth-last-of-type(2)
+		border-bottom: none
+
+.c-application__add-item
+	font-size: 180%
+	color: $color-1
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	cursor: pointer
+	transition: all .3s
+	&:hover
+		text-decoration: none
+		color: $color-1
+		background: rgba($color-3, .8)
+		transition: all 0s
+	&:focus
+		text-decoration: none
+		color: $color-1
+	&:active
+		text-decoration: none
+		color: $color-1
+		background: darken($color-3, 20%)
+	&>.fa
+		right: 7px
+		position: relative
+
+.c-application__ctrl-bar
+	height: auto
+	width: 100%
+	background: $color-2
+	display: flex
+	justify-content: space-between
+	padding: 15px 15px 5px 15px
+	position: relative
+	border: 1px solid $grey-dark
+	border-top: none
+	top: -1px
+
+.c-application__id
+	min-width: 75px
+	margin-right: 5px
+	width: 5%
+
+.c-application__art
+	min-width: 100px
+	width: 15%
+	margin: 0 5px
+
+.c-application__prod
+	min-width: 80px
+	width: 15%
+	margin: 0 5px
+
+.c-application__brend
+	min-width: 80px
+	width: 15%
+	margin: 0 5px
+
+.c-application__count
+	min-width: 125px
+	margin: 0 5px
+
+.c-application__wrapper
+	margin: 0 5px
+	min-width: 130px
+
+.c-application__count
+	position: relative
+	display: block
+	padding-right: 25px
+	&::after
+		position: absolute
+		content: 'ед.'
+		color: $color-1
+		right: 30px
+		top: calc(50% - .78em)
+	&:hover .arrows-box
+		opacity: 1
+		visibility: visible
+	&:hover .c-application__count-inner
+		background: rgba($color-3, 0.39)
+
+.c-application__count--disabled
+	&:hover .arrows-box
+		opacity: 0
+		visibility: hidden
+	&:hover .c-application__count-inner
+		background: none
+		border: none
+
+.c-application__count--disabled
+	&>.c-application__count-inner:hover
+		border: 1px solid rgba(10, 10, 10, 0)
+
+.c-application__link
+	color: $color-1
+	cursor: pointer
+	&:hover
+		color: $color-3
+
+
+.c-application__count-inner
+	display: inline
+	background: none
+	border: 1px solid rgba($color-2, 0)
+	text-align: right
+	outline: none
+	padding: 5px 25px 5px 5px
+	max-width: 100px
+	&:hover
+		border: 1px solid rgba($color-2, 1)
+		background: rgba($color-3, 0.39)
+	&:focus
+		border: 1px solid rgba($color-2, 1)
+		background: rgba($color-3, 0.39)
+	&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+		-webkit-appearance: none
+	&::placeholder
+		color: $color-1
+	&:focus ~ .arrows-box
+		opacity: 1
+		visibility: visible
+
+.c-application__total-info
+	font-size: 130%
+	padding: 5px 0
+	display: flex
+	align-items: center
+	white-space: nowrap
+	&>span
+		margin-left: 5px
+
+
+.c-application__total
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 0 15px
+  position: relative
+  //min-width: 20%
+  &>.l-btn-bar
+    margin-bottom: 0
+  &>h3
+    position: relative
+
+.arrows-box
+	position: absolute
+	right: 11px
+	top: 0
+	opacity: 0
+	visibility: hidden
+	width: 15px
+	height: 100%
+
+.arrow
+	display: flex
+	justify-content: center
+	align-items: center
+	line-height: 5px
+	cursor: pointer
+	background: rgba($color-3, .4)
+	color: $color-1
+	height: 50%
+	border: 1px solid $main-color
+	font-size: 130%
+	&:hover
+		background: rgba($color-3, .8)
+		color: $color-1
+
+.c-application__wrapper
+  display: flex
+  flex-direction: column
+
+.c-application__full-info
+	display: none
+	visibility: hidden
+	position: absolute
+	margin-top: 50px
+
+.c-application__check
+	&:checked ~ .c-application__main
+		background-color: rgba($third-color, .9)
+	&:checked ~ .c-application__full-info
+		display: block
+		position: relative
+		visibility: visible
+
+.c-application__switcher-wrapper
+	display: block
+	width: 100%
+
+.c-application__tabs-switcher
+  display: none
+  visibility: hidden
+  position: absolute
+
+.c-application__tabs
+  display: none
+
+.c-application__tabs-switcher
+	&:checked ~ .c-application__tabs-button
+		background-color: lighten($main-color, 1%)
+		font-weight: bold
+		height: 41px
+		border: 1px solid $grey-dark
+		border-bottom: none
+	&:checked ~ .c-application__tabs
+		display: block
+
+.c-application__price
+	width: 11rem
+	text-align: right
+	background: none
+	border: 1px solid rgba($main-color, 0)
+	outline: none
+	&:hover
+		background: $third-color
+		border: 1px solid $color-2
+	&:focus
+		background: rgba($color-3, .8)
+
+.c-application__tabs-button
+	position: absolute
+	width: 150px
+	height: 40px
+	line-height: 40px
+	background: darken($color-2, 2%)
+	//border: 1px solid $color-2
+	top: -40px
+	cursor: pointer
+	text-align: center
+	font-size: 120%
+	left: 0
+	&--2
+		left: 150px
+
+.l-popup-window
+	position: absolute
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	background-color: rgba(0,0,0, .5)
+	transform: scale3d(0, 0, 0)
+	opacity: 0
+	transition: opacity .3s ease-in-out
+	&--is-active
+		display: flex
+		//visibility: visible
+		transform: scale3d(1, 1, 1)
+		opacity: 1
+		transition: opacity .3s ease-in-out
+
+.c-popup-window
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	width: 350px
+	padding: 20px 20px 0 20px
+	background: $main-color
+	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+
+
+.c-ctrl-panel
+	position: absolute
+	width: 300px
+	height: 100%
+	right: -299px
+	top: 0
+	padding: 10px 15px
+	background-color: $main-color
+	border-left: 1px solid $color-2
+	box-shadow: -1px 0px 6px 3px rgba(0, 0, 0, .5)
+	opacity: 0
+	transition: .2s ease-out
+	overflow-y: auto
+	&--is-active
+		right: 0
+		opacity: 1
+		transition: right .2s ease-out
+
+
+.c-ctrl-panel__label
+	position: relative
+	width: 100%
+	display: block
+	padding: 5px 0
+	color: $color-1
+	font-size: 120%
+	margin-top: 10px
+	&--download
+		width: calc(100% - 32px)
+		background: none
+		padding: 5px 10px
+		margin-top: 0
+		font-weight: bold
+		cursor: pointer
+		opacity: .8
+		&>.fa
+			font-size: 180%
+			position: absolute
+			right: 5px
+			top: calc(50% - 1rem)
+		&:hover
+			opacity: 1
+		&>b
+			display: inline-block
+			width: calc(100% - 35px)
+			white-space: nowrap
+			text-overflow: ellipsis
+			overflow: hidden
+	&--hot-news
+		&>input, &>textarea, &>b, &>i, &>button
+			font-size: 1.2rem
+	&--link
+		display: flex
+		align-items: center
+		&>span
+			margin-right: 5px
+
+
+.c-styleguide__select
+	width: 100%
+
+.c-ctrl-panel__wrapper
+	width: 100%
+	display: flex
+	justify-content: flex-end
+	align-items: center
+
+.c-input
+	width: 100%
+	padding: 5px 10px
+	background-color: $secondary-color
+	border: solid 1px $color-2
+	border-radius: .1em
+	color: $color-1
+	outline: none
+	font-size: 120%
+	&:required
+		color: $color-1
+	&::placeholder
+		color: rgba(255, 255, 255, .5)
+	&[type="number"]
+		width: calc(100% - 24px)
+	&[type="file"]
+		width: calc(100% - 32px)
+		visibility: hidden
+		display: none
+		position: absolute
+	&[type="date"]
+		&:disabled
+			opacity: .3
+	&:disabled
+		opacity: .3
+
+.c-ctrl-panel__wrapper>i
+	color: $color-1
+	font-size: 160%
+	margin: 0 5px
+	width: 24px
+
+.c-ico-btn
+	background: none
+	border: none
+	cursor: pointer
+	&--close
+		position: absolute
+		top: 10px
+		right: 15px
+		color: $color-1
+		font-size: 200%
+		opacity: .7
+		&:hover, &:focus
+			color: $color-1
+			opacity: 1
+	&--trash
+		position: relative
+		font-size: 240%
+		color: $color-1
+		opacity: .7
+		&:disabled
+			opacity: .3
+		&:not([disabled]):hover, &:not([disabled]):focus
+			color: $color-1
+			opacity: 1
+	&--edit
+		position: relative
+		font-size: 1.2em
+		color: $color-1
+		margin-left: 0px
+		//top: calc(50% - 1em)
+		opacity: .7
+		&:hover, &:focus
+			color: $color-1
+			transform: scale3d(1.1, 1.1, 1)
+			outline: none
+			opacity: 1
+	&--remove
+		position: relative
+		font-size: 1.7em
+		color: lighten($danger, 10%)
+		margin-left: 0px
+		//top: calc(50% - 1em)
+		opacity: .7
+		&:hover, &:focus
+			color: lighten($danger, 10%)
+			opacity: 1
+	&--refresh
+		position: absolute
+		top: 10px
+		right: 15px
+		color: $color-1
+		font-size: 150%
+		opacity: .7
+		&:hover, &:focus
+			color: $color-1
+			opacity: 1
+	&--currentcy
+		position: absolute
+		top: calc(50% - 11px)
+		right: -25px
+		font-size: 15px
+
+.c-settings__close-btn
+  top: -2px
+  right: 0px
+
+.l-btn-bar
+  margin: 10px 0
+  width: 100%
+
+.l-popup-panel
+  position: absolute
+  z-index: 51
+  height: calc(100%)
+  right: -350px
+  top: 0
+  overflow-y: auto
+  opacity: 0
+  transition: .2s ease-out
+  &--is-active
+    right: 0
+    opacity: 1
+    transition: right .2s ease-out
+
+.c-popup-panel
+	min-width: 400px
+	width: 350px
+	background: transparentize($main-color, .0)
+	border-bottom: 1px solid $color-2
+	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+	opacity: 1
+	padding: 10px 20px 20px 20px
+	display: flex
+	flex-direction: column
+	&>h1
+		width: 100%
+		text-align: center
+	&>h3
+		margin: 15px 0 5px 0
+
+.c-popup-panel__info-comb
+	background: $secondary-color
+	border-radius: 3px
+	box-shadow: inset 0 1px 5px 3px rgba(0, 0, 0, 0.5)
+
+.c-popup-panel__item
+	position: relative
+	color: $color-1
+	font-size: 120%
+	font-weight: bold
+	line-height: 1.75
+	padding: 4px 15px
+	margin: 1px 0
+	border-bottom: 5px solid $main-color
+	&>span
+		font-weight: normal
+
+.c-popup-panel__btn-wrapper
+	display: flex
+	justify-content: center
+	margin-top: 20px
+	height: 30px
+	padding-bottom: 20px
+	&>.c-btn
+		min-height: calc(2em + 1em)
+
+.c-profile
+	width: 100%
+	min-height: 100vh
+	padding: 25px 40px
+	background-image: linear-gradient(109deg, #29323c, #424f5c 83%, #485563)
+	//box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+
+.c-profile__inner
+	height: 100%
+	width: 100%
+	background: $main-color
+	border: 1px solid $color-2
+	padding: 20px
+	color: $color-1
+	//box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+	&--catalog
+		display: flex
+		align-items: stretch
+		padding: 0
+		border: none
+		background: none
+		box-shadow: none
+		position: relative
+		justify-content: space-between
+
+.c-profile__btn-wrapper
+  margin: 40px 35px 20px 35px
+
+.c-profile-table__title
+	text-align: left
+	&>h2
+		margin: 15px 20px
+
+.c-profile-table__item
+	padding: 3px 10px 3px 40px
+	font-size: 120%
+	font-weight: bold
+	&>span, &>input
+		display: inline-block
+		border-bottom: 1px dashed $grey-light
+		font-weight: normal
+
+.c-topnav
+	display: flex
+	justify-content: space-between
+	background: $main-color
+	margin-bottom: 25px
+	border: 1px solid $color-2
+	border-left: none
+	border-right: none
+	z-index: 97
+	position: relative
+	//box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+
+.c-topnav__list
+  display: flex
+
+.c-topnav__link
+	position: relative
+	display: block
+	color: $color-1
+	font-size: 120%
+	padding: 1.2rem 2.5rem
+	text-decoration: none
+	border: 1px solid $color-2
+	border-bottom: none
+	border-top: none
+	cursor: pointer
+	&>span
+		display: block
+		border-bottom: 1px dashed $grey-light
+	&:hover
+		text-decoration: none
+		background: $secondary-color
+		&>span
+			color: $color-1
+			&>.fa
+				transform: rotate(180deg)
+	&:last-of-type
+		&:hover>.c-topnav__dropdown
+			right: -1px
+			opacity: 1
+			transition: opacity .3s ease-in-out
+	&--dropdown
+		padding: 8px 20px
+		font-size: 1.2rem
+		white-space: nowrap
+		border: none
+		&:hover
+			background: $color-2
+			color: $color-1
+	&--new::after
+		display: block
+		position: absolute
+		top: 10px
+		right: 15px
+		width: 5px
+		height: 5px
+		border-radius: 10px
+		background-color: $color-3
+		content: ''
+
+.c-topnav__dropdown
+	position: absolute
+	top: 100%
+	right: 99999px
+	border: 1px solid $color-2
+	background: $secondary-color
+	color: $color-1
+	opacity: 0
+	border-top: none
+
+.l-chat
+	width: 100%
+	display: flex
+	justify-content: center
+	&--profile
+		//box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+
+.c-chat
+	display: flex
+	flex-direction: column
+	flex-wrap: wrap
+	width: 100%
+	background: $main-color
+	border: 1px solid $color-2
+	height: calc(100vh - 80px)
+	position: relative
+	overflow: hidden
+	padding-left: 250px
+	&--userside
+		height: calc(100vh - 120px)
+
+
+.c-chat__sidebar
+	background: $main-color
+	border-right: 2px solid $color-2
+	width: 250px
+	padding: 18px 10px
+
+.c-chat__sidebar
+	&>.l-search>.c-search
+		display: block
+		width: calc(100% - 20px)
+		margin-left: 20px
+		margin-bottom: 17px
+
+
+.c-sidebar__userlist-wrapper
+	height: 100%
+	overflow-y: auto
+	padding: 0 0px 40px 0
+
+.c-chat__userbar
+  width: 100%
+  background: $main-color
+  border-bottom: 2px solid $color-2
+  padding: 10px 15px
+  display: flex
+  position: relative
+
+.c-chat__user
+  height: 50px
+  color: $color-1
+  display: flex
+  padding: 7px 10px 7px 50px
+  position: relative
+  flex-direction: column
+  flex-wrap: wrap
+  justify-content: center
+  text-decoration: none
+  &--link:hover
+    background: $third-color
+    text-decoration: none
+    border-radius: 10px 0 0 10px
+    &>.c-chat__tooltip-wrapper
+      left: 100%
+      opacity: 1
+      //transition: opacity .5s ease-in-out
+
+.c-chat__tooltip-wrapper
+  position: absolute
+  padding: 7px 5px
+  top: 0
+  left: -99999px
+  background: $third-color
+  border-radius: 0 10px 10px 0px
+  opacity: 0
+  display: flex
+  height: 100%
+
+.c-chat__tooltip
+  display: block
+  height: 100%
+  color: $color-1
+  font-size: 110%
+  &>span
+    display: block
+    white-space: nowrap
+    height: 50%
+    padding: 0 20px
+
+.c-chat__user-status
+	width: 12px
+	height: 12px
+	border-radius: 50%
+	box-shadow: inset 0 0 20px 20px $grey-light
+	display: block
+	position: absolute
+	right: 5px
+	top: calc(50% - 6px)
+	border: 2px solid transparent
+	&>span
+    position: absolute
+    right: 9999px
+    bottom: 100%
+    padding: 0 5px
+    color: #000
+    font-weight: bold
+    height: 16px
+    background: $grey-lighten
+    border-radius: 10px 10px 0 10px
+    white-space: nowrap
+    opacity: 0
+	&--online
+    box-shadow: inset 0 0 20px 20px lighten($success, 10%)
+	&:hover>span
+    right: 100%
+    opacity: 1
+    transition: opacity .3s ease-in-out
+
+.c-chat__img
+  width: 36px
+  height: 36px
+  object-fit: cover
+  border-radius: 50%
+  border: 1px solid $grey-darken
+  margin-right: 15px
+  position: absolute
+  top: calc(50% - 18px)
+  left: 5px
+
+.c-chat__info
+  margin: 0
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+  height: 50%
+  &--username
+  	font-size: 130%
+  	color: rgba($color-1, .8)
+  &--position
+  	font-size: 110%
+  	color: rgba($color-1, .4)
+
+.c-sidebar__item
+	border-bottom: 1px solid $grey-dark
+	position: relative
+	cursor: pointer
+	&--new
+		box-shadow: inset 0px 0px 50px 50px rgba($color-3, .15)
+		animation: ping2 1.65s ease-in-out
+		animation-iteration-count: infinite
+	&--category
+		color: rgba($color-1, .8)
+		font-weight: bold
+		font-size: 120%
+		padding: 20px 10px 10px 10px
+		border-bottom: none
+		cursor: default
+		display: flex
+		align-items: center
+		justify-content: space-between
+		&>div
+			display: flex
+			align-items: center
+			justify-content: space-between
+			&>.c-checkbox
+				margin-right: 5px
+	&:not(.c-sidebar__item--category):hover, &--is-active
+		background: rgba($color-3, .2)
+
+.c-sidebar__ctrl-wrapper
+  width: 100%
+
+.c-sidebar__ctrl
+	width: 50%
+	float: left
+	text-align: center
+	font-size: 120%
+	color: $color-1
+	display: block
+	height: 30px
+	line-height: 27px
+	margin-top: 10px
+	cursor: pointer
+	transition: all .3s
+	background: none
+	border: none
+	&:not([disabled]):hover
+		color: $color-1
+		text-decoration: none
+		background: rgba($color-3, .8)
+		transition: all .0s
+	&:disabled
+		opacity: .3
+
+
+.c-sidebar
+	position: absolute
+	height: 100%
+	top: 0
+	left: 0
+
+.c-chat__new
+	display: block
+	padding: .2em .66em
+	background-color: $color-3
+	color: $color-1
+	font-size: 75%
+	text-align: center
+	margin-left: 20px
+	position: absolute
+	border-radius: 3px
+	&::before
+		display: block
+		content: ''
+		width: 5px
+		height: 6px
+		border-right: 5px solid $color-3
+		border-top: 3px solid transparent
+		border-bottom: 3px solid transparent
+		position: absolute
+		top: calc(50% - 3px)
+		left: -5px
+
+.c-navbar__new
+	position: absolute
+	display: block
+	width: 6px
+	height: 6px
+	background-color: lighten($color-3, 10%)
+	top: -6px
+	right: -6px
+	border-radius: 20px
+
+.c-navlink--new
+	box-shadow: inset 0px 0px 20px 20px rgba($color-3, .15)
+	animation: ping2 1.65s ease-in-out
+	animation-iteration-count: infinite
+
+
+@keyframes ping2
+	0%
+		box-shadow: inset 0px 0px 50px 50px rgba($color-3, .2)
+	50%
+		box-shadow: inset 0px 0px 50px 50px rgba($color-3, .05)
+	100%
+		box-shadow: inset 0px 0px 50px 50px rgba($color-3, .2)
+
+
+.c-dialog__list
+	display: flex
+	flex-direction: column
+	padding: 20px 20px 85px 20px
+	width: 100%
+	overflow-y: auto
+	height: calc(100% - 72px)
+
+.c-dialog__date
+	width: 100%
+	text-align: center
+	font-size: 160%
+	color: $color-1
+	margin: 10px 0
+
+.c-dialog__item
+	width: 100%
+	display: block
+	color: $color-1
+	margin: 5px 0
+	font-size: 120%
+
+.c-dialog__message
+	width: 100%
+	display: flex
+	flex-direction: column
+	&--inc
+		align-self: flex-start
+		align-items: flex-start
+		&>.c-dialog__message-text
+			max-width:  50%
+			background-color: rgba($color-3, .2)
+			border-radius: 50px 50px 50px 0
+	&--out
+		align-self: flex-end
+		align-items: flex-end
+		&>.c-dialog__message-text
+			max-width:  50%
+			background-color: rgba($color-3, .5)
+			border-radius: 50px 50px 0 50px
+			position: relative
+	&>.c-dialog__message-text
+		padding: 10px 24px
+
+.l-chat__new-message
+  position: absolute
+  display: flex
+  padding: 20px 10px
+  background: $main-color
+  bottom: 0
+  right: 0
+  width: calc(100% - 250px)
+  border-top: 1px solid $color-2
+  align-items: center
+
+.c-chat__new-message
+  display: block
+  width: calc(100% - 10px)
+  background: lighten($main-color, 7%)
+  height: 40px
+  line-height: 40px
+  color: $color-1
+  padding: 0 20px
+  border: 1px solid $color-2
+  font-size: 120%
+  resize: none
+  &::placeholder
+  	color: $color-1
+
+.c-chat__send-btn
+  display: block
+  width: 34px
+  height: 34px
+  background: url("../img/send.svg") 50% no-repeat lighten($info, 10%)
+  background-size: 50%
+  border: none
+  margin: 0 0 0 10px
+  &:hover
+  	background-color: $info
+  &:active
+  	background-color: $info
+
+.c-catalog-sidebar
+	margin-right: 10px
+	background: $main-color
+	padding: 0 15px 10px 15px
+	border: 1px solid $color-2
+	margin-bottom: 30px
+	width: 230px
+
+.c-catalog-sidebar__title
+	margin: 20px 0 10px 0
+	font-weight: bold
+
+.c-catalog-sidebar__list
+	overflow-y: auto
+	max-height: 200px
+	//border: 1px solid $color-2
+	//background: lighten($main-color, 0%)
+
+.c-catalog-sidebar__item
+	//border-bottom: 1px solid $color-2
+
+.c-catalog-sidebar__item-inner
+	width: 100%
+	height: 100%
+	display: flex
+	align-items: center
+	padding-left: 0px
+	padding: 5px 5px
+	cursor: pointer
+	font-size: 120%
+	position: relative
+	&>.fa
+		margin-right: 5px
+		font-size: 130%
+	&--brends
+		justify-content: space-between
+		padding-left: 26px
+		&::before
+			display: block
+			position: absolute
+			content: ''
+			width: 16px
+			height: 16px
+			top: calc(50% - 8px)
+			left: 5px
+			border-radius: 50%
+			border: 1px solid $color-2
+			background: $grey-light
+		&::after
+			display: block
+			position: absolute
+			content: ''
+			width: 8px
+			height: 8px
+			top: calc(50% - 4px)
+			left: 9px
+			border-radius: 50%
+			background: $color-2
+			visibility: hidden
+			opacity: 0
+
+.c-catalog-sidebar__filter
+  //padding-top: 20px
+
+.c-catalog-sidebar__brend-name
+  font-size: 120%
+
+.c-catalog-main
+	width: calc(100% - 235px)
+	display: flex
+	flex-direction: column
+	align-items: center
+	margin-bottom: 30px
+
+.c-panel
+	width: 100%
+	margin-bottom: 10px
+	background: $main-color
+	border: 1px solid $color-2
+	//box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+
+.c-catalog-filter
+	display: flex
+	justify-content: space-between
+	padding: 10px 15px
+
+.c-breadcrumbs
+	width: 100%
+	font-size: 120%
+	margin: 10px 0 20px 0
+
+.c-catalog-header
+	display: flex
+	justify-content: space-between
+	padding: 10px 0
+
+.c-catalog-main__list
+	border: 1px solid $color-2
+	border-bottom: none
+	margin-bottom: 10px
+	width: 100%
+
+
+
+.c-catalog-main__item
+	display: flex
+	justify-content: space-between
+	padding: 5px 0
+	font-size: 110%
+	background: $main-color
+	border-bottom: 1px solid $color-2
+	&:nth-of-type(2n+2)
+		background: lighten($main-color, 5%)
+
+.c-catalog-col
+	display: flex
+	align-items: center
+	position: relative
+	padding: 0 15px
+	&:not(:last-of-type)::after
+		content: ''
+		display: block
+		position: absolute
+		background-color: $color-2
+		right: 0
+		top: 0
+		width: 1px
+		height: 100%
+	&>strong
+		font-size: 120%
+		font-weight: bold
+		text-align: center
+	&--art
+		width: 25%
+	&--name
+		width: 26%
+	&--cost
+	  width: 20%
+	  min-width: 140px
+	  max-width: 180px
+	  justify-content: center
+	  flex-direction: column
+	  align-items: center
+	&--count
+		min-width: 187px
+		width: 187px
+		justify-content: center
+		flex-wrap: wrap
+	&--favorite
+		width: 10%
+		min-width: 80px
+		justify-content: center
+	&-cart--art
+		width: 32%
+	&--cart-name
+		width: 35%
+	&--cart-cost
+	  width: 20%
+	  min-width: 120px
+	  max-width: 180px
+	  justify-content: center
+	  flex-direction: column
+	  align-items: flex-end
+	&--cart-count
+		min-width: 80px
+		width: 80px
+		display: flex
+	&--cart-remove
+		width: 10%
+		min-width: 40px
+		justify-content: center
+
+.c-catalog-main__input-count
+	width: 36px
+	height: 29px
+	border: 1px solid $color-2
+	background: rgba($color-3, .4)
+	padding: 0 3px
+	text-align: center
+	transition: all .3s
+	&:focus
+		background: rgba($color-3, .8)
+		outline: none
+
+
+.l-btn-mini
+	margin-right: 5px
+
+.c-btn-mini
+	width: 14.5px
+	height: 14.5px
+	line-height: 9px
+	border: 1px solid $color-2
+	background: rgba($color-3, .4)
+	padding: 0
+	margin: 0
+	display: block
+	transition: all .3s
+	font-size: 10px
+	&:hover
+		background-color: rgba($color-3, .8)
+		transition: all 0s
+	&:active
+		background-color: darken($color-3, 20%)
+		box-shadow: 0 0 3px 1px transparentize($grey-darken, .3)
+		transition: all 0s
+
+.c-catalog-sidebar__radio
+	display: none
+	visibility: hidden
+	display: none
+	&:checked + .c-catalog-sidebar__item-inner
+		background: rgba($color-3, .4)
+		&::after
+			opacity: 1
+			visibility: visible
+
+.l-cart
+	position: fixed
+	bottom: 0
+	width: 100%
+	height: 40px
+	background: $color-2
+	z-index: 98
+	display: flex
+	justify-content: center
+	align-items: center
+	&--is-active
+		position: absolute
+		width: 100%
+		height: 100%
+		background: rgba(0, 0, 0, .6)
+		&>.c-cart
+			max-width: 700px
+			width: 90%
+			min-width: 420px
+			min-height: 200px
+			height: auto
+			max-height: 90%
+			border-radius: 15px
+			box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+			&>.c-cart__title
+				cursor: default
+				font-weight: bold
+				&:hover
+					background: $color-2
+
+
+
+.c-cart
+	width: 100%
+	height: 40px
+	background: $color-2
+	overflow: hidden
+	border: 1px solid $color-2
+	position: relative
+	font-size: 110%
+
+.c-cart__title
+	height: 40px
+	line-height: 40px
+	color: $color-1
+	width: 100%
+	text-align: center
+	cursor: pointer
+	&:hover
+		background: lighten($color-2, 5%)
+
+.c-cart__panel
+	height: 50px
+	background: $color-2
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 10px 10px 10px 10px
+
+.c-cart__info
+	color: $color-1
+	font-size: 120%
+	font-weight: bold
+	&>span
+		font-weight: normal
+
+
+
+.c-cart__list
+	padding: 20px 0
+	max-height: 600px
+	background: $main-color
+	overflow-y: auto
+
+.c-cart__item
+	display: flex
+	justify-content: space-between
+	padding: 10px 0
+	border-bottom: 1px solid $color-2
+	color: $color-1
+
+
+
+
+
+
+
+
+
+
+
+.l-profile-popup
+	position: absolute
+	width: 100%
+	height: 100vh
+	background: rgba(0, 0, 0, .6)
+	z-index: 99
+	display: flex
+	justify-content: center
+	align-items: center
+	display: none
+	visibility: hidden
+	&--is-active
+	  display: flex
+	  visibility: visible
+
+
+.c-profile-popup
+	width: 91%
+	height: 90%
+	background: #29323c
+	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+	border: 1px solid $color-2
+	border-radius: 15px
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	align-items: center
+	overflow-y: auto
+	padding: 10px 0
+	position: relative
+
+
+.c-alph-filter
+	width: 100%
+	display: flex
+	// align-items: center
+	padding: 15px 15px
+	&>label>div
+		padding: 5px
+		font-size: 120%
+		color: $color-1
+		border: 1px solid $color-2
+		width: 35px
+		padding: 3px 0
+		height: 26px
+		text-align: center
+		margin-right: 2px
+		cursor: pointer
+		background: rgba($color-3, .3)
+		transition: all .3s
+		&:hover
+			background-color: rgba($color-3, .8)
+			transition: all .0s
+
+.c-alph-filter__radio
+  display: none
+  visibility: hidden
+  position: absolute
+  &:checked + div
+    background: rgba($color-3, .8)
+
+
+.c-alph-filter__list
+	display: flex
+	flex-wrap: wrap
+	margin: 0 30px 0 50px
+
+.c-alph-filter__item
+	width: 26px
+	height: 26px
+	padding: 3px 0
+	text-align: center
+	border: 1px solid $color-2
+	background-color: rgba($color-3, .3)
+	color: $color-1
+	font-size: 120%
+	margin: 0 2px 2px 0
+	cursor: pointer
+	transition: all .3s
+	&--is-active, &:hover
+		background-color: rgba($color-3, .8)
+		transition: all .0s
+
+
+
+
+.c-profile-popup__list
+	display: flex
+	flex-wrap: wrap
+	width: auto
+	margin-top: 20px
+	overflow-y: auto
+	height: 100%
+	padding: 0 10px
+
+.c-profile-popup__item
+	position: relative
+	width: 150px
+	height: 150px
+	border: 4px solid $color-2
+	margin: 10px 10px 40px 10px
+	padding: 7px
+	background: white
+	cursor: pointer
+	border-radius: 10%
+	&:hover, &--is-active
+		border: 4px solid rgba($color-3, .5)
+
+.c-profile-popup__item-name
+	position: absolute
+	width: 100%
+	color: $color-1
+	text-align: center
+	font-size: 120%
+	bottom: -25px
+	font-weight: bold
+	text-transform: uppercase
+	left: 0
+
+.c-footer
+	width: 100%
+	height: 20px
+	background-color: darken($main-color, 5%)
+	border-bottom: 1px solid $color-2
+	box-shadow: -1px 0px 6px 3px rgba(0, 0, 0, .5)
+	z-index: 52
+
+.l-login-form
+  width: 100%
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  background: $color-2
+
+.c-login-form
+	position: relative
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 300px
+	padding: 15px 30px 15px 30px
+	background: $main-color
+	border-radius: 5px
+	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, .5)
+
+.c-login-form__label
+  color: $color-1
+  align-self: flex-start
+  font-size: 120%
+  margin-bottom: 5px
+
+.c-login-form__input
+	margin-bottom: 15px
+	background: $secondary-color
+
+.l-modal-window
+	position: absolute
+	width: 100%
+	height: 100%
+	min-height: 100vh
+	z-index: 999
+	display: flex
+	justify-content: center
+	align-items: center
+	background: rgba(0, 0, 0, .6)
+	top: 0
+	left: 0
+	opacity: 0
+	transition: opacity .3s ease-in-out
+	transform: scale3d(0, 0, 0)
+	&--is-active
+		opacity: 1
+		transition: opacity .3s ease-in-out
+		transform: scale3d(1, 1, 1)
+
+.c-modal-window
+  min-width: 350px
+  //height: 210px
+  background: $color-2
+  border: 1px solid $color-2
+  border-radius: 15px
+  box-shadow: 0 0 10px 3px rgba(0,0,0, .5)
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  padding-bottom: 20px
+  opacity: 0
+  transition: opacity .3s ease-in-out
+  transform: scale3d(0, 0, 0)
+  position: absolute
+  &--is-active
+    position: relative
+    opacity: 1
+    transition: all .3s ease-in-out
+    transform: scale3d(1, 1, 1)
+
+.c-modal-window__title
+	width: 100%
+	padding: 5px 15px
+	font-size: 140%
+	color: rgba(255, 255, 255, .5)
+	font-weight: bold
+	text-align: center
+	border-bottom: 1px solid rgba($secondary-color, .5)
+	margin: 0
+
+.c-modal-window__ico
+  width: 64px
+  height: 64px
+  margin-top: 20px
+  &--success
+  	background: url("../img/ok-256.png") center no-repeat
+  	background-size: 64px 64px
+  &--warning
+  	background: url("../img/warning-256.png") center no-repeat
+  	background-size: 64px 64px
+  &--danger
+  	background: url("../img/danger-256.png") center no-repeat
+  	background-size: 64px 64px
+  &--info
+  	background: url("../img/info-256.png") center no-repeat
+  	background-size: 64px 64px
+
+
+.c-modal-window__text
+	font-size: 180%
+	color: rgba(255, 255, 255, .5)
+	font-weight: bold
+	margin: 20px 0 0 0
+	text-align: center
+	padding: 0 15px
+	&--info
+		font-size: 130%
+		margin: 20px 0 10px 0
+		font-weight: normal
+
+.c-modal-window__btn-wrapper
+	display: flex
+	width: 100%
+	justify-content: center
+
+::-webkit-scrollbar
+  width: 5px
+  height: 8px
+
+::-webkit-scrollbar-track
+  border-radius: 4px
+
+::-webkit-scrollbar-thumb
+  border-radius: 4px
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5)
+  background-color: rgba(255,255,255,.3)
+
+.h-margin-0
+  margin: 0
+
+.loader-div
+	margin: 0 auto
+	background-image: url('../img/kloader.gif')
+	background-repeat: no-repeat
+	background-size: cover
+	position: relative
+	&--16
+		height: 16px
+		width: 16px
+		top: calc(50% - 8px)
+	&--32
+		height: 32px
+		width: 32px
+		top: calc(50% - 16px)
+	&--64
+		height: 64px
+		width: 64px
+		top: calc(50% - 32px)
+	&--128
+		height: 128px
+		width: 128px
+		top: calc(50% - 64px)
+	&--left
+		position: absolute
+		left: -24px
+
+.tick-div
+  margin: 0 auto
+  background-image: url('../img/tick.svg')
+  background-repeat: no-repeat
+  background-size: cover
+  &--16
+    height: 16px
+    width: 16px
+    margin-top: calc(50% - 8px)
+  &--32
+    height: 32px
+    width: 32px
+    margin-top: calc(50% - 16px)
+  &--64
+    height: 64px
+    width: 64px
+    margin-top: calc(50% - 32px)
+  &--128
+    height: 128px
+    width: 128px
+    margin-top: calc(50% - 64px)
+
+
+@import "media" // Всегда в конце

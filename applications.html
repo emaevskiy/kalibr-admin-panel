@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Заявки</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div class="main-container">
+    <div class="c-header">
+      <div class="c-logo">
+      </div>
+      <div class="c-header__wrapper">
+        <div class="c-header__time">
+        </div>
+        <div class="c-header__date">
+        </div>
+      </div>
+    </div>
+    <div class="c-main">
+      <div class="c-navbar">
+        <input id="c-menu-ctrl" type="checkbox" checked/>
+        <label for="c-menu-ctrl" class="c-menu-ctrl"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></label>
+        <h4 class="c-navbar__title">Admin Panel ver. 1.0</h4>
+        <div class="c-userbar">
+          <div class="c-userbar__img"></div>
+          <div class="c-userbar__username">John Doe</div>
+          <div class="c-userbar__email">john.doe@example.com</div>
+          <div class="c-userbar__wrapper">
+            <a href="#" class="c-userbar__link c-link"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> Настройки</a>
+            <a href="#" class="c-userbar__link c-link"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i> Выход</a>
+          </div>
+        </div>
+        <ul class="c-navbar__list">
+          <li class="c-navbar__item">
+            <a href="index.html" class="c-navbar__navlink c-navlink"><span>Каталог</span><i class="fa fa-book fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="brends.html" class="c-navbar__navlink c-navlink"><span>Производители</span><i class="fa fa-building fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="classification.html" class="c-navbar__navlink c-navlink"><span>Классификация</span><i class="fa fa-th fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="product_types.html" class="c-navbar__navlink c-navlink"><span>Вид товара</span><i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="news.html" class="c-navbar__navlink c-navlink"><span>Новости</span><i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i></a>
+          </li>
+					<li class="c-navbar__item">
+            <a href="hot_news.html" class="c-navbar__navlink c-navlink"><span>Горячие новости</span><i class="fa fa-fire fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="clients.html" class="c-navbar__navlink c-navlink"><span>Наши клиенты</span><i class="fa fa-male fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="users.html" class="c-navbar__navlink c-navlink"><span>Пользователи</span><i class="fa fa-users fa-fw" aria-hidden="true"></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="applications.html" class="c-navbar__navlink c-navlink c-navlink--is-active"><span>Список заявок</span><i class="fa fa-list fa-fw" aria-hidden="true"><span class="c-navbar__new"></span></i></a>
+          </li>
+          <li class="c-navbar__item">
+            <a href="chat.html" class="c-navbar__navlink c-navlink c-navlink--new"><span>Чат</span><i class="fa fa-comment fa-fw" aria-hidden="true"><span class="c-navbar__new"></span></i></a>
+          </li>
+        </ul>
+        <div class="c-settings">
+          <!-- c-settings--is-active -->
+          <a href="#" class="c-settings__close-btn c-ico-btn c-ico-btn--close" title="Закрыть"><i class="fa fa-close fa-fw" aria-hidden="true"></i></a>
+          <ul class="c-settings__list">
+            <li class="c-settings__item">
+              <label class="c-settings__label">
+                <input class="c-settings__radio" type="radio" name="unit" />
+                <div class="c-settings__userbar">
+                  <div class="c-user-status c-user-status--offline c-settings__user-status"></div>
+                  <div class="c-settings__img-wrapper">
+                    <img src="img/dima.jpg" alt="user_photo" class="c-settings__img">
+                  </div>
+                  <div class="c-settings__wrapper">
+                    <div class="c-settings__username">
+                      Дмитрий Медведев
+                    </div>
+                    <div class="c-settings__position">
+                      Премьер министр РФ
+                    </div>
+                    <div class="c-settings__email">
+                      dima.mozhet@example.com
+                    </div>
+                  </div>
+                  <div class="c-settings__status">
+                    <div class="c-settings__title">
+                      Статус:
+                    </div>
+                    <textarea class="c-styleguide__textarea c-settings__status__inner" rows="3" placeholder="Статус">Добрый день! Я являюсь премьер министром РФ. Вы можете направить мне предложения по изменению системы образования в стране или ваши пожелания по работе Роскомнадзора.
+                    </textarea>
+                    <button class="c-btn c-btn--small c-settings__btn">СМЕНИТЬ ПОЛЬЗОВАТЕЛЯ</button>
+                    <button class="c-btn c-btn--small c-settings__btn">ОБНОВИТЬ СТАТУС</button>
+                  </div>
+                </div>
+              </label>
+            </li>
+            <li class="c-settings__item">
+              <label class="c-settings__label">
+                <input class="c-settings__radio" type="radio" name="unit" />
+                <div class="c-settings__userbar">
+                  <div class="c-user-status c-user-status--online c-settings__user-status"></div>
+                  <div class="c-settings__img-wrapper">
+                    <img src="img/gena.jpg" alt="user_photo" class="c-settings__img">
+                  </div>
+                  <div class="c-settings__wrapper">
+                    <div class="c-settings__username">
+                      Геннадий Букин
+                    </div>
+                    <div class="c-settings__position">
+                      Продавец обуви
+                    </div>
+                    <div class="c-settings__email">
+                      gena.bukin@example.com
+                    </div>
+                  </div>
+                  <div class="c-settings__status">
+                    <div class="c-settings__title">
+                      Статус:
+                    </div>
+                    <textarea class="c-styleguide__textarea c-settings__status__inner" rows="3" placeholder="Статус">Добрый день! Я помогу Вам подобрать обувь, которая бы подчеркивала Ваш стиль и стала отличным дополнением к другой обуви в вашем шкафу.
+                    </textarea>
+                    <button class="c-btn c-btn--small c-settings__btn">СМЕНИТЬ ПОЛЬЗОВАТЕЛЯ</button>
+                    <button class="c-btn c-btn--small c-settings__btn">ОБНОВИТЬ СТАТУС</button>
+                  </div>
+                </div>
+              </label>
+            </li>
+            <li class="c-settings__item">
+              <label class="c-settings__label">
+                <input class="c-settings__radio" type="radio" name="unit" />
+                <div class="c-settings__userbar">
+                  <div class="c-user-status c-user-status--offline c-settings__user-status"></div>
+                  <div class="c-settings__img-wrapper">
+                    <img src="img/user.jpg" alt="user_photo" class="c-settings__img">
+                  </div>
+                  <div class="c-settings__wrapper">
+                    <div class="c-settings__username">
+                      Иван Иванов
+                    </div>
+                    <div class="c-settings__position">
+                      Консультант
+                    </div>
+                    <div class="c-settings__email">
+                      ivan.ivanov@example.com
+                    </div>
+                  </div>
+                  <div class="c-settings__status">
+                    <div class="c-settings__title">
+                      Статус:
+                    </div>
+                    <textarea class="c-styleguide__textarea c-settings__status__inner" rows="3" placeholder="Статус">Добрый день! Я являюсь экспертом компании "Калибр". Я могу проконсультировать Вас по нашему ассортименту.
+                    </textarea>
+                    <button class="c-btn c-btn--small c-settings__btn">СМЕНИТЬ ПОЛЬЗОВАТЕЛЯ</button>
+                    <button class="c-btn c-btn--small c-settings__btn">ОБНОВИТЬ СТАТУС</button>
+                  </div>
+                </div>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="c-content">
+
+        <div class="l-datatable">
+       		<div class="c-datatable">
+       				<label class="c-datatable__label">
+       					Показывать
+       					<select class="c-datatable__select">
+       						<option value="1">10</option>
+       						<option value="2" selected>50</option>
+       						<option value="3">100</option>
+       						<option value="4">200</option>
+       					</select>
+       					заявок
+       				</label>
+              <div class="l-add-item h-hidden">
+                <div class="c-add-item">
+                  <a href="#" class="c-add-item__link"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <div class="l-search">
+                <select class="c-datatable__select">
+                  <option value="1" selected>Все заявки</option>
+                  <option value="2">Только мои</option>
+                  <option value="3">Только новые</option>
+                </select>
+                <select class="c-datatable__select">
+                  <option value="1" selected>ID заявки</option>
+                  <option value="2">ID пользователя</option>
+                  <option value="3">Дата заявки</option>
+                  <option value="4">Статус заявки</option>
+                  <option value="5">Менеджер</option>
+                </select>
+                <label class="c-search">
+                  <input class="c-search__inner" type="search" placeholder="Поиск...">
+              </label>
+              </div>
+       			<div class="c-datatable__wrapper">
+              <div class="c-datatable__application c-application">
+                <label class="c-application__label">
+                  <input class="c-application__check" type="radio" name="app_item"/>
+                  <div class="c-application__main">
+                    <div class="c-application__info c-application__info--id">
+                      ID заявки: <span>1</span>
+                    </div>
+                    <div class="c-application__info c-application__info--user-id">
+                      ID пользователя: <span>1</span><!--  если пользователь не регистрировался на сайте, то эта графа должна быть «не авторизованный»  -->
+                    </div>
+                    <div class="c-application__info c-application__info--username">
+                      <a href="users.html" class="c-application__link">Иванов Иван Иванович</a>
+                    </div>
+                    <div class="c-application__info c-application__info--phone">
+                      Телефон: <span>+7 (999) 999-99-99</span>
+                    </div>
+                    <div class="c-application__info c-application__info--email">
+                      Эл. почта: <span>john.doe@example.com</span>
+                    </div>
+                    <div class="c-application__info c-application__info--date">
+                      Дата заявки: <span>17.07.2017</span>
+                    </div>
+                    <div class="c-application__info c-application__info--date">
+                      Время заявки: <span>16:35</span>
+                    </div>
+                    <div class="c-application__info c-application__info--manager">
+                      N/A
+                    </div>
+                    <div class="c-application__status c-application__status--new">
+                      Статус заявки: <span>Новая</span>
+                    </div>
+                  </div>
+                  <div class="c-application__full-info">
+                    <label class="c-application__switcher-wrapper">
+                      <input type="radio" class="c-application__tabs-switcher" name="tabs_switch"/>
+                      <div class="c-application__tabs-button">
+                        Список товаров
+                      </div>
+                      <div class="c-application__tabs">
+                        <ul class="c-application__list">
+                          <li class="c-application__item">
+                            <span class="c-application__id">1</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                <input class="c-application__price"  type="text" value="" min="0" placeholder="0.00"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                <input class="c-application__price"  type="text" value="" min="0" placeholder="0.00"/><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__id">2</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                <input class="c-application__price"  type="text" value="" min="0" placeholder="0.00"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                <input class="c-application__price"  type="text" value="" min="0" placeholder="0.00"/><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__id">3</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                <input class="c-application__price"  type="text" value="" min="0" placeholder="0.00"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                <input class="c-application__price"  type="text" value="" min="0" placeholder="0.00"/><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item c-application__item--new">
+                            <a href="#" class="c-application__add-item"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                        </ul>
+                        <div class="c-application__ctrl-bar">
+                          <div class="c-application__total"><h3>Итого к оплате:</h3>
+                            <div class="c-application__total-info">
+                              В рублях: <span>0.00</span><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                            </div>
+                            <div class="c-application__total-info">
+                              В евро: <span>0.00</span><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                            </div>
+                            <div class="c-application__total-info">
+                              В долларах: <span>0.00</span><i class="fa fa-dollar fa-fw" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="c-application__total"><h3>Курсы валют (17.07.2017): <a href="#" class="c-ico-btn c-ico-btn--refresh c-ico-btn--currentcy" title="Сделать перерасчет цен"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i></a></h3>
+                            <div class="c-application__total-info">
+                              Евро: <span>69,4700</span><input class="c-editor c-editor--currency h-hidden" type="text" value="69.4700" placeholder="0.0000" max="999" min="0"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i><button class="c-ico-btn c-ico-btn--edit" title="Править курс"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="c-application__total-info">
+                              Доллар США: <span>59,6500</span><input class="c-editor c-editor--currency h-hidden" type="text" value="59.6500" placeholder="0.0000" max="999" min="0"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i><button class="c-ico-btn c-ico-btn--edit" title="Править курс"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="c-application__total-info">
+                              <label class="c-checkbox">
+                                <input class="c-checkbox__inner" type="checkbox">
+                                <div class="c-checkbox__tick"></div>
+                              </label>
+                              <span>Зафиксировать курс</span>
+                            </div>
+                          </div>
+                          <div class="c-application__total">
+                            <div>
+                              <h3>Менеджер:</h3>
+                              <select class="c-styleguide__select">
+                                <option value="0" selected>Не выбран</option>
+                                <option value="1">И.Иванов</option>
+                                <option value="2">А.Петров</option>
+                                <option value="3">В.Сидоров</option>
+                                <option value="4">Ю.Сорокина</option>
+                                <option value="5">В.Михалева</option>
+                              </select>
+                            </div>
+                            <div class="l-btn-bar">
+                              <button class="c-btn c-btn--block">ПРИНЯТЬ В РАБОТУ</button>
+                            </div>
+                          </div>
+                          <div class="c-application__total">
+                            <div>
+                              <h3>Статус заявки:</h3>
+                              <select class="c-styleguide__select">
+                                <option value="1" selected>Новая</option>
+                                <option value="2">В работе</option>
+                                <option value="3">Выполнена</option>
+                                <option value="4">Отменена</option>
+                                <option value="5">Удалить</option>
+                              </select>
+                            </div>
+                            <div class="l-btn-bar">
+                              <button class="c-btn c-btn--block">СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
+                              <button class="c-btn c-btn--block" disabled>УДАЛИТЬ ЗАЯВКУ</button>
+                            </div>
+                          </div>
+                          <a href="#" class="c-ico-btn c-ico-btn--refresh" title="Обновить информацию"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i></a>
+                        </div>
+                      </div>
+                    </label>
+                    <label class="c-application__switcher-wrapper">
+                      <input type="radio" class="c-application__tabs-switcher" name="tabs_switch" />
+                      <div class="c-application__tabs-button c-application__tabs-button--2">
+                        Документы
+                      </div>
+                      <div class="c-application__tabs">
+                        <ul class="c-application__list">
+                          <li class="c-application__item">
+                            <span class="c-application__art">1</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Карточка предприятия.pdf</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">2</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Счет на оплату.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">3</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Договор поставки.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">3</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Договор на оказание услуг.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item c-application__item--new">
+                            <label class="c-application__label">
+                            <input class="c-application__addfile h-hidden" type="file" />
+                            <div class="c-application__add-item c-application__add-docs"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </label>
+                  </div>
+                </label>
+              </div>
+
+              <div class="c-datatable__application c-application">
+                <label class="c-application__label">
+                  <input class="c-application__check" type="radio" name="app_item"/>
+                  <div class="c-application__main">
+                    <div class="c-application__info c-application__info--id">
+                      ID заявки: <span>1</span>
+                    </div>
+                    <div class="c-application__info c-application__info--user-id">
+                      ID пользователя: <span>1</span><!--  если пользователь не регистрировался на сайте, то эта графа должна быть «не авторизованный»  -->
+                    </div>
+                    <div class="c-application__info c-application__info--username">
+                      <a href="users.html" class="c-application__link">Иванов Иван Иванович</a>
+                    </div>
+                    <div class="c-application__info c-application__info--phone">
+                      Телефон: <span>+7 (999) 999-99-99</span>
+                    </div>
+                    <div class="c-application__info c-application__info--email">
+                      Эл. почта: <span>john.doe@example.com</span>
+                    </div>
+                    <div class="c-application__info c-application__info--date">
+                      Дата заявки: <span>17.07.2017</span>
+                    </div>
+                    <div class="c-application__info c-application__info--date">
+                      Время заявки: <span>16:35</span>
+                    </div>
+                    <div class="c-application__info c-application__info--manager">
+                      Ю.Сорокина
+                    </div>
+                    <div class="c-application__status c-application__status--processing">
+                      Статус заявки: <span>В работе</span>
+                    </div>
+                  </div>
+                  <div class="c-application__full-info">
+                    <label class="c-application__switcher-wrapper">
+                      <input type="radio" class="c-application__tabs-switcher" name="tabs_switch"/>
+                      <div class="c-application__tabs-button">
+                        Список товаров
+                      </div>
+                      <div class="c-application__tabs">
+                        <ul class="c-application__list">
+                          <li class="c-application__item">
+                            <span class="c-application__id">1</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                <input class="c-application__price"  type="text" value="49045.82" min="0" placeholder="0.00"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                <input class="c-application__price"  type="text" value="706.00" min="0" placeholder="0.00"/><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__id">2</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                <input class="c-application__price"  type="text" value="49045.82" min="0" placeholder="0.00"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                <input class="c-application__price"  type="text" value="706.00" min="0" placeholder="0.00"/><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__id">3</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                <input class="c-application__price"  type="text" value="49045.82" min="0" placeholder="0.00"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                <input class="c-application__price"  type="text" value="706.00" min="0" placeholder="0.00"/><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item c-application__item--new">
+                            <a href="#" class="c-application__add-item"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                        </ul>
+                        <div class="c-application__ctrl-bar">
+                          <div class="c-application__total"><h3>Итого к оплате:</h3>
+                            <div class="c-application__total-info">
+                              В рублях: <span>245229.10</span><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                            </div>
+                            <div class="c-application__total-info">
+                              В евро: <span>3530.00</span><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                            </div>
+                            <div class="c-application__total-info">
+                              В долларах: <span>4111.14</span><i class="fa fa-dollar fa-fw" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="c-application__total"><h3>Курсы валют (17.07.2017): <a href="#" class="c-ico-btn c-ico-btn--refresh c-ico-btn--currentcy" title="Сделать перерасчет цен"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i></a></h3>
+                            <div class="c-application__total-info">
+                              Евро: <span>69,4700</span><input class="c-editor c-editor--currency h-hidden" type="text" value="69.4700" placeholder="0.0000" max="999" min="0"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i><button class="c-ico-btn c-ico-btn--edit" title="Править курс"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="c-application__total-info">
+                              Доллар США: <span>59,6500</span><input class="c-editor c-editor--currency h-hidden" type="text" value="59.6500" placeholder="0.0000" max="999" min="0"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i><button class="c-ico-btn c-ico-btn--edit" title="Править курс"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="c-application__total-info">
+                              <label class="c-checkbox">
+                                <input class="c-checkbox__inner" type="checkbox">
+                                <div class="c-checkbox__tick"></div>
+                              </label>
+                              <span>Зафиксировать курс</span>
+                            </div>
+                          </div>
+                          <div class="c-application__total">
+                            <div>
+                              <h3>Менеджер:</h3>
+                              <select class="c-styleguide__select">
+                                <option value="0">Не выбран</option>
+                                <option value="1">И.Иванов</option>
+                                <option value="2">А.Петров</option>
+                                <option value="3">В.Сидоров</option>
+                                <option value="4" selected>Ю.Сорокина</option>
+                                <option value="5">В.Михалева</option>
+                              </select>
+                            </div>
+                            <div class="l-btn-bar">
+                              <button class="c-btn c-btn--block">ПРИНЯТЬ В РАБОТУ</button>
+                            </div>
+                          </div>
+                          <div class="c-application__total">
+                            <div>
+                              <h3>Статус заявки:</h3>
+                              <select class="c-styleguide__select">
+                                <option value="1">Новая</option>
+                                <option value="2">В работе</option>
+                                <option value="3">Выполнена</option>
+                                <option value="4">Отменена</option>
+                                <option value="5">Удалить</option>
+                              </select>
+                            </div>
+                            <div class="l-btn-bar">
+                              <button class="c-btn c-btn--block">СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
+                              <button class="c-btn c-btn--block" disabled>УДАЛИТЬ ЗАЯВКУ</button>
+                            </div>
+                          </div>
+                          <a href="#" class="c-ico-btn c-ico-btn--refresh" title="Обновить информацию"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i></a>
+                        </div>
+                      </div>
+                    </label>
+                    <label class="c-application__switcher-wrapper">
+                      <input type="radio" class="c-application__tabs-switcher" name="tabs_switch" />
+                      <div class="c-application__tabs-button c-application__tabs-button--2">
+                        Документы
+                      </div>
+                      <div class="c-application__tabs">
+                        <ul class="c-application__list">
+                          <li class="c-application__item">
+                            <span class="c-application__art">1</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Карточка предприятия.pdf</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">2</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Счет на оплату.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">3</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Договор поставки.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">3</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Договор на оказание услуг.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item c-application__item--new">
+                            <label class="c-application__label">
+                            <input class="c-application__addfile h-hidden" type="file" />
+                            <div class="c-application__add-item c-application__add-docs"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </label>
+                  </div>
+                </label>
+              </div>
+
+              <div class="c-datatable__application c-application">
+                <label class="c-application__label">
+                  <input class="c-application__check" type="radio" name="app_item"/>
+                  <div class="c-application__main">
+                    <div class="c-application__info c-application__info--id">
+                      ID заявки: <span>1</span>
+                    </div>
+                    <div class="c-application__info c-application__info--user-id">
+                      ID пользователя: <span>1</span><!--  если пользователь не регистрировался на сайте, то эта графа должна быть «не авторизованный»  -->
+                    </div>
+                    <div class="c-application__info c-application__info--username">
+                      <a href="users.html" class="c-application__link">Иванов Иван Иванович</a>
+                    </div>
+                    <div class="c-application__info c-application__info--phone">
+                      Телефон: <span>+7 (999) 999-99-99</span>
+                    </div>
+                    <div class="c-application__info c-application__info--email">
+                      Эл. почта: <span>john.doe@example.com</span>
+                    </div>
+                    <div class="c-application__info c-application__info--date">
+                      Дата заявки: <span>17.07.2017</span>
+                    </div>
+                    <div class="c-application__info c-application__info--date">
+                      Время заявки: <span>16:35</span>
+                    </div>
+                    <div class="c-application__info c-application__info--manager">
+                      Ю.Сорокина
+                    </div>
+                    <div class="c-application__status c-application__status--completed">
+                      Статус заявки: <span>Выполнена</span>
+                    </div>
+                  </div>
+                  <div class="c-application__full-info">
+                    <label class="c-application__switcher-wrapper">
+                      <input type="radio" class="c-application__tabs-switcher" name="tabs_switch"/>
+                      <div class="c-application__tabs-button">
+                        Список товаров
+                      </div>
+                      <div class="c-application__tabs">
+                        <ul class="c-application__list">
+                          <li class="c-application__item">
+                            <span class="c-application__id">1</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                <input class="c-application__price"  type="text" value="49045.82" min="0" placeholder="0.00"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                <input class="c-application__price"  type="text" value="706.00" min="0" placeholder="0.00"/><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__id">2</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                <input class="c-application__price"  type="text" value="49045.82" min="0" placeholder="0.00"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                <input class="c-application__price"  type="text" value="706.00" min="0" placeholder="0.00"/><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__id">3</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                <input class="c-application__price"  type="text" value="49045.82" min="0" placeholder="0.00"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                <input class="c-application__price"  type="text" value="706.00" min="0" placeholder="0.00"/><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item c-application__item--new">
+                            <a href="#" class="c-application__add-item"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                        </ul>
+                        <div class="c-application__ctrl-bar">
+                          <div class="c-application__total"><h3>Итого к оплате:</h3>
+                            <div class="c-application__total-info">
+                              В рублях: <span>245229.10</span><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                            </div>
+                            <div class="c-application__total-info">
+                              В евро: <span>3530.00</span><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                            </div>
+                            <div class="c-application__total-info">
+                              В долларах: <span>4111.14</span><i class="fa fa-dollar fa-fw" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="c-application__total"><h3>Курсы валют (17.07.2017): <a href="#" class="c-ico-btn c-ico-btn--refresh c-ico-btn--currentcy" title="Сделать перерасчет цен"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i></a></h3>
+                            <div class="c-application__total-info">
+                              Евро: <span>69,4700</span><input class="c-editor c-editor--currency h-hidden" type="text" value="69.4700" placeholder="0.0000" max="999" min="0"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i><button class="c-ico-btn c-ico-btn--edit" title="Править курс"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="c-application__total-info">
+                              Доллар США: <span>59,6500</span><input class="c-editor c-editor--currency h-hidden" type="text" value="59.6500" placeholder="0.0000" max="999" min="0"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i><button class="c-ico-btn c-ico-btn--edit" title="Править курс"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="c-application__total-info">
+                              <label class="c-checkbox">
+                                <input class="c-checkbox__inner" type="checkbox">
+                                <div class="c-checkbox__tick"></div>
+                              </label>
+                              <span>Зафиксировать курс</span>
+                            </div>
+                          </div>
+                          <div class="c-application__total">
+                            <div>
+                              <h3>Менеджер:</h3>
+                              <select class="c-styleguide__select">
+                                <option value="0">Не выбран</option>
+                                <option value="1">И.Иванов</option>
+                                <option value="2">А.Петров</option>
+                                <option value="3">В.Сидоров</option>
+                                <option value="4" selected>Ю.Сорокина</option>
+                                <option value="5">В.Михалева</option>
+                              </select>
+                            </div>
+                            <div class="l-btn-bar">
+                              <button class="c-btn c-btn--block">ПРИНЯТЬ В РАБОТУ</button>
+                            </div>
+                          </div>
+                          <div class="c-application__total">
+                            <div>
+                              <h3>Статус заявки:</h3>
+                              <select class="c-styleguide__select">
+                                <option value="1">Новая</option>
+                                <option value="2">В работе</option>
+                                <option value="3">Выполнена</option>
+                                <option value="4">Отменена</option>
+                                <option value="5">Удалить</option>
+                              </select>
+                            </div>
+                            <div class="l-btn-bar">
+                              <button class="c-btn c-btn--block">СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
+                              <button class="c-btn c-btn--block" disabled>УДАЛИТЬ ЗАЯВКУ</button>
+                            </div>
+                          </div>
+                          <a href="#" class="c-ico-btn c-ico-btn--refresh" title="Обновить информацию"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i></a>
+                        </div>
+                      </div>
+                    </label>
+                    <label class="c-application__switcher-wrapper">
+                      <input type="radio" class="c-application__tabs-switcher" name="tabs_switch" />
+                      <div class="c-application__tabs-button c-application__tabs-button--2">
+                        Документы
+                      </div>
+                      <div class="c-application__tabs">
+                        <ul class="c-application__list">
+                          <li class="c-application__item">
+                            <span class="c-application__art">1</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Карточка предприятия.pdf</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">2</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Счет на оплату.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">3</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Договор поставки.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">3</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Договор на оказание услуг.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item c-application__item--new">
+                            <label class="c-application__label">
+                            <input class="c-application__addfile h-hidden" type="file" />
+                            <div class="c-application__add-item c-application__add-docs"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </label>
+                  </div>
+                </label>
+              </div>
+
+              <div class="c-datatable__application c-application">
+                <label class="c-application__label">
+                  <input class="c-application__check" type="radio" name="app_item"/>
+                  <div class="c-application__main">
+                    <div class="c-application__info c-application__info--id">
+                      ID заявки: <span>1</span>
+                    </div>
+                    <div class="c-application__info c-application__info--user-id">
+                      ID пользователя: <span>1</span><!--  если пользователь не регистрировался на сайте, то эта графа должна быть «не авторизованный»  -->
+                    </div>
+                    <div class="c-application__info c-application__info--username">
+                      <a href="users.html" class="c-application__link">Иванов Иван Иванович</a>
+                    </div>
+                    <div class="c-application__info c-application__info--phone">
+                      Телефон: <span>+7 (999) 999-99-99</span>
+                    </div>
+                    <div class="c-application__info c-application__info--email">
+                      Эл. почта: <span>john.doe@example.com</span>
+                    </div>
+                    <div class="c-application__info c-application__info--date">
+                      Дата заявки: <span>17.07.2017</span>
+                    </div>
+                    <div class="c-application__info c-application__info--date">
+                      Время заявки: <span>16:35</span>
+                    </div>
+                    <div class="c-application__info c-application__info--manager">
+                      Ю.Сорокина
+                    </div>
+                    <div class="c-application__status c-application__status--canceled">
+                      Статус заявки: <span>Отменена</span>
+                    </div>
+                  </div>
+                  <div class="c-application__full-info">
+                    <label class="c-application__switcher-wrapper">
+                      <input type="radio" class="c-application__tabs-switcher" name="tabs_switch"/>
+                      <div class="c-application__tabs-button">
+                        Список товаров
+                      </div>
+                      <div class="c-application__tabs">
+                        <ul class="c-application__list">
+                          <li class="c-application__item">
+                            <span class="c-application__id">1</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                <input class="c-application__price"  type="text" value="49045.82" min="0" placeholder="0.00"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                <input class="c-application__price"  type="text" value="706.00" min="0" placeholder="0.00"/><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__id">2</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабель</span>
+                            <span class="c-application__brend">Turck</span>
+                            <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                <input class="c-application__price"  type="text" value="49045.82" min="0" placeholder="0.00"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                <input class="c-application__price"  type="text" value="706.00" min="0" placeholder="0.00"/><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__id">3345345</span>
+                            <a href="index.html" class="c-application__art c-application__link">QCMT 050204 - CM NC 3220</a>
+                            <span class="c-application__prod">Кабеerter ertertertertль</span>
+                            <span class="c-application__brend">Turetertck</span>
+                            <label class="c-application__count"><input class="c-application__count-inner" type="number" value="10" placeholder="0" min="0" max="9999999999"/><div class="arrows-box"><div class=" arrow arrow--up">+</div><div class="arrow arrow--down">-</div></div></label>
+                            <div class="c-application__wrapper">
+                              <div>
+                                <input class="c-application__price"  type="text" value="49045.82" min="0" placeholder="0.00"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                              </div>
+                              <div>
+                                <input class="c-application__price"  type="text" value="706.00" min="0" placeholder="0.00"/><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                              </div>
+                            </div>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить товар из списка"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item c-application__item--new">
+                            <a href="#" class="c-application__add-item"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                        </ul>
+                        <div class="c-application__ctrl-bar">
+                          <div class="c-application__total"><h3>Итого к оплате:</h3>
+                            <div class="c-application__total-info">
+                              В рублях: <span>245229.10</span><i class="fa fa-rub fa-fw" aria-hidden="true"></i>
+                            </div>
+                            <div class="c-application__total-info">
+                              В евро: <span>3530.00</span><i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+                            </div>
+                            <div class="c-application__total-info">
+                              В долларах: <span>4111.14</span><i class="fa fa-dollar fa-fw" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="c-application__total"><h3>Курсы валют (17.07.2017): <a href="#" class="c-ico-btn c-ico-btn--refresh c-ico-btn--currentcy" title="Сделать перерасчет цен"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i></a></h3>
+                            <div class="c-application__total-info">
+                              Евро: <span>69,4700</span><input class="c-editor c-editor--currency h-hidden" type="text" value="69.4700" placeholder="0.0000" max="999" min="0"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i><button class="c-ico-btn c-ico-btn--edit" title="Править курс"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="c-application__total-info">
+                              Доллар США: <span>59,6500</span><input class="c-editor c-editor--currency h-hidden" type="text" value="59.6500" placeholder="0.0000" max="999" min="0"/><i class="fa fa-rub fa-fw" aria-hidden="true"></i><button class="c-ico-btn c-ico-btn--edit" title="Править курс"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="c-application__total-info">
+                              <label class="c-checkbox">
+                                <input class="c-checkbox__inner" type="checkbox">
+                                <div class="c-checkbox__tick"></div>
+                              </label>
+                              <span>Зафиксировать курс</span>
+                            </div>
+                          </div>
+                          <div class="c-application__total">
+                            <div>
+                              <h3>Менеджер:</h3>
+                              <select class="c-styleguide__select">
+                                <option value="0">Не выбран</option>
+                                <option value="1">И.Иванов</option>
+                                <option value="2">А.Петров</option>
+                                <option value="3">В.Сидоров</option>
+                                <option value="4" selected>Ю.Сорокина</option>
+                                <option value="5">В.Михалева</option>
+                              </select>
+                            </div>
+                            <div class="l-btn-bar">
+                              <button class="c-btn c-btn--block">ПРИНЯТЬ В РАБОТУ</button>
+                            </div>
+                          </div>
+                          <div class="c-application__total">
+                            <div>
+                              <h3>Статус заявки:</h3>
+                              <select class="c-styleguide__select">
+                                <option value="1">Новая</option>
+                                <option value="2">В работе</option>
+                                <option value="3">Выполнена</option>
+                                <option value="4">Отменена</option>
+                                <option value="5">Удалить</option>
+                              </select>
+                            </div>
+                            <div class="l-btn-bar">
+                              <button class="c-btn c-btn--block">СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
+                              <button class="c-btn c-btn--block" disabled>УДАЛИТЬ ЗАЯВКУ</button>
+                            </div>
+                          </div>
+                          <a href="#" class="c-ico-btn c-ico-btn--refresh" title="Обновить информацию"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i></a>
+                        </div>
+                      </div>
+                    </label>
+                    <label class="c-application__switcher-wrapper">
+                      <input type="radio" class="c-application__tabs-switcher" name="tabs_switch" />
+                      <div class="c-application__tabs-button c-application__tabs-button--2">
+                        Документы
+                      </div>
+                      <div class="c-application__tabs">
+                        <ul class="c-application__list">
+                          <li class="c-application__item">
+                            <span class="c-application__art">1</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Карточка предприятия.pdf</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">2</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Счет на оплату.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">3</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Договор поставки.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item">
+                            <span class="c-application__art">3</span>
+                            <a href="docs/Договор поставки по заявкам.doc" class="c-application__link">Договор на оказание услуг.doc</a>
+                            <a href="#" class="c-ico-btn c-ico-btn--remove" title="Удалить документ"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+                          </li>
+                          <li class="c-application__item c-application__item--new">
+                            <label class="c-application__label">
+                            <input class="c-application__addfile h-hidden" type="file" />
+                            <div class="c-application__add-item c-application__add-docs"><i class="fa fa-plus fa-fw" aria-hidden="true"></i></div>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </label>
+                  </div>
+                </label>
+              </div>
+
+       		  </div>
+       				<div class="c-datatable__info">
+       					Показано с 1 по 4 из 4 заявок
+       				</div>
+       				<div class="c-datatable__paginate">
+       					<a href="#" class="paginate-button paginate-button--first paginate-button--disabled"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+       					<a href="#" class="paginate-button paginate-button--previous paginate-button--disabled"><i class="fa fa-angle-left" aria-hidden="true"></i> Предыдущая</a>
+       					<span>
+       						<a href="#" class="paginate-button paginate-button--current">1</a>
+       						<a href="#" class="paginate-button">2</a>
+       						<a href="#" class="paginate-button">3</a>
+       						<a href="#" class="paginate-button">...</a>
+       						<a href="#" class="paginate-button">10</a>
+       					</span>
+       					<a href="#" class="paginate-button paginate-button--next">Следующая <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+       					<a href="#" class="paginate-button paginate-button--last"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+       				</div>
+       		</div>
+       	</div>
+        <div class="l-popup-window">
+          <div class="c-popup-window">
+              <a href="#" class="c-ico-btn c-ico-btn--close" title="Закрыть"><i class="fa fa-close fa-fw" aria-hidden="true"></i></a>
+              <label class="c-ctrl-panel__label" for="art">Артикул товара</label>
+              <input class="c-input" id="art" type="text" placeholder="Артикул" />
+              <label class="c-ctrl-panel__label" for="brend">Производитель</label>
+              <select class="c-styleguide__select" id="brend">
+                <option value="0" selected>Не выбран</option>
+                <option value="1">Производитель_1</option>
+                <option value="2">Производитель_2</option>
+                <option value="3">Производитель_3</option>
+                <option value="4">Производитель_4</option>
+                <option value="5">Производитель_5</option>
+              </select>
+              <label class="c-ctrl-panel__label" for="class">Классификация товара</label>
+              <select class="c-styleguide__select" id="class" disabled>
+                <option value="0">Не выбрана</option>
+                <option value="1">Класс_1</option>
+                <option value="2">Класс_2</option>
+                <option value="3">Класс_3</option>
+                <option value="4">Класс_4</option>
+                <option value="5">Класс_5</option>
+              </select>
+              <label class="c-ctrl-panel__label" for="type">Вид товара</label>
+              <select class="c-styleguide__select" id="type" disabled>
+                <option value="0">Не выбран</option>
+                <option value="1">Тип_1</option>
+                <option value="2">Тип_2</option>
+                <option value="3">Тип_3</option>
+                <option value="4">Тип_4</option>
+                <option value="5">Тип_5</option>
+              </select>
+              <label class="c-ctrl-panel__label" for="name">Доступные товары</label>
+              <select class="c-styleguide__select" id="name" size="6" disabled>
+                <option value="0">Не выбран</option>
+                <option value="1">Товар_1</option>
+                <option value="2">Товар_2</option>
+                <option value="3">Товар_3</option>
+                <option value="4">Товар_4</option>
+                <option value="5">Товар_5</option>
+                <option value="6">Товар_6</option>
+                <option value="7">Товар_7</option>
+                <option value="8">Товар_8</option>
+                <option value="9">Товар_9</option>
+                <option value="10">Товар_10</option>
+              </select>
+              <label class="c-ctrl-panel__label" for="cost">Стоимость</label>
+              <div class="c-ctrl-panel__wrapper">
+                <input class="c-input" id="cost" type="number" placeholder="0" disabled/>
+                <i class="fa fa-eur fa-fw" aria-hidden="true"></i>
+              </div>
+              <div class="l-btn-bar">
+                <button class="c-btn c-btn--block">ДОБАВИТЬ</button>
+                <button class="c-btn c-btn--block">ОТМЕНА</button>
+              </div>
+  	      </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-footer">
+
+    </div>
+	</div>
+	<script src="js/scripts.min.js"></script>
+
+  <script>
+    $(".c-application__add-item:even").click(".c-application", function() {
+      $(".l-popup-window").addClass("l-popup-window--is-active");
+    });
+    $(".c-btn--block, .c-ico-btn--close").click(".l-popup-window", function() {
+      $(".l-popup-window").removeClass("l-popup-window--is-active");
+    });
+    $(".c-application__main").on("click", function() {
+      $(this).next().find("input").eq(0).prop("checked", true);
+    });
+  </script>
+
+
+
+</body>
+</html>
