@@ -3,9 +3,6 @@ window.onload = function Time() {
       (function Time(){
           var date = new Date();
           var hours = date.getHours();
-          if(hours < 10) {
-            hours = '0'+hours;
-          }
           hours = (hours < 10) ? '0' + hours : hours;
           var minutes = date.getMinutes();
           minutes = (minutes < 10) ? '0' + minutes : minutes;
