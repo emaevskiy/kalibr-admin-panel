@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+
+
+
+  <div class="l-modal-window l-modal-window--is-active"> <!-- Вставляется между последним тегом и закрывающим тегом body, до скриптов. Активируется классом l-modal-window--is-active -->
+
+    <div class="c-modal-window js-modal-window--success"> <!-- Активируется классом c-modal-window--is-active -->
+      <div class="c-modal-window__ico c-modal-window__ico--success">
+      </div>
+      <div class="c-modal-window__text">
+				Успешно!
+      </div>
+    </div>
+
+    <div class="c-modal-window js-modal-window--warning"> <!-- Активируется классом c-modal-window--is-active -->
+      <h3 class="c-modal-window__title">
+				Удалить элемент?
+      </h3>
+      <div class="c-modal-window__ico c-modal-window__ico--warning">
+      </div>
+      <div class="c-modal-window__text c-modal-window__text--info">
+				Это действие будет невозможно отменить.
+      </div>
+      <div class="c-modal-window__btn-wrapper">
+        <button class="c-btn c-btn--danger" type="button" name="accept">Отмена</button>
+        <button class="c-btn c-btn--info" type="button" name="cancel">Да</button>
+      </div>
+    </div>
+
+    <div class="c-modal-window js-modal-window--danger"> <!-- Активируется классом c-modal-window--is-active -->
+      <div class="c-modal-window__ico c-modal-window__ico--danger">
+      </div>
+      <div class="c-modal-window__text">
+				Ошибка!
+      </div>
+    </div>
+
+    <div class="c-modal-window js-modal-window--info c-modal-window--is-active"> <!-- Активируется классом c-modal-window--is-active -->
+      <div class="c-modal-window__ico c-modal-window__ico--info">
+      </div>
+      <div class="c-modal-window__text c-modal-window__text--info">
+				Информационное сообщение.
+      </div>
+      <div class="c-modal-window__btn-wrapper">
+        <button class="c-btn c-btn--info" type="button" name="accept">Закрыть</button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>
